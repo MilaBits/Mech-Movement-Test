@@ -13,8 +13,16 @@ public class MechController : MonoBehaviour {
     public WeaponSet WeaponSet2;
     public Mod Mod;
 
-    void Start() {
 
+
+    void Start() {
+        float LookRotation = Input.GetAxis("Camera Horizontal");
+        float LookJaw = Input.GetAxis("Camera Vertical");
+
+        float facing = Top.transform.eulerAngles.y;
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        float heading = Mathf.Atan2(moveHorizontal, moveVertical);
     }
 
     void Update() {
@@ -23,8 +31,9 @@ public class MechController : MonoBehaviour {
     }
 
     private void CameraMovement() {
-        float LookRotation = Input.GetAxis("Camera Horizontal");
-        float LookJaw = Input.GetAxis("Camera Vertical");
+
+        LookRotation = Input.GetAxis("Camera Horizontal");
+        LookJaw = Input.GetAxis("Camera Vertical");
 
         Debug.Log("Horizontal: " + LookRotation + ", Vertical: " + LookJaw);
 
@@ -33,18 +42,15 @@ public class MechController : MonoBehaviour {
 
     private void Movement() {
 
-        float facing = Top.transform.eulerAngles.y;
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        float heading = Mathf.Atan2(moveHorizontal, moveVertical);
 
 
-        if (moveHorizontal != 0 || moveVertical != null) {
+
+        if (moveHorizontal != 0 || moveVertical != 0) {
             Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
             movement = Quaternion.Euler(0, facing, 0) * movement;
             transform.position += movement * Speed;
 
-            Bottom.transform.rotation = Quaternion.Euler(0f, heading * Mathf.Rad2Deg, 0f);
+            Bottom.transform.rotation = Quaternion.Euler(0f, facing + heading * Mathf.Rad2Deg, 0f);
 
         }
 
