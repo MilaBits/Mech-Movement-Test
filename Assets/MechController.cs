@@ -14,17 +14,14 @@ public class MechController : MonoBehaviour {
     public Mod Mod;
 
 
+    private float LookRotation;
+    private float LookJaw;
 
-    void Start() {
-        float LookRotation = Input.GetAxis("Camera Horizontal");
-        float LookJaw = Input.GetAxis("Camera Vertical");
-
-        float facing = Top.transform.eulerAngles.y;
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-        float heading = Mathf.Atan2(moveHorizontal, moveVertical);
-    }
-
+    private float facing;
+    private float moveHorizontal;
+    private float moveVertical;
+    private float heading;
+    
     void Update() {
         Movement();
         CameraMovement();
@@ -42,7 +39,11 @@ public class MechController : MonoBehaviour {
 
     private void Movement() {
 
+        moveHorizontal = Input.GetAxis("Horizontal");
+        moveVertical = Input.GetAxis("Vertical");
 
+        facing = Top.transform.eulerAngles.y;
+        heading = Mathf.Atan2(moveHorizontal, moveVertical);
 
 
         if (moveHorizontal != 0 || moveVertical != 0) {
@@ -53,6 +54,5 @@ public class MechController : MonoBehaviour {
             Bottom.transform.rotation = Quaternion.Euler(0f, facing + heading * Mathf.Rad2Deg, 0f);
 
         }
-
     }
 }
