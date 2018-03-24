@@ -49,15 +49,8 @@ public class MechController : MonoBehaviour {
             movement = Quaternion.Euler(0, facing, 0) * movement;
             transform.position += movement * Speed;
 
-
-            //TODO: CONFUSING ROTATION MATH I DON'T GET (multiple attempts made)
-            // Mathf.LerpAngle(heading, facing + heading * Mathf.Rad2Deg, Time.deltaTime);
-            //Quaternion newRotation = Quaternion.Euler(0f, facing + heading * Mathf.Rad2Deg, 0f);
-            //transform.rotation = Quaternion.Lerp(Bottom.transform.rotation, Quaternion.Euler(newRotation.eulerAngles), Time.deltaTime);
-
-            // just keeping this instead for now
-            Bottom.transform.rotation = Quaternion.Euler(0f, facing + heading * Mathf.Rad2Deg, 0f);
-
+            Quaternion newRotation = Quaternion.Euler(0f, facing + heading * Mathf.Rad2Deg, 0f);
+            Bottom.transform.rotation = Quaternion.Lerp(Bottom.transform.rotation, Quaternion.Euler(newRotation.eulerAngles), Time.deltaTime * 5);
         }
     }
 
@@ -70,6 +63,8 @@ public class MechController : MonoBehaviour {
 
         //Debug.Log(string.Format("min:{0}, current:{1}, max:{2}", lowerLimit, camera.transform.eulerAngles.x, upperLimit));
         //if (camera.transform.eulerAngles.x >= lowerLimit && camera.transform.eulerAngles.x <= upperLimit) {
-        camera.transform.RotateAround(Top.transform.position, Top.transform.right, LookJaw);
+        
+        camera.transform.localEulerAngles = new Vector3(Mathf.Clamp(camera.transform.localEulerAngles.x, lowerLimit, upperLimit), 0, 0);
+
     }
 }
