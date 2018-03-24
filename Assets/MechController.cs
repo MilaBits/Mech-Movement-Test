@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MechController : MonoBehaviour {
+    [Header("Mech")]
     public MechTypes MechType;
     public GameObject Top;
     public GameObject Bottom;
     public float Speed;
     public float CameraSpeed;
-    [Space]
+    [Header("Equipment")]
     public WeaponSet WeaponSet1;
     public WeaponSet WeaponSet2;
     public Mod Mod;
+    [Header("Camera")]
+    public Camera camera;
+    public float upperLimit;
+    public float lowerLimit;
 
 
     private float LookRotation;
@@ -29,18 +34,19 @@ public class MechController : MonoBehaviour {
 
     private void CameraMovement() {
 
-        LookRotation = Input.GetAxis("Camera Horizontal");
-        LookJaw = Input.GetAxis("Camera Vertical");
+        LookRotation = hInput.GetAxis("Camera Horizontal");
+        LookJaw = hInput.GetAxis("Camera Vertical");
 
         Debug.Log("Horizontal: " + LookRotation + ", Vertical: " + LookJaw);
 
         Top.transform.Rotate(0.0f, LookRotation * CameraSpeed, 0.0f);
+        camera.transform.RotateAround(Top.transform.position, Top.transform.right, LookJaw);
     }
 
     private void Movement() {
 
-        moveHorizontal = Input.GetAxis("Horizontal");
-        moveVertical = Input.GetAxis("Vertical");
+        moveHorizontal = hInput.GetAxis("Horizontal");
+        moveVertical = hInput.GetAxis("Vertical");
 
         facing = Top.transform.eulerAngles.y;
         heading = Mathf.Atan2(moveHorizontal, moveVertical);
@@ -51,6 +57,13 @@ public class MechController : MonoBehaviour {
             movement = Quaternion.Euler(0, facing, 0) * movement;
             transform.position += movement * Speed;
 
+            Mathf.LerpAngle(heading, facing + heading * Mathf.Rad2Deg, Time.deltaTime);
+            
+            //TODO: CONFUSING ROTATION MATH I DON'T GET
+            Quaternion newRotation = Quaternion.Euler(0f, facing + heading * Mathf.Rad2Deg, 0f);
+            transform.rotation = Quaternion.Lerp(Bottom.transform.rotation, Quaternion.Euler(newRotation.eulerAngles), Time.deltaTime);
+
+            // just keeping this instead for now
             Bottom.transform.rotation = Quaternion.Euler(0f, facing + heading * Mathf.Rad2Deg, 0f);
 
         }
