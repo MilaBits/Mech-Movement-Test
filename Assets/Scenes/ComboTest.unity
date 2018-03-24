@@ -1599,6 +1599,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1111496508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1111496509}
+  m_Layer: 0
+  m_Name: FizzleR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1111496509
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1111496508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.7, y: 1.38, z: -10.055}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1592657967}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1127355038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1972,6 +2001,92 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1566630337}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1592657966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1592657967}
+  - component: {fileID: 1592657970}
+  - component: {fileID: 1592657969}
+  - component: {fileID: 1592657968}
+  m_Layer: 0
+  m_Name: HitBoxOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1592657967
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1592657966}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_Children:
+  - {fileID: 2084261283}
+  m_Father: {fileID: 1111496509}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1592657968
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1592657966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1592657969
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1592657966}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1592657970
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1592657966}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1596250501
 GameObject:
@@ -2392,7 +2507,7 @@ MonoBehaviour:
           name: Finisher
           isSystemEvent: 0
           isGlobal: 0
-        toState: FinisherAttackR
+        toState: FinisherChargeR
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
@@ -2642,13 +2757,13 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0.5
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0.5
         fsmIntParams:
         - useVariable: 1
           name: Stance
@@ -2762,56 +2877,22 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GetKeyDown
         - HutongGames.PlayMaker.Actions.GetKeyDown
         - HutongGames.PlayMaker.Actions.Wait
-        - HutongGames.PlayMaker.Actions.SendEvent
         customNames:
         - 
         - 
         - 
         - 
-        - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 000000000300000006000000090000000c000000
-        actionHashCodes: ff77a904ff77a904ff77a90448c011015e69bb04
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000030000000600000009000000
+        actionHashCodes: ff77a904ff77a904ff77a90448c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
-        fsmEventTargetParams:
-        - target: 0
-          excludeSelf:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          gameObject:
-            ownerOption: 0
-            gameObject:
-              useVariable: 0
-              name: 
-              tooltip: 
-              showInInspector: 0
-              networkSync: 0
-              value: {fileID: 0}
-          fsmName:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 
-          sendToChildren:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: 0
-          fsmComponent: {fileID: 0}
+        fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
         fsmStringParams: []
@@ -2826,12 +2907,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 2
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 1
@@ -2862,13 +2937,12 @@ MonoBehaviour:
         - SubAttack
         - AttackR
         - Idle
-        - 
-        byteData: 6100000073000000640000000000
+        byteData: 61000000730000006400000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0700000017000000110000000700000017000000110000000700000017000000110000000f00000017000000010000001f000000170000000f00000001000000
+        paramDataType: 0700000017000000110000000700000017000000110000000700000017000000110000000f0000001700000001000000
         paramName:
         - key
         - sendEvent
@@ -2882,12 +2956,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        - eventTarget
-        - sendEvent
-        - delay
-        - everyFrame
-        paramDataPos: 00000000000000000000000004000000010000000100000008000000020000000200000000000000030000000c0000000000000004000000010000000d000000
-        paramByteDataSize: 04000000000000000000000004000000000000000000000004000000000000000000000000000000000000000100000000000000000000000000000001000000
+        paramDataPos: 00000000000000000000000004000000010000000100000008000000020000000200000000000000030000000c000000
+        paramByteDataSize: 040000000000000000000000040000000000000000000000040000000000000000000000000000000000000001000000
     - name: LowAttackL
       description: 
       colorIndex: 0
@@ -2968,13 +3038,13 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0.7
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 1
+          value: 0.7
         fsmIntParams:
         - useVariable: 1
           name: Stance
@@ -3117,13 +3187,13 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 1
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 1
         fsmIntParams:
         - useVariable: 1
           name: Stance
@@ -3266,13 +3336,13 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.5
+          value: 0.3
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 0.5
+          value: 0.3
         fsmIntParams:
         - useVariable: 1
           name: Stance
@@ -3653,62 +3723,84 @@ MonoBehaviour:
         - realTime
         paramDataPos: 0000000001000000000000000000000001000000000000000100000002000000030000000000000000000000010000000000000001000000010000000100000005000000
         paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000001000000
-    - name: FinisherAttackR
+    - name: FinisherChargeR
       description: 
       colorIndex: 0
       position:
         serializedVersion: 2
-        x: 494.33594
+        x: 484.33594
         y: 477.91406
-        width: 134
-        height: 32
+        width: 139
+        height: 64
       isBreakpoint: 0
       isSequence: 0
       hideUnused: 0
       transitions:
       - fsmEvent:
+          name: Charge
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: FinisherChargeR
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
           isGlobal: 0
-        toState: IdleInput
+        toState: ChargeReset
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: Finisher
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: FinisherAttacKR
         linkStyle: 0
         linkConstraint: 0
         colorIndex: 0
       actionData:
         actionNames:
-        - HutongGames.PlayMaker.Actions.SetIntValue
-        - HutongGames.PlayMaker.Actions.CreateObject
+        - HutongGames.PlayMaker.Actions.GetKeyUp
+        - HutongGames.PlayMaker.Actions.IntAdd
         - HutongGames.PlayMaker.Actions.DestroyObject
+        - HutongGames.PlayMaker.Actions.CreateObject
+        - HutongGames.PlayMaker.Actions.IntClamp
+        - HutongGames.PlayMaker.Actions.IntCompare
         - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000003000000080000000b000000
-        actionHashCodes: 603dd905bf83c9009ff80c0248c01101
+        - 
+        - 
+        - 
+        actionEnabled: 01010101010101
+        actionIsOpen: 01010101010101
+        actionStartIndex: 000000000300000006000000090000000e0000001200000018000000
+        actionHashCodes: ff77a904603dd9059ff80c02bf83c9002181e80209faa10248c01101
         unityObjectParams: []
         fsmGameObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 1847023678}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 782098378}
         - useVariable: 1
           name: ActiveHitBox
           tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 1111496508}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 782098378}
         - useVariable: 1
           name: ActiveHitBox
           tooltip: 
@@ -3733,16 +3825,28 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 2
+          value: 0.75
         fsmIntParams:
         - useVariable: 1
-          name: Stance
+          name: Charge
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: Charge
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3753,7 +3857,31 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
+        - useVariable: 1
+          name: Charge
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 3
         fsmBoolParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -3779,29 +3907,46 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        byteData: 0000
+        - Finisher
+        - 
+        - Finisher
+        - Charge
+        byteData: 6400000000000000
         arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 10000000100000000100000013000000130000001c0000001c00000013000000130000000f000000110000000f0000001700000001000000
+        paramDataType: 070000001700000011000000100000001000000001000000130000000f0000001100000013000000130000001c0000001c00000013000000100000001000000010000000010000001000000010000000170000001700000017000000010000000f0000001700000001000000
         paramName:
+        - key
+        - sendEvent
+        - storeResult
         - intVariable
-        - intValue
+        - add
         - everyFrame
+        - gameObject
+        - delay
+        - detachChildren
         - gameObject
         - spawnPoint
         - position
         - rotation
         - storeObject
-        - gameObject
-        - delay
-        - detachChildren
+        - intVariable
+        - minValue
+        - maxValue
+        - everyFrame
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
         - time
         - finishEvent
         - realTime
-        paramDataPos: 0000000001000000000000000000000001000000000000000100000002000000030000000000000000000000010000000000000001000000
-        paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000100000004000000000000000000000001000000010000000200000000000000010000000300000002000000030000000400000005000000050000000600000001000000020000000300000006000000010000000400000007000000
+        paramByteDataSize: 040000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: ForFollowR 1
       description: 
       colorIndex: 0
@@ -3834,6 +3979,7 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.DestroyObject
         - HutongGames.PlayMaker.Actions.CreateObject
         - HutongGames.PlayMaker.Actions.DestroyObject
         - HutongGames.PlayMaker.Actions.GetKeyDown
@@ -3844,12 +3990,19 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0101010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 0000000003000000080000000b0000000e000000
-        actionHashCodes: 603dd905bf83c9009ff80c02ff77a90448c01101
+        - 
+        actionEnabled: 010101010101
+        actionIsOpen: 010101010101
+        actionStartIndex: 0000000003000000060000000b0000000e00000011000000
+        actionHashCodes: 603dd9059ff80c02bf83c9009ff80c02ff77a90448c01101
         unityObjectParams: []
         fsmGameObjectParams:
+        - useVariable: 1
+          name: ActiveHitBox
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         - useVariable: 0
           name: 
           tooltip: 
@@ -3892,6 +4045,12 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 0.3
         - useVariable: 0
           name: 
@@ -3913,6 +4072,12 @@ MonoBehaviour:
           networkSync: 0
           value: 2
         fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -3950,11 +4115,14 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 10000000100000000100000013000000130000001c0000001c00000013000000130000000f000000110000000700000017000000110000000f0000001700000001000000
+        paramDataType: 100000001000000001000000130000000f0000001100000013000000130000001c0000001c00000013000000130000000f000000110000000700000017000000110000000f0000001700000001000000
         paramName:
         - intVariable
         - intValue
         - everyFrame
+        - gameObject
+        - delay
+        - detachChildren
         - gameObject
         - spawnPoint
         - position
@@ -3969,8 +4137,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 0000000001000000000000000000000001000000000000000100000002000000030000000000000000000000010000000000000001000000010000000100000005000000
-        paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000001000000
+        paramDataPos: 0000000001000000000000000000000000000000000000000100000002000000000000000100000003000000040000000100000001000000010000000000000002000000020000000100000005000000
+        paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000001000000
     - name: ForFollowR 2
       description: 
       colorIndex: 0
@@ -3995,6 +4163,7 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.DestroyObject
         - HutongGames.PlayMaker.Actions.CreateObject
         - HutongGames.PlayMaker.Actions.DestroyObject
         - HutongGames.PlayMaker.Actions.Wait
@@ -4003,12 +4172,19 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 01010101
-        actionIsOpen: 01010101
-        actionStartIndex: 0000000003000000080000000b000000
-        actionHashCodes: 603dd905bf83c9009ff80c0248c01101
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000003000000060000000b0000000e000000
+        actionHashCodes: 603dd9059ff80c02bf83c9009ff80c0248c01101
         unityObjectParams: []
         fsmGameObjectParams:
+        - useVariable: 1
+          name: ActiveHitBox
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
         - useVariable: 0
           name: 
           tooltip: 
@@ -4051,6 +4227,12 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
           value: 1
         - useVariable: 0
           name: 
@@ -4072,6 +4254,12 @@ MonoBehaviour:
           networkSync: 0
           value: 4
         fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
         - useVariable: 0
           name: 
           tooltip: 
@@ -4102,11 +4290,14 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 10000000100000000100000013000000130000001c0000001c00000013000000130000000f000000110000000f0000001700000001000000
+        paramDataType: 100000001000000001000000130000000f0000001100000013000000130000001c0000001c00000013000000130000000f000000110000000f0000001700000001000000
         paramName:
         - intVariable
         - intValue
         - everyFrame
+        - gameObject
+        - delay
+        - detachChildren
         - gameObject
         - spawnPoint
         - position
@@ -4118,8 +4309,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 0000000001000000000000000000000001000000000000000100000002000000030000000000000000000000010000000000000001000000
-        paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 0000000001000000000000000000000000000000000000000100000002000000000000000100000003000000040000000100000001000000020000000000000001000000
+        paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: HighAttackR
       description: 
       colorIndex: 0
@@ -4269,6 +4460,384 @@ MonoBehaviour:
         - realTime
         paramDataPos: 0000000001000000000000000000000001000000000000000100000002000000030000000000000000000000010000000000000001000000
         paramByteDataSize: 0000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+    - name: FinisherAttacKR
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 701
+        y: 477
+        width: 135
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Input
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.DestroyObject
+        - HutongGames.PlayMaker.Actions.CreateObject
+        - HutongGames.PlayMaker.Actions.DestroyObject
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101
+        actionIsOpen: 010101010101
+        actionStartIndex: 000000000300000006000000090000000e00000011000000
+        actionHashCodes: 603dd905603dd9059ff80c02bf83c9009ff80c0248c01101
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: ActiveHitBox
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 1847023678}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 782098378}
+        - useVariable: 1
+          name: ActiveHitBox
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ActiveHitBox
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        fsmIntParams:
+        - useVariable: 1
+          name: Charge
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Stance
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000100000001000000001000000130000000f0000001100000013000000130000001c0000001c00000013000000130000000f000000110000000f0000001700000001000000
+        paramName:
+        - intVariable
+        - intValue
+        - everyFrame
+        - intVariable
+        - intValue
+        - everyFrame
+        - gameObject
+        - delay
+        - detachChildren
+        - gameObject
+        - spawnPoint
+        - position
+        - rotation
+        - storeObject
+        - gameObject
+        - delay
+        - detachChildren
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 0000000001000000000000000200000003000000010000000000000000000000000000000100000002000000000000000100000003000000040000000100000001000000020000000000000002000000
+        paramByteDataSize: 0000000000000000010000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+    - name: ChargeReset
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 496
+        y: 566
+        width: 114
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Input
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        - HutongGames.PlayMaker.Actions.DestroyObject
+        - HutongGames.PlayMaker.Actions.CreateObject
+        - HutongGames.PlayMaker.Actions.DestroyObject
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101
+        actionIsOpen: 010101010101
+        actionStartIndex: 000000000300000006000000090000000e00000011000000
+        actionHashCodes: 603dd905603dd9059ff80c02bf83c9009ff80c0248c01101
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: ActiveHitBox
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 1111496508}
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 782098378}
+        - useVariable: 1
+          name: ActiveHitBox
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ActiveHitBox
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.3
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0.3
+        fsmIntParams:
+        - useVariable: 1
+          name: Charge
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Stance
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000100000001000000001000000130000000f0000001100000013000000130000001c0000001c00000013000000130000000f000000110000000f0000001700000001000000
+        paramName:
+        - intVariable
+        - intValue
+        - everyFrame
+        - intVariable
+        - intValue
+        - everyFrame
+        - gameObject
+        - delay
+        - detachChildren
+        - gameObject
+        - spawnPoint
+        - position
+        - rotation
+        - storeObject
+        - gameObject
+        - delay
+        - detachChildren
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos: 0000000001000000000000000200000003000000010000000000000000000000000000000100000002000000000000000100000003000000040000000100000001000000020000000000000002000000
+        paramByteDataSize: 0000000000000000010000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -4277,6 +4846,9 @@ MonoBehaviour:
       isSystemEvent: 0
       isGlobal: 0
     - name: AttackR
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Charge
       isSystemEvent: 0
       isGlobal: 0
     - name: Finisher
@@ -4303,7 +4875,13 @@ MonoBehaviour:
     globalTransitions: []
     variables:
       floatVariables: []
-      intVariables: []
+      intVariables:
+      - useVariable: 1
+        name: Charge
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
       boolVariables: []
       stringVariables: []
       vector2Variables: []
@@ -4325,7 +4903,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 00000000
+      variableCategoryIDs: 0000000000000000
     description: 
     docUrl: 
     showStateLabel: 1
@@ -5580,6 +6158,91 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 6.636, y: 0, z: 0}
+--- !u!1 &2084261282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2084261283}
+  - component: {fileID: 2084261286}
+  - component: {fileID: 2084261285}
+  - component: {fileID: 2084261284}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2084261283
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084261282}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.63, y: 0.04, z: 1.34}
+  m_LocalScale: {x: 4.0310206, y: 4.266533, z: 1.9006817}
+  m_Children: []
+  m_Father: {fileID: 1592657967}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2084261284
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084261282}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2084261285
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084261282}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: f7b8afa84e1bbbb4981558d675963274, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &2084261286
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2084261282}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2143958361
 GameObject:
   m_ObjectHideFlags: 0
