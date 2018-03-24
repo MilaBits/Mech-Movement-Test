@@ -63,8 +63,29 @@ public class MechController : MonoBehaviour {
 
         //Debug.Log(string.Format("min:{0}, current:{1}, max:{2}", lowerLimit, camera.transform.eulerAngles.x, upperLimit));
         //if (camera.transform.eulerAngles.x >= lowerLimit && camera.transform.eulerAngles.x <= upperLimit) {
-        
-        camera.transform.localEulerAngles = new Vector3(Mathf.Clamp(camera.transform.localEulerAngles.x, lowerLimit, upperLimit), 0, 0);
 
+        camera.transform.localEulerAngles = new Vector3(ClampAngle(camera.transform.localEulerAngles.x + LookJaw, lowerLimit, upperLimit), 0, 0);
+
+    }
+
+    private float ClampAngle(float angle, float min, float max) {
+        if (min < 0 && max > 0 && (angle > max || angle < min)) {
+            angle -= 360;
+            if (angle > max || angle < min) {
+                if (Mathf.Abs(Mathf.DeltaAngle(angle, min)) < Mathf.Abs(Mathf.DeltaAngle(angle, max))) return min;
+                else return max;
+            }
+        }
+        else if (min > 0 && (angle > max || angle < min)) {
+            angle += 360;
+            if (angle > max || angle < min) {
+                if (Mathf.Abs(Mathf.DeltaAngle(angle, min)) < Mathf.Abs(Mathf.DeltaAngle(angle, max))) return min;
+                else return max;
+            }
+        }
+
+        if (angle < min) return min;
+        else if (angle > max) return max;
+        else return angle;
     }
 }
