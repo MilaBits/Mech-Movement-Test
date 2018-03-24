@@ -309,16 +309,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Equipment.cs" />
     <Compile Include="Assets\HardShellStudios\Complete Control\Core\Scripts\hInput.cs" />
     <Compile Include="Assets\HardShellStudios\Complete Control\Core\Scripts\hInputDetails.cs" />
     <Compile Include="Assets\HardShellStudios\Complete Control\Core\Scripts\hManager.cs" />
     <Compile Include="Assets\HardShellStudios\Complete Control\Core\Scripts\hScheme.cs" />
     <Compile Include="Assets\HardShellStudios\Complete Control\Core\Scripts\hUtility.cs" />
     <Compile Include="Assets\iTween\iTween.cs" />
-    <Compile Include="Assets\MechController.cs" />
-    <Compile Include="Assets\MechTypes.cs" />
-    <Compile Include="Assets\Mod.cs" />
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\AnimateColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\AnimateFloat.cs" />
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\AnimateFloatV2.cs" />
@@ -1083,7 +1079,11 @@
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Subtract.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Web\WWWObject.cs" />
     <Compile Include="Assets\PlayMaker\UpdateHelper.cs" />
-    <Compile Include="Assets\WeaponSet.cs" />
+    <Compile Include="Assets\Scripts\Equipment.cs" />
+    <Compile Include="Assets\Scripts\MechController.cs" />
+    <Compile Include="Assets\Scripts\MechTypes.cs" />
+    <Compile Include="Assets\Scripts\Mod.cs" />
+    <Compile Include="Assets\Scripts\WeaponSet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HardShellStudios\Complete Control\readme.txt" />

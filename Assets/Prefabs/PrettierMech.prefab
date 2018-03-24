@@ -128,13 +128,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1512510131841138}
-  m_LocalRotation: {x: 0.8528179, y: -0, z: -0, w: 0.5222084}
-  m_LocalPosition: {x: 0, y: 0.03072, z: 0.03077}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0, y: 0.03, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4002050892342162}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 27.039001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!4 &4609119097320834
 Transform:
   m_ObjectHideFlags: 1
@@ -353,5 +353,5 @@ MonoBehaviour:
   WeaponSet2: {fileID: 0}
   Mod: {fileID: 0}
   camera: {fileID: 20798965248211930}
-  upperLimit: 0
-  lowerLimit: 0
+  upperLimit: 40
+  lowerLimit: -15
