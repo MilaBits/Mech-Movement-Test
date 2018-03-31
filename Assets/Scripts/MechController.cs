@@ -3,30 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MechController : MonoBehaviour {
-    [Header("Mech")]
-    public MechTypes MechType;
+    [Header("Mech")] public MechTypes MechType;
     public GameObject Top;
     public GameObject Bottom;
     public float Speed;
     public float CameraSpeed;
-    [Header("Equipment")]
-    public WeaponSet WeaponSet1;
+    [Header("Equipment")] public WeaponSet WeaponSet1;
     public WeaponSet WeaponSet2;
     public Mod Mod;
-    [Header("Camera")]
-    public Camera camera;
+    [Header("Camera")] public Camera camera;
+
+    public float distance;
     public float upperLimit;
     public float lowerLimit;
 
-
+    public float HorizontalSensitivity;
+    public float VerticalSensitivity;
+    
     private float LookRotation;
     private float LookJaw;
 
+    private float verticalCamRotation;
     private float facing;
     private float moveHorizontal;
     private float moveVertical;
     private float heading;
-
+    
     void Update() {
         Movement();
     }
@@ -36,13 +38,11 @@ public class MechController : MonoBehaviour {
     }
 
     private void Movement() {
-
         moveHorizontal = hInput.GetAxis("Horizontal");
         moveVertical = hInput.GetAxis("Vertical");
 
         facing = Top.transform.eulerAngles.y;
         heading = Mathf.Atan2(moveHorizontal, moveVertical);
-
 
         if (moveHorizontal != 0 || moveVertical != 0) {
             Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
@@ -50,22 +50,24 @@ public class MechController : MonoBehaviour {
             transform.position += movement * Speed;
 
             Quaternion newRotation = Quaternion.Euler(0f, facing + heading * Mathf.Rad2Deg, 0f);
-            Bottom.transform.rotation = Quaternion.Lerp(Bottom.transform.rotation, Quaternion.Euler(newRotation.eulerAngles), Time.deltaTime * 5);
+            Bottom.transform.rotation = Quaternion.Lerp(Bottom.transform.rotation,
+                Quaternion.Euler(newRotation.eulerAngles), Time.deltaTime * 5);
         }
     }
 
     private void CameraMovement() {
-
         LookRotation = hInput.GetAxis("Camera Horizontal");
         LookJaw = hInput.GetAxis("Camera Vertical");
 
-        Top.transform.Rotate(0.0f, LookRotation * CameraSpeed, 0.0f);
+        // Horizontal rotation
+        Top.transform.Rotate(0.0f, LookRotation * HorizontalSensitivity, 0.0f);
 
-        //Debug.Log(string.Format("min:{0}, current:{1}, max:{2}", lowerLimit, camera.transform.eulerAngles.x, upperLimit));
-        //if (camera.transform.eulerAngles.x >= lowerLimit && camera.transform.eulerAngles.x <= upperLimit) {
-
-        camera.transform.localEulerAngles = new Vector3(ClampAngle(camera.transform.localEulerAngles.x + LookJaw, lowerLimit, upperLimit), 0, 0);
-
+        
+        // Vertical rotation
+        verticalCamRotation = ClampAngle(camera.transform.localEulerAngles.x + LookJaw * VerticalSensitivity, lowerLimit, upperLimit);
+        camera.transform.localRotation = Quaternion.Euler(verticalCamRotation, 0, 0);
+        Vector3 lookAtPoint = camera.transform.parent.position + (camera.transform.forward * -distance);
+        camera.transform.position = lookAtPoint;
     }
 
     private float ClampAngle(float angle, float min, float max) {
