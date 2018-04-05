@@ -16,8 +16,3 @@ PlaymakerPreview
 - A preview only version of Playmaker. Editing is disabled.
 - Useful if you want to share a Playmaker project with someone who doesn't own Playmaker.
 - NOTE: Please do not include the Versions folder if distributing a Preview Project!
-
-PlaymakerWP8
-
-- Windows Phone 8 version of Playmaker.
-- Only needed in Unity 4.x
