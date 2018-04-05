@@ -1,6 +1,11 @@
 ﻿
+<<<<<<< HEAD
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
+=======
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+>>>>>>> master
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechMovementTest", "Assembly-CSharp.csproj", "{4995353A-4F7F-6925-4395-BE67F3455F79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MechMovementTest", "Assembly-CSharp-Editor.csproj", "{CB6FC290-5F08-B222-B50A-1BD271DCF086}"
@@ -23,4 +28,10 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
+=======
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+>>>>>>> master
 EndGlobal
