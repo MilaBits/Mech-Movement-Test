@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f66ab67005225c04e98f70452ca48165, type: 3}
-  m_Name: XBoxKeyBindings
+  m_Name: PS4KeyBindings2
   m_EditorClassIdentifier: 
   inputs:
   - Name: Horizontal
     UniqueName: 
     Type: 2
     Positive:
-      Primary: 0
+      Primary: 97
       Secondary: 0
     Negative:
       Primary: 0
@@ -50,7 +50,7 @@ MonoBehaviour:
       Primary: 0
       Secondary: 0
     targetController: 0
-    Axis: 3
+    Axis: 2
     Invert: 0
     Sensitivity: 1
     val: 0
@@ -64,7 +64,35 @@ MonoBehaviour:
       Primary: 0
       Secondary: 0
     targetController: 0
-    Axis: 4
+    Axis: 5
+    Invert: 0
+    Sensitivity: 1
+    val: 0
+  - Name: Dash
+    UniqueName: 
+    Type: 2
+    Positive:
+      Primary: 0
+      Secondary: 0
+    Negative:
+      Primary: 0
+      Secondary: 0
+    targetController: 0
+    Axis: 0
+    Invert: 0
+    Sensitivity: 1
+    val: 0
+  - Name: Jump
+    UniqueName: 
+    Type: 0
+    Positive:
+      Primary: 0
+      Secondary: 0
+    Negative:
+      Primary: 0
+      Secondary: 0
+    targetController: 0
+    Axis: 0
     Invert: 0
     Sensitivity: 1
     val: 0
