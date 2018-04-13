@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="705b0a79-917e-4ab8-bf8e-9697a3617c8e" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor.meta" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains.meta" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs.meta" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MechMovementTest/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.MechMovementTest/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/KeyBindings.asset" afterPath="$PROJECT_DIR$/Assets/Resources/KeyBindings.asset" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/KeyBindings.asset.meta" afterPath="$PROJECT_DIR$/Assets/Resources/KeyBindings.asset.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PS4KeyBindings2.asset" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/PS4KeyBindings2.asset.meta" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PS4KeyBindings2.asset" afterPath="$PROJECT_DIR$/Assets/Resources/xBoxBindings.asset" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PS4KeyBindings2.asset.meta" afterPath="$PROJECT_DIR$/Assets/Resources/xBoxBindings.asset.meta" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MechController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/MechController.cs" />
       <change beforePath="$PROJECT_DIR$/MechMovementTest.Editor.csproj" afterPath="$PROJECT_DIR$/MechMovementTest.Editor.csproj" />
       <change beforePath="$PROJECT_DIR$/MechMovementTest.csproj" afterPath="$PROJECT_DIR$/MechMovementTest.csproj" />
@@ -147,12 +152,12 @@
       <option name="presentableId" value="Default" />
       <updated>1522512509961</updated>
       <workItem from="1522512537345" duration="2104000" />
-      <workItem from="1523644503689" duration="5546000" />
+      <workItem from="1523644503689" duration="5698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7650000" />
+    <option name="totallyTimeSpent" value="7802000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
