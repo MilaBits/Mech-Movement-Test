@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using HutongGames.PlayMaker.Actions;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class MechController : MonoBehaviour {
@@ -13,13 +13,17 @@ public class MechController : MonoBehaviour {
     public Mod Mod;
     [Header("Camera")] public Camera camera;
 
-    public float distance;
+    public float MaxDistance;
+    private float distance;
+    public LayerMask LevelMask;
+    public float WallOffset;
     public float upperLimit;
     public float lowerLimit;
 
     public float HorizontalSensitivity;
     public float VerticalSensitivity;
-    
+    public float WeaponDampening;
+
     private float LookRotation;
     private float LookJaw;
 
@@ -28,7 +32,7 @@ public class MechController : MonoBehaviour {
     private float moveHorizontal;
     private float moveVertical;
     private float heading;
-    
+
     void Update() {
         Movement();
     }
@@ -62,14 +66,29 @@ public class MechController : MonoBehaviour {
         // Horizontal rotation
         Top.transform.Rotate(0.0f, LookRotation * HorizontalSensitivity, 0.0f);
 
-        
+
         // Vertical rotation
-        verticalCamRotation = ClampAngle(camera.transform.localEulerAngles.x + LookJaw * VerticalSensitivity, lowerLimit, upperLimit);
+        verticalCamRotation = ClampAngle(camera.transform.localEulerAngles.x + LookJaw * VerticalSensitivity,
+            lowerLimit, upperLimit);
         camera.transform.localRotation = Quaternion.Euler(verticalCamRotation, 0, 0);
-        Vector3 lookAtPoint = camera.transform.parent.position + (camera.transform.forward * -distance);
+        Vector3 lookAtPoint = camera.transform.parent.position + (camera.transform.forward * -GetDistanceToWall());
         camera.transform.position = lookAtPoint;
 
         //TODO: Public float forcamera dampening speed between >0 and 1, if 0 no effect
+    }
+
+    private float GetDistanceToWall() {
+        RaycastHit hit;
+        float dist = MaxDistance;
+        Debug.DrawRay(camera.transform.parent.position, -camera.transform.forward * MaxDistance, Color.red, 1f);
+        if (Physics.Raycast(camera.transform.parent.position, -camera.transform.forward, out hit,
+            MaxDistance, LevelMask)) {
+            Debug.DrawLine(camera.transform.parent.position, hit.point, Color.green, 1f);
+            dist = hit.distance - WallOffset;
+            Debug.Log("Wall at: " + dist);
+        }
+
+        return dist;
     }
 
     private float ClampAngle(float angle, float min, float max) {
