@@ -68,6 +68,8 @@ public class MechController : MonoBehaviour {
         camera.transform.localRotation = Quaternion.Euler(verticalCamRotation, 0, 0);
         Vector3 lookAtPoint = camera.transform.parent.position + (camera.transform.forward * -distance);
         camera.transform.position = lookAtPoint;
+
+        //TODO: Public float forcamera dampening speed between >0 and 1, if 0 no effect
     }
 
     private float ClampAngle(float angle, float min, float max) {
