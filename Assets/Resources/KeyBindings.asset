@@ -96,5 +96,33 @@ MonoBehaviour:
     Invert: 0
     Sensitivity: 1
     val: 0
+  - Name: Left Weapon
+    UniqueName: 
+    Type: 0
+    Positive:
+      Primary: 334
+      Secondary: 0
+    Negative:
+      Primary: 0
+      Secondary: 0
+    targetController: 0
+    Axis: 0
+    Invert: 0
+    Sensitivity: 1
+    val: 0
+  - Name: Right Weapon
+    UniqueName: 
+    Type: 0
+    Positive:
+      Primary: 335
+      Secondary: 0
+    Negative:
+      Primary: 0
+      Secondary: 0
+    targetController: 0
+    Axis: 0
+    Invert: 0
+    Sensitivity: 1
+    val: 0
   rebindRemoveKey: 27
   forceResetInEditor: 1

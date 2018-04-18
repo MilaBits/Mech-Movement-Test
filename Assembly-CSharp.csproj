@@ -825,10 +825,13 @@
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Subtract.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Web\WWWObject.cs" />
     <Compile Include="Assets\PlayMaker\UpdateHelper.cs" />
+    <Compile Include="Assets\Scripts\Controls.cs" />
     <Compile Include="Assets\Scripts\Equipment.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MechController.cs" />
     <Compile Include="Assets\Scripts\MechTypes.cs" />
     <Compile Include="Assets\Scripts\Mod.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectUtility.cs" />
     <Compile Include="Assets\Scripts\WeaponSet.cs" />
     <None Include="Assets\PlayMaker\Templates\readme.txt" />
     <None Include="Assets\PlayMaker\Readme.txt" />
