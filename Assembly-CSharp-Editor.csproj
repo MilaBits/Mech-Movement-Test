@@ -52,8 +52,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HardShellStudios\Complete Control\Core\Editor\hSchemeEditor.cs" />
-    <Compile Include="Assets\HardShellStudios\Complete Control\Core\Editor\hStyles.cs" />
+    <Compile Include="Assets\Editor\ControlsEditor.cs" />
+    <Compile Include="Assets\Editor\GameInputDrawer.cs" />
+    <Compile Include="Assets\Editor\GameInputEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\BaseClasses\OnAnimatorUpdateActionEditorBase.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorAnimatorRootActionEditor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Animator\Editor\GetAnimatorBodyActionEditor.cs" />

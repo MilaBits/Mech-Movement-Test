@@ -1,9 +1,11 @@
-﻿using HardShellStudios.CompleteControl;
-using HutongGames.PlayMaker.Actions;
+﻿using HutongGames.PlayMaker.Actions;
 using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class MechController : MonoBehaviour {
+    public Game Game;
+    private Controls controls;
+
     [Header("Mech")] public MechTypes MechType;
     public GameObject Top;
     public GameObject Bottom;
@@ -34,6 +36,12 @@ public class MechController : MonoBehaviour {
     private float moveVertical;
     private float heading;
 
+    void Start() {
+        if (!Game)
+            Game = GameObject.FindObjectOfType<Game>();
+        controls = Game.controls;
+    }
+
     void Update() {
         Movement();
     }
@@ -43,8 +51,10 @@ public class MechController : MonoBehaviour {
     }
 
     private void Movement() {
-        moveHorizontal = hInput.GetAxis("Horizontal");
-        moveVertical = hInput.GetAxis("Vertical");
+        moveHorizontal = controls.GetAxis("Horizontal");
+        moveVertical = controls.GetAxis("Vertical");
+
+        Debug.Log(moveHorizontal);
 
         facing = Top.transform.eulerAngles.y;
         heading = Mathf.Atan2(moveHorizontal, moveVertical);
@@ -61,8 +71,8 @@ public class MechController : MonoBehaviour {
     }
 
     private void CameraMovement() {
-        LookRotation = hInput.GetAxis("Camera Horizontal");
-        LookJaw = hInput.GetAxis("Camera Vertical");
+        LookRotation = controls.GetAxis("Camera Horizontal");
+        LookJaw = controls.GetAxis("Camera Vertical");
 
         // Horizontal rotation
         Top.transform.Rotate(0.0f, LookRotation * HorizontalSensitivity, 0.0f);
