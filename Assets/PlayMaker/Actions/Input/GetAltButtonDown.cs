@@ -28,7 +28,7 @@ namespace HutongGames.PlayMaker.Actions
 
 		public override void OnUpdate()
 		{
-			var buttonDown = hInput.GetButtonDown(buttonName.Value);
+			var buttonDown = Input.GetButtonDown(buttonName.Value);
 			
 			if (buttonDown)
 			{

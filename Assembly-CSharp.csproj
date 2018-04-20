@@ -59,11 +59,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HardShellStudios\Complete Control\Core\Scripts\hInput.cs" />
-    <Compile Include="Assets\HardShellStudios\Complete Control\Core\Scripts\hInputDetails.cs" />
-    <Compile Include="Assets\HardShellStudios\Complete Control\Core\Scripts\hManager.cs" />
-    <Compile Include="Assets\HardShellStudios\Complete Control\Core\Scripts\hScheme.cs" />
-    <Compile Include="Assets\HardShellStudios\Complete Control\Core\Scripts\hUtility.cs" />
     <Compile Include="Assets\iTween\iTween.cs" />
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\AnimateColor.cs" />
     <Compile Include="Assets\PlayMaker\Actions\AnimateVariables\AnimateFloat.cs" />
@@ -834,7 +829,7 @@
     <Compile Include="Assets\PlayMaker\UpdateHelper.cs" />
     <Compile Include="Assets\Scripts\Controls.cs" />
     <Compile Include="Assets\Scripts\Equipment.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Game.cs" />
     <Compile Include="Assets\Scripts\MechController.cs" />
     <Compile Include="Assets\Scripts\MechTypes.cs" />
     <Compile Include="Assets\Scripts\Mod.cs" />
@@ -844,7 +839,6 @@
     <None Include="Assets\PlayMaker\Readme.txt" />
     <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\PlayMaker\Resources\PlayMakerAssemblies.txt" />
-    <None Include="Assets\HardShellStudios\Complete Control\readme.txt" />
     <None Include="Assets\PlayMaker\Versions\readme.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Docs/Documents/BitMech/MechMovementTest/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>

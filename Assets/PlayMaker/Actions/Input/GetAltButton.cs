@@ -44,7 +44,7 @@ namespace HutongGames.PlayMaker.Actions
 
 		void DoGetButton()
 		{
-			storeResult.Value = hInput.GetButton(buttonName.Value);
+			storeResult.Value = Input.GetButton(buttonName.Value);
 		}
 	}
 }
