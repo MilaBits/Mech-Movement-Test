@@ -6609,16 +6609,17 @@ MonoBehaviour:
   Top: {fileID: 1732664477}
   Bottom: {fileID: 1097905256}
   Speed: 0.1
-  CameraSpeed: 2
   WeaponSet1: {fileID: 0}
   WeaponSet2: {fileID: 0}
   Mod: {fileID: 0}
+  JumpForce: 15
   camera: {fileID: 73406180}
   MaxDistance: 5
   LevelMask:
     serializedVersion: 2
     m_Bits: 512
-  WallOffset: 0
+  WallOffset: 0.5
+  smoothTime: 0.1
   upperLimit: 40
   lowerLimit: -15
   HorizontalSensitivity: 2

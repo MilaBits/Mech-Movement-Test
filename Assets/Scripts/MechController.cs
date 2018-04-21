@@ -9,22 +9,25 @@ public class MechController : MonoBehaviour {
     [Header("Mech")] public MechTypes MechType;
     public GameObject Top;
     public GameObject Bottom;
-    public float Speed;
-    public float CameraSpeed;
+    public float Speed = .1f;
     [Header("Equipment")] public WeaponSet WeaponSet1;
     public WeaponSet WeaponSet2;
     public Mod Mod;
+    public float JumpForce = 2;
     [Header("Camera")] public Camera camera;
 
-    public float MaxDistance;
+    public float MaxDistance = 3.5f;
     private float distance;
     public LayerMask LevelMask;
-    public float WallOffset;
-    public float upperLimit;
-    public float lowerLimit;
+    public float WallOffset = 1;
+    private Vector3 cameraVelocity = Vector3.zero;
+    public float smoothTime = 0.3f;
 
-    public float HorizontalSensitivity;
-    public float VerticalSensitivity;
+    public float upperLimit = 40;
+    public float lowerLimit = -15;
+
+    public float HorizontalSensitivity = 2;
+    public float VerticalSensitivity = 1;
     public float WeaponDampening;
 
     private float LookRotation;
@@ -50,11 +53,20 @@ public class MechController : MonoBehaviour {
         CameraMovement();
     }
 
+    private void FixedUpdate() {
+        ModAction();
+    }
+
+    private void ModAction() {
+        if (controls.GetButtonDown("Mod")) {
+            Debug.Log("Mod!");
+            GetComponent<Rigidbody>().AddForce(Vector3.forward * JumpForce);
+        }
+    }
+
     private void Movement() {
         moveHorizontal = controls.GetAxis("Horizontal");
         moveVertical = controls.GetAxis("Vertical");
-
-        Debug.Log(moveHorizontal);
 
         facing = Top.transform.eulerAngles.y;
         heading = Mathf.Atan2(moveHorizontal, moveVertical);
@@ -71,8 +83,8 @@ public class MechController : MonoBehaviour {
     }
 
     private void CameraMovement() {
-        LookRotation = controls.GetAxis("Camera Horizontal");
-        LookJaw = controls.GetAxis("Camera Vertical");
+        LookRotation = controls.GetAxis("Horizontal Camera");
+        LookJaw = controls.GetAxis("Vertical Camera");
 
         // Horizontal rotation
         Top.transform.Rotate(0.0f, LookRotation * HorizontalSensitivity, 0.0f);
@@ -83,7 +95,8 @@ public class MechController : MonoBehaviour {
             lowerLimit, upperLimit);
         camera.transform.localRotation = Quaternion.Euler(verticalCamRotation, 0, 0);
         Vector3 lookAtPoint = camera.transform.parent.position + (camera.transform.forward * -GetDistanceToWall());
-        camera.transform.position = lookAtPoint;
+        camera.transform.position =
+            Vector3.SmoothDamp(camera.transform.position, lookAtPoint, ref cameraVelocity, smoothTime);
 
         //TODO: Public float forcamera dampening speed between >0 and 1, if 0 no effect
     }

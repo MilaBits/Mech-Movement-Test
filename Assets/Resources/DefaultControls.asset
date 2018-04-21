@@ -33,18 +33,18 @@ MonoBehaviour:
     Ps4: Vertical Camera_Ps4
     Xbox: Vertical Camera_Xbox
     Keyboard: Vertical Camera_Keyboard
-  - InputName: 
-    CopyInputName: 0
-    Ps4: _Ps4
-    Xbox: _Xbox
-    Keyboard: _Keyboard
-  - InputName: 
-    CopyInputName: 0
-    Ps4: _Ps4
-    Xbox: _Xbox
-    Keyboard: _Keyboard
-  - InputName: 
-    CopyInputName: 0
-    Ps4: _Ps4
-    Xbox: _Xbox
-    Keyboard: _Keyboard
+  - InputName: Left Weapon
+    CopyInputName: 1
+    Ps4: Left Weapon_Ps4
+    Xbox: Left Weapon_Xbox
+    Keyboard: Left Weapon_Keyboard
+  - InputName: Right Weapon
+    CopyInputName: 1
+    Ps4: Right Weapon_Ps4
+    Xbox: Right Weapon_Xbox
+    Keyboard: Right Weapon_Keyboard
+  - InputName: Mod
+    CopyInputName: 1
+    Ps4: Mod_Ps4
+    Xbox: Mod_Xbox
+    Keyboard: Mod_Keyboard

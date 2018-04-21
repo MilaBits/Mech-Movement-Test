@@ -49,7 +49,7 @@ public class Controls : ScriptableObject {
     }
 
     public float GetAxis(string input) {
-        GameInput gameInput = null; // = Inputs.First(i => i.InputName == input);
+        GameInput gameInput = null;
         foreach (var current in Inputs) {
             if (input.Equals(current.InputName)) {
                 gameInput = current;
@@ -70,5 +70,77 @@ public class Controls : ScriptableObject {
         }
 
         return 0;
+    }
+
+    public bool GetButton(string input) {
+        GameInput gameInput = null;
+        foreach (var current in Inputs) {
+            if (input.Equals(current.InputName)) {
+                gameInput = current;
+                switch (inputMethod) {
+                    case InputMethod.Ps4:
+                        return Input.GetButton(gameInput.Ps4);
+                        break;
+                    case InputMethod.Keyboard:
+                        return Input.GetButton(gameInput.Keyboard);
+                        break;
+                    case InputMethod.Xbox:
+                        return Input.GetButton(gameInput.Xbox);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException("inputMethod", inputMethod, null);
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public bool GetButtonUp(string input) {
+        GameInput gameInput = null;
+        foreach (var current in Inputs) {
+            if (input.Equals(current.InputName)) {
+                gameInput = current;
+                switch (inputMethod) {
+                    case InputMethod.Ps4:
+                        return Input.GetButtonUp(gameInput.Ps4);
+                        break;
+                    case InputMethod.Keyboard:
+                        return Input.GetButtonUp(gameInput.Keyboard);
+                        break;
+                    case InputMethod.Xbox:
+                        return Input.GetButtonUp(gameInput.Xbox);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException("inputMethod", inputMethod, null);
+                }
+            }
+        }
+
+        return false;
+    }
+
+    public bool GetButtonDown(string input) {
+        GameInput gameInput = null;
+        foreach (var current in Inputs) {
+            if (input.Equals(current.InputName)) {
+                gameInput = current;
+                switch (inputMethod) {
+                    case InputMethod.Ps4:
+                        return Input.GetButtonDown(gameInput.Ps4);
+                        break;
+                    case InputMethod.Keyboard:
+                        return Input.GetButtonDown(gameInput.Keyboard);
+                        break;
+                    case InputMethod.Xbox:
+                        return Input.GetButtonDown(gameInput.Xbox);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException("inputMethod", inputMethod, null);
+                }
+            }
+        }
+
+        return false;
     }
 }
