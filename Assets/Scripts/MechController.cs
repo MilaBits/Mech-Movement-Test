@@ -10,10 +10,18 @@ public class MechController : MonoBehaviour {
     public GameObject Top;
     public GameObject Bottom;
     public float Speed = .1f;
-    [Header("Equipment")] public WeaponSet WeaponSet1;
-    public WeaponSet WeaponSet2;
+
+    [Header("Weapon Left")] 
+    public Weapon WeaponLeft;
+    public GameObject WeaponLeftPivot;
+    [Header("Weapon Right")] 
+    public Weapon WeaponRight;
+    public GameObject WeaponRightPivot;
+    [Header("Mod")] 
     public Mod Mod;
+    public GameObject ModPivot;
     public float JumpForce = 2;
+
     [Header("Camera")] public Camera camera;
 
     public float MaxDistance = 3.5f;
@@ -43,6 +51,22 @@ public class MechController : MonoBehaviour {
         if (!Game)
             Game = GameObject.FindObjectOfType<Game>();
         controls = Game.controls;
+
+        InitializeEquipment();
+    }
+
+    private void InitializeEquipment() {
+        WeaponLeft = Instantiate(Resources.Load<Weapon>("Weapons/" + WeaponLeft.name));
+        WeaponRight.InitializeModel(WeaponLeftPivot.transform);
+        WeaponLeft.mech = this;
+
+        WeaponRight = Instantiate(Resources.Load<Weapon>("Weapons/" + WeaponRight.name));
+        WeaponRight.InitializeModel(WeaponRightPivot.transform);
+        WeaponRight.mech = this;
+
+        Mod = Instantiate(Resources.Load<Mod>("Mods/" + Mod.name));
+        Mod.InitializeModel(ModPivot.transform);
+        Mod.mech = this;
     }
 
     void Update() {
