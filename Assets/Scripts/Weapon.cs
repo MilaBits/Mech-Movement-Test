@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class WeaponSet : Equipment {
+public class Weapon : Equipment {
 
 	// Use this for initialization
 	void Start () {
@@ -12,5 +13,10 @@ public class WeaponSet : Equipment {
 	// Update is called once per frame
 	void Update () {
 		
+	}
+	
+	[MenuItem("Assets/Create/Game/Weapon")]
+	public static void CreateAsset() {
+		ScriptableObjectUtility.CreateAsset<Weapon>();
 	}
 }

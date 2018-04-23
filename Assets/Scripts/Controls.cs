@@ -31,7 +31,7 @@ public class Controls : ScriptableObject {
         public String Keyboard;
     }
 
-    [MenuItem("Assets/Create/Controls")]
+    [MenuItem("Assets/Create/Game/Controls")]
     public static void CreateAsset() {
         ScriptableObjectUtility.CreateAsset<Controls>();
     }

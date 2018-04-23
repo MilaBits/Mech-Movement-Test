@@ -2,6 +2,7 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>4</LangVersion>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -827,7 +828,8 @@
     <Compile Include="Assets\Scripts\MechTypes.cs" />
     <Compile Include="Assets\Scripts\Mod.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectUtility.cs" />
-    <Compile Include="Assets\Scripts\WeaponSet.cs" />
+    <Compile Include="Assets\Scripts\Shield.cs" />
+    <Compile Include="Assets\Scripts\Weapon.cs" />
     <None Include="Assets\PlayMaker\Templates\readme.txt" />
     <None Include="Assets\PlayMaker\Readme.txt" />
     <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />

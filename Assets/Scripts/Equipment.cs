@@ -1,16 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Equipment : MonoBehaviour {
+public class Equipment : ScriptableObject {
+    [HideInInspector] public MechController mech;
+    public string Name;
+    public GameObject Model;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void InitializeModel(Transform position) {
+        Instantiate(Model, position);
+    }
 }

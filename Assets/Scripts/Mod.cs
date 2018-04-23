@@ -1,16 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Mod : Equipment {
+    public string ActionName;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void Start() { }
+
+    public bool Action() {
+        return false;
+    }
+
+    [MenuItem("Assets/Create/Game/Mod")]
+    public static void CreateAsset() {
+        ScriptableObjectUtility.CreateAsset<Mod>();
+    }
 }
