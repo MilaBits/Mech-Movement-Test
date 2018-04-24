@@ -602,20 +602,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52a428a3b410e94ba4d998528d75f95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Game: {fileID: 0}
   MechType: 1
   Top: {fileID: 1898647209529174}
   Bottom: {fileID: 1281234379274828}
   Speed: 0.02
-  CameraSpeed: 2
-  WeaponSet1: {fileID: 0}
-  WeaponSet2: {fileID: 0}
+  WeaponLeft: {fileID: 0}
+  WeaponLeftPivot: {fileID: 0}
+  WeaponRight: {fileID: 0}
+  WeaponRightPivot: {fileID: 0}
   Mod: {fileID: 0}
+  ModPivot: {fileID: 0}
+  JumpForce: 2
   camera: {fileID: 20916442804473124}
   MaxDistance: 4
   LevelMask:
     serializedVersion: 2
     m_Bits: 4294967295
   WallOffset: 0.5
+  smoothTime: 0.3
   upperLimit: 40
   lowerLimit: -15
   HorizontalSensitivity: 2
@@ -2835,7 +2840,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: 0
+            value: 1
           fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
@@ -2964,7 +2969,7 @@ MonoBehaviour:
             tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: 0
+            value: 1
           fsmComponent: {fileID: 0}
         fsmPropertyParams: []
         layoutOptionParams: []
