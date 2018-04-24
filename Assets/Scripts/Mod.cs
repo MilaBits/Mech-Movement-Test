@@ -8,7 +8,8 @@ public class Mod : Equipment {
 
     private void Start() { }
 
-    public bool Action() {
+    public virtual bool Action() {
+        Debug.Log("Default mod");
         return false;
     }
 

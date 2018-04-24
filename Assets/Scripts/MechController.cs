@@ -87,8 +87,7 @@ public class MechController : MonoBehaviour {
 
     private void ModAction() {
         if (controls.GetButtonDown("Mod")) {
-            Debug.Log("Mod!");
-            GetComponent<Rigidbody>().AddForce(Vector3.forward * JumpForce);
+            Mod.Action();
         }
     }
 
