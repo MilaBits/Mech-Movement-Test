@@ -13,7 +13,7 @@ Prefab:
   m_IsPrefabParent: 1
 --- !u!1 &1000675947015502
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -30,7 +30,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1016941040998002
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -47,7 +47,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1036516358204724
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -64,7 +64,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1048498011591718
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -98,7 +98,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1301199071258454
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -115,7 +115,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1381593221403672
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -132,7 +132,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1435844724029930
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -149,7 +149,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1455259848279850
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -166,7 +166,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1457286217775548
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -181,6 +181,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1487678775460630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4706483588977518}
+  - component: {fileID: 33946643632354974}
+  - component: {fileID: 23457210420456222}
+  m_Layer: 0
+  m_Name: LaserLance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1591037889015794
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,8 +206,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4827117965345344}
-  - component: {fileID: 33576230728566882}
-  - component: {fileID: 23709204271857446}
   - component: {fileID: 114573018164214404}
   m_Layer: 0
   m_Name: LaserLance
@@ -201,7 +216,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1620326129197876
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -218,7 +233,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1765815632791064
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -235,7 +250,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1774040442780330
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -252,7 +267,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1826261287614470
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -277,7 +292,7 @@ Transform:
   m_LocalPosition: {x: -0.03439925, y: -0.056275178, z: 0}
   m_LocalScale: {x: 0.42888722, y: 0.10844293, z: 0.42888722}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4097248996645446
@@ -290,7 +305,7 @@ Transform:
   m_LocalPosition: {x: 0.011917992, y: -0.05587199, z: -0.0759522}
   m_LocalScale: {x: 0.10844293, y: 0.7441664, z: 0.55766726}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4281366122871954
@@ -303,7 +318,7 @@ Transform:
   m_LocalPosition: {x: -0.0050450205, y: -0.05587199, z: 0.075710066}
   m_LocalScale: {x: 0.10844293, y: 0.7441664, z: 0.55766726}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4412100884790836
@@ -316,7 +331,7 @@ Transform:
   m_LocalPosition: {x: -0.0050450205, y: -0.05587199, z: -0.0759522}
   m_LocalScale: {x: 0.10844293, y: 0.7441664, z: 0.55766726}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4455212447035414
@@ -329,7 +344,7 @@ Transform:
   m_LocalPosition: {x: 0.11414087, y: -0.07847008, z: -0.01422505}
   m_LocalScale: {x: 0.55766726, y: 0.22648484, z: 0.55766726}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4539473456640424
@@ -342,7 +357,7 @@ Transform:
   m_LocalPosition: {x: -0.011731565, y: -0.05587199, z: -0.0759522}
   m_LocalScale: {x: 0.10844293, y: 0.7441664, z: 0.55766726}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4615067335359516
@@ -355,7 +370,7 @@ Transform:
   m_LocalPosition: {x: 0.0030534395, y: -0.05587199, z: -0.0759522}
   m_LocalScale: {x: 0.10844293, y: 0.7441664, z: 0.55766726}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4661282448724152
@@ -368,7 +383,7 @@ Transform:
   m_LocalPosition: {x: 0.11414087, y: -0.07847008, z: 0.013562563}
   m_LocalScale: {x: 0.55766726, y: 0.22648484, z: 0.55766726}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4667961691464070
@@ -381,7 +396,7 @@ Transform:
   m_LocalPosition: {x: 0.07377167, y: -0.06810596, z: 0}
   m_LocalScale: {x: 0.7136352, y: 0.13877216, z: 0.7136352}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4671622072452064
@@ -394,31 +409,17 @@ Transform:
   m_LocalPosition: {x: 0.0030534395, y: -0.05587199, z: 0.075710066}
   m_LocalScale: {x: 0.10844293, y: 0.7441664, z: 0.55766726}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4804402319635116
+--- !u!4 &4706483588977518
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1301199071258454}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.068242066, y: -0.056275178, z: 0}
-  m_LocalScale: {x: 0.5054358, y: 0.09828611, z: 0.5054358}
-  m_Children:
-  - {fileID: 4835132887546422}
-  m_Father: {fileID: 4827117965345344}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4827117965345344
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1591037889015794}
+  m_GameObject: {fileID: 1487678775460630}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 1.095, y: 1.401, z: -8.068955}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 9.221439, y: 1.7931839, z: 1.7931839}
   m_Children:
   - {fileID: 4667961691464070}
@@ -434,6 +435,34 @@ Transform:
   - {fileID: 4097248996645446}
   - {fileID: 4455212447035414}
   - {fileID: 4661282448724152}
+  m_Father: {fileID: 4827117965345344}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4804402319635116
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1301199071258454}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.068242066, y: -0.056275178, z: 0}
+  m_LocalScale: {x: 0.5054358, y: 0.09828611, z: 0.5054358}
+  m_Children:
+  - {fileID: 4835132887546422}
+  m_Father: {fileID: 4706483588977518}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4827117965345344
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1591037889015794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_Children:
+  - {fileID: 4706483588977518}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -460,7 +489,7 @@ Transform:
   m_LocalPosition: {x: -0.011731565, y: -0.05587199, z: 0.075710066}
   m_LocalScale: {x: 0.10844293, y: 0.7441664, z: 0.55766726}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4934673536721760
@@ -473,7 +502,7 @@ Transform:
   m_LocalPosition: {x: 0.011917992, y: -0.05587199, z: 0.075710066}
   m_LocalScale: {x: 0.10844293, y: 0.7441664, z: 0.55766726}
   m_Children: []
-  m_Father: {fileID: 4827117965345344}
+  m_Father: {fileID: 4706483588977518}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23150695343515112
@@ -616,12 +645,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23483165370099002
+--- !u!23 &23457210420456222
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000675947015502}
+  m_GameObject: {fileID: 1487678775460630}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -651,12 +680,12 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23709204271857446
+--- !u!23 &23483165370099002
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1591037889015794}
+  m_GameObject: {fileID: 1000675947015502}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1085,13 +1114,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1765815632791064}
   m_Mesh: {fileID: 4300010, guid: 83053cec7c8d4374c9727d54554c6aa7, type: 3}
---- !u!33 &33576230728566882
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1591037889015794}
-  m_Mesh: {fileID: 4300000, guid: 83053cec7c8d4374c9727d54554c6aa7, type: 3}
 --- !u!33 &33580445623854196
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1106,6 +1128,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1301157876878944}
   m_Mesh: {fileID: 4300004, guid: 83053cec7c8d4374c9727d54554c6aa7, type: 3}
+--- !u!33 &33946643632354974
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487678775460630}
+  m_Mesh: {fileID: 4300000, guid: 83053cec7c8d4374c9727d54554c6aa7, type: 3}
 --- !u!114 &114573018164214404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3625,6 +3654,7 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.GetParent
         - HutongGames.PlayMaker.Actions.GetParent
         - HutongGames.PlayMaker.Actions.GetParent
+        - HutongGames.PlayMaker.Actions.GetParent
         - HutongGames.PlayMaker.Actions.SetFloatValue
         - HutongGames.PlayMaker.Actions.SetFloatValue
         - HutongGames.PlayMaker.Actions.GetName
@@ -3639,14 +3669,21 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0101010101010101
-        actionIsOpen: 0101010101010101
-        actionStartIndex: 00000000020000000400000006000000090000000c0000000f00000015000000
-        actionHashCodes: d97b7202d97b7202d97b72029845b3059845b30571c75a030c0e55020c0e5502
+        - 
+        actionEnabled: 010101010101010101
+        actionIsOpen: 010101010101010101
+        actionStartIndex: 00000000020000000400000006000000080000000b0000000e0000001100000017000000
+        actionHashCodes: d97b7202d97b7202d97b7202d97b72029845b3059845b30571c75a030c0e55020c0e5502
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
           name: Arm
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ArmParent
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -3689,6 +3726,14 @@ MonoBehaviour:
         - ownerOption: 1
           gameObject:
             useVariable: 1
+            name: ArmParent
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
             name: Torso
             tooltip: 
             showInInspector: 0
@@ -3718,7 +3763,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: LeftArm
+          value: WeaponPivotLeft
         - useVariable: 1
           name: ArmName
           tooltip: 
@@ -3730,7 +3775,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: RightArm
+          value: WeaponPivotRight
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3789,8 +3834,10 @@ MonoBehaviour:
         arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000013000000140000001300000014000000130000000f0000000f000000010000000f0000000f00000001000000130000001200000001000000120000001200000017000000170000001100000001000000120000001200000017000000170000001100000001000000
+        paramDataType: 14000000130000001400000013000000140000001300000014000000130000000f0000000f000000010000000f0000000f00000001000000130000001200000001000000120000001200000017000000170000001100000001000000120000001200000017000000170000001100000001000000
         paramName:
+        - gameObject
+        - storeResult
         - gameObject
         - storeResult
         - gameObject
@@ -3818,8 +3865,8 @@ MonoBehaviour:
         - notEqualEvent
         - storeResult
         - everyFrame
-        paramDataPos: 000000000000000001000000010000000200000002000000000000000100000000000000020000000300000001000000030000000000000002000000010000000200000000000000010000000000000003000000030000000400000002000000030000000100000004000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000010000000100000002000000020000000300000003000000000000000100000000000000020000000300000001000000040000000000000002000000010000000200000000000000010000000000000003000000030000000400000002000000030000000100000004000000
+        paramByteDataSize: 0000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000000000000000000001000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000
     - name: LagSetR
       description: 
       colorIndex: 0
@@ -6553,7 +6600,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: LeftArm
+          value: WeaponPivotLeft
         - useVariable: 1
           name: ArmName
           tooltip: 
@@ -6565,7 +6612,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: RightArm
+          value: WeaponPivotRight
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -6710,6 +6757,12 @@ MonoBehaviour:
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
+        name: ArmParent
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
         name: Mech
         tooltip: 
         showInInspector: 0
@@ -6728,7 +6781,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 1
@@ -6738,7 +6791,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 0
+    preprocessed: 1
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0

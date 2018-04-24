@@ -8,7 +8,8 @@ namespace HutongGames.PlayMaker.Actions
 	[Tooltip("Sends an Event when a Button is pressed.")]
 	public class GetAltButtonDown : FsmStateAction
 	{
-		[RequiredField]
+        
+        [RequiredField]
         [Tooltip("The name of the button. Set in the Unity Input Manager.")]
 		public FsmString buttonName;
 
@@ -21,14 +22,14 @@ namespace HutongGames.PlayMaker.Actions
 		
 		public override void Reset()
 		{
-			buttonName = "Fire1";
+            buttonName = "Fire1";
 			sendEvent = null;
 			storeResult = null;
 		}
 
 		public override void OnUpdate()
 		{
-			var buttonDown = Input.GetButtonDown(buttonName.Value);
+			var buttonDown = GameObject.FindObjectOfType<Game>().controls.GetButtonDown(buttonName.Value);
 			
 			if (buttonDown)
 			{
