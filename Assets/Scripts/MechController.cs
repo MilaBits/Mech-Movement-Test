@@ -11,14 +11,11 @@ public class MechController : MonoBehaviour {
     public GameObject Bottom;
     public float Speed = .1f;
 
-    [Header("Weapon Left")] 
-    public Weapon WeaponLeft;
+    [Header("Weapon Left")] public Weapon WeaponLeft;
     public GameObject WeaponLeftPivot;
-    [Header("Weapon Right")] 
-    public Weapon WeaponRight;
+    [Header("Weapon Right")] public Weapon WeaponRight;
     public GameObject WeaponRightPivot;
-    [Header("Mod")] 
-    public Mod Mod;
+    [Header("Mod")] public Mod Mod;
     public GameObject ModPivot;
     public float JumpForce = 2;
 
@@ -75,6 +72,12 @@ public class MechController : MonoBehaviour {
 
     void LateUpdate() {
         CameraMovement();
+        WeaponMovement();
+    }
+
+    private void WeaponMovement() {
+        WeaponLeftPivot.transform.localRotation = Quaternion.Euler(verticalCamRotation, 0, 0);
+        WeaponRightPivot.transform.localRotation = Quaternion.Euler(verticalCamRotation, 0, 0);
     }
 
     private void FixedUpdate() {
