@@ -53,6 +53,7 @@ public class MechController : MonoBehaviour {
     }
 
     private void InitializeEquipment() {
+        //TODO: invert X scale on left weapon
         WeaponLeft = Instantiate(Resources.Load<Weapon>("Weapons/" + WeaponLeft.name));
         WeaponRight.InitializeModel(WeaponLeftPivot.transform);
         WeaponLeft.mech = this;
