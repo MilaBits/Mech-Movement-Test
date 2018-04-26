@@ -17,7 +17,6 @@ public class MechController : MonoBehaviour {
     public GameObject WeaponRightPivot;
     [Header("Mod")] public Mod Mod;
     public GameObject ModPivot;
-    public float JumpForce = 2;
 
     [Header("Camera")] public Camera camera;
 
