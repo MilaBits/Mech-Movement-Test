@@ -144,6 +144,7 @@ public class MechController : MonoBehaviour {
             Vector3.SmoothDamp(camera.transform.position, lookAtPoint, ref cameraVelocity, smoothTime);
 
         //TODO: Public float forcamera dampening speed between >0 and 1, if 0 no effect
+        //TODO: Change view to cockpit camera when below a certain distance
     }
 
     private float GetDistanceToWall() {
