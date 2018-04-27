@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = System.Random;
@@ -10,6 +12,7 @@ public class Health : MonoBehaviour {
     public bool isModuleHealth;
     public Health ParentHealth;
     public int maxHealth;
+    [ProgressBar(0, 500, ColorMember = "GetHealthBarColor")]
     public int health;
     public bool Critical;
     public float CriticalMultiplier = 1.5f;
@@ -20,6 +23,15 @@ public class Health : MonoBehaviour {
 
     public Material DamagedMaterial;
 
+    private Color GetHealthBarColor(float value)
+    {
+        // Blends between red, and yellow color for when the health is below 30,
+        // and blends between yellow and green color for when the health is above 30.
+        return Color.Lerp(Color.Lerp(
+                Color.red, Color.yellow, MathUtilities.LinearStep(0f, 30f, value)),
+            Color.green, MathUtilities.LinearStep(0f, 100f, value));
+    }
+    
     // Use this for initialization
     void Start() {
         if (isModuleHealth) {

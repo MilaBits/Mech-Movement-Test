@@ -1,38 +1,34 @@
 ﻿using HutongGames.PlayMaker.Actions;
+using Sirenix.OdinInspector;
 using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class MechController : MonoBehaviour {
-    public Game Game;
+    [Required] public Game Game;
     private Controls controls;
 
-    [Header("Mech")] public MechTypes MechType;
-    public GameObject Top;
-    public GameObject Bottom;
-    public float Speed = .1f;
+    [TabGroup("Mech")] [EnumToggleButtons] public MechTypes MechType;
 
-    [Header("Weapon Left")] public Weapon WeaponLeft;
-    public GameObject WeaponLeftPivot;
-    [Header("Weapon Right")] public Weapon WeaponRight;
-    public GameObject WeaponRightPivot;
-    [Header("Mod")] public Mod Mod;
-    public GameObject ModPivot;
+    [TabGroup("Mech")] public GameObject Top;
+    [TabGroup("Mech")] public GameObject Bottom;
+    [TabGroup("Mech")] public float MovementSpeed = .1f;
 
-    [Header("Camera")] public Camera camera;
+    [Space] [TabGroup("Camera")] public LayerMask LevelMask;
 
-    public float MaxDistance = 3.5f;
+    [TabGroup("Camera")] public Camera camera;
+    [Space] [TabGroup("Camera")] public float MaxDistance = 3.5f;
+
     private float distance;
-    public LayerMask LevelMask;
-    public float WallOffset = 1;
+    [TabGroup("Camera")] public float WallOffset = 1;
     private Vector3 cameraVelocity = Vector3.zero;
-    public float smoothTime = 0.3f;
+    [TabGroup("Camera")] public float smoothTime = 0.3f;
+    [Space] [TabGroup("Camera")] public float upperLimit = 40;
 
-    public float upperLimit = 40;
-    public float lowerLimit = -15;
+    [TabGroup("Camera")] public float lowerLimit = -15;
+    [Space] [TabGroup("Camera")] public float HorizontalSensitivity = 2;
 
-    public float HorizontalSensitivity = 2;
-    public float VerticalSensitivity = 1;
-    public float WeaponDampening;
+    [TabGroup("Camera")] public float VerticalSensitivity = 1;
+    [TabGroup("Camera")] public float WeaponDampening;
 
     private float LookRotation;
     private float LookJaw;
@@ -42,6 +38,29 @@ public class MechController : MonoBehaviour {
     private float moveHorizontal;
     private float moveVertical;
     private float heading;
+
+    [HorizontalGroup("Split", 0.5f, LabelWidth = 20)]
+    [BoxGroup("Split/Left Weapon")]
+    [LabelWidth(55)]
+    [LabelText("Weapon")]
+    public Weapon WeaponLeft;
+
+    [BoxGroup("Split/Left Weapon")] [LabelWidth(55)] [LabelText("Pivot")]
+    public GameObject WeaponLeftPivot;
+
+    [HorizontalGroup("Split", 0.5f, LabelWidth = 20)]
+    [BoxGroup("Split/Right Weapon")]
+    [LabelWidth(55)]
+    [LabelText("Weapon")]
+    public Weapon WeaponRight;
+
+    [BoxGroup("Split/Right Weapon")] [LabelWidth(55)] [LabelText("Pivot")]
+    public GameObject WeaponRightPivot;
+
+    [BoxGroup("Mod")] [LabelWidth(55)] public Mod Mod;
+
+    [BoxGroup("Mod")] [LabelWidth(55)] [LabelText("Pivot")]
+    public GameObject ModPivot;
 
     void Start() {
         if (!Game)
@@ -100,7 +119,7 @@ public class MechController : MonoBehaviour {
         if (moveHorizontal != 0 || moveVertical != 0) {
             Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
             movement = Quaternion.Euler(0, facing, 0) * movement;
-            transform.position += movement * Speed;
+            transform.position += movement * MovementSpeed;
 
             Quaternion newRotation = Quaternion.Euler(0f, facing + heading * Mathf.Rad2Deg, 0f);
             Bottom.transform.rotation = Quaternion.Lerp(Bottom.transform.rotation,
