@@ -1,35 +1,113 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
+using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 
-[Serializable]
 public class Controls : ScriptableObject {
-    public InputMethod inputMethod;
+    [EnumToggleButtons, HideLabel] public InputMethod inputMethod;
 
     public List<GameInput> Inputs = new List<GameInput>();
 
+    private SerializedProperty axisArray;
+
     private void OnValidate() {
+        GetAllAxes();
         foreach (var input in Inputs) {
             if (input.CopyInputName) {
                 input.Ps4 = input.InputName + "_Ps4";
                 input.Xbox = input.InputName + "_Xbox";
                 input.Keyboard = input.InputName + "_Keyboard";
             }
+
+            input.ps4Invalid = !inputExists(input.Ps4);
+            input.Ps4Message = "Input " + input.Ps4 + " does not yet exist";
+
+            input.XboxInvalid = !inputExists(input.Xbox);
+            input.XboxMessage = "Input " + input.Xbox + " does not yet exist";
+
+            input.KeyboardInvalid = !inputExists(input.Keyboard);
+            input.KeyboardMessage = "Input " + input.Keyboard + " does not yet exist";
         }
     }
 
     [Serializable]
     public class GameInput {
+        [FoldoutGroup("$InputName"), LabelWidth(110)]
         public String InputName;
 
-        [Header("Inputs")] public bool CopyInputName;
-        public String Ps4;
-        public String Xbox;
-        public String Keyboard;
+        [FoldoutGroup("$InputName"), LabelWidth(110)]
+        public bool CopyInputName;
+
+        [FoldoutGroup("$InputName/Unity Inputs", false), LabelWidth(65)]
+        [InfoBox("$Ps4Message", InfoMessageType.Error, "ps4Invalid")]
+        public string Ps4;
+
+        [HideInInspector] public string Ps4Message;
+        [HideInInspector] public bool ps4Invalid;
+
+        [FoldoutGroup("$InputName/Unity Inputs", false), LabelWidth(65)]
+        [InfoBox("$XboxMessage", InfoMessageType.Error, "XboxInvalid")]
+        public string Xbox;
+
+        [HideInInspector] public string XboxMessage;
+        [HideInInspector] public bool XboxInvalid;
+
+        [FoldoutGroup("$InputName/Unity Inputs", false), LabelWidth(65)]
+        [InfoBox("$KeyboardMessage", InfoMessageType.Error, "KeyboardInvalid")]
+        public string Keyboard;
+
+        [HideInInspector] public string KeyboardMessage;
+        [HideInInspector] public bool KeyboardInvalid;
     }
+
+    [Button("Open Input Manager", ButtonSizes.Medium)]
+    private void OpenInputManager() {
+        EditorApplication.ExecuteMenuItem("Edit/Project Settings/Input");
+    }
+
+    public bool inputExists(string input) {
+        for (int i = 0; i < axisArray.arraySize; ++i) {
+            var axis = axisArray.GetArrayElementAtIndex(i);
+
+            if (input.Equals(axis.FindPropertyRelative("m_Name").stringValue))
+                return true;
+        }
+
+        return false;
+    }
+
+    public void GetAllAxes() {
+        var inputManager = AssetDatabase.LoadAllAssetsAtPath("ProjectSettings/InputManager.asset")[0];
+
+        SerializedObject obj = new SerializedObject(inputManager);
+
+        axisArray = obj.FindProperty("m_Axes");
+
+        if (axisArray.arraySize == 0)
+            Debug.Log("No Axes");
+
+//        for (int i = 0; i < axisArray.arraySize; ++i) {
+//            var axis = axisArray.GetArrayElementAtIndex(i);
+//
+//            var name = axis.FindPropertyRelative("m_Name").stringValue;
+//            var axisVal = axis.FindPropertyRelative("axis").intValue;
+//            var inputType = (InputType) axis.FindPropertyRelative("type").intValue;
+//
+//        }
+    }
+
+    public enum InputType {
+        KeyOrMouseButton,
+        MouseMovement,
+        JoystickAxis,
+    };
+
+    [MenuItem("Assets/ReadInputManager")]
+    public static void DoRead() { }
 
     [MenuItem("Assets/Create/Game/Controls")]
     public static void CreateAsset() {
@@ -56,13 +134,10 @@ public class Controls : ScriptableObject {
                 switch (inputMethod) {
                     case InputMethod.Ps4:
                         return Input.GetAxis(gameInput.Ps4);
-                        break;
                     case InputMethod.Keyboard:
                         return Input.GetAxis(gameInput.Keyboard);
-                        break;
                     case InputMethod.Xbox:
                         return Input.GetAxis(gameInput.Xbox);
-                        break;
                     default:
                         throw new ArgumentOutOfRangeException("inputMethod", inputMethod, null);
                 }

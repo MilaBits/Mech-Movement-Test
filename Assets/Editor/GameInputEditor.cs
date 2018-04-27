@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-[CustomEditor(typeof(Controls.GameInput))]
+//[CustomEditor(typeof(Controls.GameInput))]
 public class GameInputEditor : Editor {
     public override void OnInspectorGUI() {
         EditorGUILayout.LabelField("Ps4", serializedObject.FindProperty("Name").stringValue + "_Ps4");

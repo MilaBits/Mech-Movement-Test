@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(Controls))]
+//[CustomEditor(typeof(Controls))]
 public class ControlsEditor : Editor {
     public override void OnInspectorGUI() {
         EditorGUILayout.LabelField(

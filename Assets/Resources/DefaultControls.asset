@@ -16,35 +16,77 @@ MonoBehaviour:
   - InputName: Horizontal
     CopyInputName: 1
     Ps4: Horizontal_Ps4
+    Ps4Message: Input Horizontal_Ps4 does not yet exist
+    ps4Invalid: 0
     Xbox: Horizontal_Xbox
+    XboxMessage: Input Horizontal_Xbox does not yet exist
+    XboxInvalid: 0
     Keyboard: Horizontal_Keyboard
+    KeyboardMessage: Input Horizontal_Keyboard does not yet exist
+    KeyboardInvalid: 0
   - InputName: Vertical
     CopyInputName: 1
     Ps4: Vertical_Ps4
+    Ps4Message: Input Vertical_Ps4 does not yet exist
+    ps4Invalid: 0
     Xbox: Vertical_Xbox
+    XboxMessage: Input Vertical_Xbox does not yet exist
+    XboxInvalid: 0
     Keyboard: Vertical_Keyboard
+    KeyboardMessage: Input Vertical_Keyboard does not yet exist
+    KeyboardInvalid: 0
   - InputName: Horizontal Camera
     CopyInputName: 1
     Ps4: Horizontal Camera_Ps4
+    Ps4Message: Input Horizontal Camera_Ps4 does not yet exist
+    ps4Invalid: 0
     Xbox: Horizontal Camera_Xbox
+    XboxMessage: Input Horizontal Camera_Xbox does not yet exist
+    XboxInvalid: 0
     Keyboard: Horizontal Camera_Keyboard
+    KeyboardMessage: Input Horizontal Camera_Keyboard does not yet exist
+    KeyboardInvalid: 0
   - InputName: Vertical Camera
     CopyInputName: 1
     Ps4: Vertical Camera_Ps4
+    Ps4Message: Input Vertical Camera_Ps4 does not yet exist
+    ps4Invalid: 0
     Xbox: Vertical Camera_Xbox
+    XboxMessage: Input Vertical Camera_Xbox does not yet exist
+    XboxInvalid: 0
     Keyboard: Vertical Camera_Keyboard
+    KeyboardMessage: Input Vertical Camera_Keyboard does not yet exist
+    KeyboardInvalid: 0
   - InputName: Left Weapon
     CopyInputName: 1
     Ps4: Left Weapon_Ps4
+    Ps4Message: Input Left Weapon_Ps4 does not yet exist
+    ps4Invalid: 0
     Xbox: Left Weapon_Xbox
+    XboxMessage: Input Left Weapon_Xbox does not yet exist
+    XboxInvalid: 0
     Keyboard: Left Weapon_Keyboard
+    KeyboardMessage: Input Left Weapon_Keyboard does not yet exist
+    KeyboardInvalid: 1
   - InputName: Right Weapon
     CopyInputName: 1
     Ps4: Right Weapon_Ps4
+    Ps4Message: Input Right Weapon_Ps4 does not yet exist
+    ps4Invalid: 0
     Xbox: Right Weapon_Xbox
+    XboxMessage: Input Right Weapon_Xbox does not yet exist
+    XboxInvalid: 0
     Keyboard: Right Weapon_Keyboard
+    KeyboardMessage: Input Right Weapon_Keyboard does not yet exist
+    KeyboardInvalid: 1
   - InputName: Mod
     CopyInputName: 1
     Ps4: Mod_Ps4
+    Ps4Message: Input Mod_Ps4 does not yet exist
+    ps4Invalid: 0
     Xbox: Mod_Xbox
+    XboxMessage: Input Mod_Xbox does not yet exist
+    XboxInvalid: 0
     Keyboard: Mod_Keyboard
+    KeyboardMessage: Input Mod_Keyboard does not yet exist
+    KeyboardInvalid: 0

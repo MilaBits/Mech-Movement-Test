@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Game : MonoBehaviour {
-    public Controls controls;
+    [InlineEditor()]public Controls controls;
 
     void Start() {
         if (!controls)
