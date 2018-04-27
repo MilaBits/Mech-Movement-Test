@@ -4,28 +4,28 @@ ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
-    100002: directionalLight1
-    100004: pCube10
-    100006: pCube11
-    100008: pCube12
-    100010: pCube13
-    100012: pCube14
-    100014: pCube15
-    100016: pCube16
-    100018: pCube16 1
-    100020: pCube16 2
-    100022: pCube16 3
-    100024: pCube17
-    100026: pCube17 1
-    100028: pCube18
-    100030: pCube2
-    100032: pCube20
-    100034: pCube21
-    100036: pCube22
-    100038: pCube23
-    100040: pCube24
-    100042: pCube25
-    100044: pCube26
+    100002: pCube10
+    100004: pCube11
+    100006: pCube12
+    100008: pCube13
+    100010: pCube14
+    100012: pCube15
+    100014: pCube16
+    100016: pCube16 1
+    100018: pCube16 2
+    100020: pCube16 3
+    100022: pCube17
+    100024: pCube17 1
+    100026: pCube18
+    100028: pCube2
+    100030: pCube20
+    100032: pCube21
+    100034: pCube22
+    100036: pCube23
+    100038: pCube24
+    100040: pCube25
+    100042: pCube26
+    100044: pCube27
     100046: pCube3
     100048: pCube4
     100050: pCube5
@@ -98,35 +98,70 @@ ModelImporter:
     100184: transform30
     100186: transform31
     100188: transform32
-    100190: transform4
-    100192: transform5
-    100194: transform6
-    100196: transform7
-    100198: transform8
-    100200: transform9
+    100190: transform33
+    100192: transform34
+    100194: transform35
+    100196: transform36
+    100198: transform37
+    100200: transform38
+    100202: transform39
+    100204: transform4
+    100206: transform40
+    100208: transform41
+    100210: transform42
+    100212: transform43
+    100214: transform44
+    100216: transform45
+    100218: transform46
+    100220: transform47
+    100222: transform48
+    100224: transform49
+    100226: transform5
+    100228: transform50
+    100230: transform51
+    100232: transform52
+    100234: transform53
+    100236: transform54
+    100238: transform55
+    100240: transform56
+    100242: transform57
+    100244: transform58
+    100246: transform59
+    100248: transform6
+    100250: transform60
+    100252: transform61
+    100254: transform62
+    100256: transform63
+    100258: transform64
+    100260: transform65
+    100262: transform66
+    100264: transform67
+    100266: transform7
+    100268: transform8
+    100270: transform9
     400000: //RootNode
-    400002: directionalLight1
-    400004: pCube10
-    400006: pCube11
-    400008: pCube12
-    400010: pCube13
-    400012: pCube14
-    400014: pCube15
-    400016: pCube16
-    400018: pCube16 1
-    400020: pCube16 2
-    400022: pCube16 3
-    400024: pCube17
-    400026: pCube17 1
-    400028: pCube18
-    400030: pCube2
-    400032: pCube20
-    400034: pCube21
-    400036: pCube22
-    400038: pCube23
-    400040: pCube24
-    400042: pCube25
-    400044: pCube26
+    400002: pCube10
+    400004: pCube11
+    400006: pCube12
+    400008: pCube13
+    400010: pCube14
+    400012: pCube15
+    400014: pCube16
+    400016: pCube16 1
+    400018: pCube16 2
+    400020: pCube16 3
+    400022: pCube17
+    400024: pCube17 1
+    400026: pCube18
+    400028: pCube2
+    400030: pCube20
+    400032: pCube21
+    400034: pCube22
+    400036: pCube23
+    400038: pCube24
+    400040: pCube25
+    400042: pCube26
+    400044: pCube27
     400046: pCube3
     400048: pCube4
     400050: pCube5
@@ -199,119 +234,51 @@ ModelImporter:
     400184: transform30
     400186: transform31
     400188: transform32
-    400190: transform4
-    400192: transform5
-    400194: transform6
-    400196: transform7
-    400198: transform8
-    400200: transform9
+    400190: transform33
+    400192: transform34
+    400194: transform35
+    400196: transform36
+    400198: transform37
+    400200: transform38
+    400202: transform39
+    400204: transform4
+    400206: transform40
+    400208: transform41
+    400210: transform42
+    400212: transform43
+    400214: transform44
+    400216: transform45
+    400218: transform46
+    400220: transform47
+    400222: transform48
+    400224: transform49
+    400226: transform5
+    400228: transform50
+    400230: transform51
+    400232: transform52
+    400234: transform53
+    400236: transform54
+    400238: transform55
+    400240: transform56
+    400242: transform57
+    400244: transform58
+    400246: transform59
+    400248: transform6
+    400250: transform60
+    400252: transform61
+    400254: transform62
+    400256: transform63
+    400258: transform64
+    400260: transform65
+    400262: transform66
+    400264: transform67
+    400266: transform7
+    400268: transform8
+    400270: transform9
     2100000: lambert1
-    2300000: pCube14
-    2300002: pCube15
-    2300004: pCube16
-    2300006: pCube16 1
-    2300008: pCube16 2
-    2300010: pCube16 3
-    2300012: pCube17
-    2300014: pCube17 1
-    2300016: pCube18
-    2300018: pCube20
-    2300020: pCube21
-    2300022: pCube22
-    2300024: pCube23
-    2300026: pCube24
-    2300028: pCube25
-    2300030: pCube26
-    2300032: pCube5
-    2300034: pCylinder1
-    2300036: pCylinder2
-    2300038: pCylinder3
-    2300040: pCylinder4
-    2300042: pCylinder5
-    2300044: pCylinder6
-    2300046: pCylinder7
-    2300048: pCylinder8
-    2300050: polySurface15 1
-    2300052: polySurface9
-    2300054: pPipe1
-    2300056: pPipe2
-    2300058: pPipe3
-    2300060: pPipe4
-    2300062: pPipe5
-    2300064: pPipe6
-    2300066: pPipe7
-    2300068: pPipe8
-    3300000: pCube14
-    3300002: pCube15
-    3300004: pCube16
-    3300006: pCube16 1
-    3300008: pCube16 2
-    3300010: pCube16 3
-    3300012: pCube17
-    3300014: pCube17 1
-    3300016: pCube18
-    3300018: pCube20
-    3300020: pCube21
-    3300022: pCube22
-    3300024: pCube23
-    3300026: pCube24
-    3300028: pCube25
-    3300030: pCube26
-    3300032: pCube5
-    3300034: pCylinder1
-    3300036: pCylinder2
-    3300038: pCylinder3
-    3300040: pCylinder4
-    3300042: pCylinder5
-    3300044: pCylinder6
-    3300046: pCylinder7
-    3300048: pCylinder8
-    3300050: polySurface15 1
-    3300052: polySurface9
-    3300054: pPipe1
-    3300056: pPipe2
-    3300058: pPipe3
-    3300060: pPipe4
-    3300062: pPipe5
-    3300064: pPipe6
-    3300066: pPipe7
-    3300068: pPipe8
-    4300000: pCube21
-    4300002: pCube20
-    4300004: pCube5
-    4300006: polySurface15
-    4300008: polySurface9
-    4300010: pCube14
-    4300012: pCube25
-    4300014: pCube16
-    4300016: pCube26
-    4300018: pCube17
-    4300020: pCube18
-    4300022: pCube17
-    4300024: pCube15
-    4300026: pCube16
-    4300028: pCube22
-    4300030: pPipe5
-    4300032: pPipe4
-    4300034: pPipe3
-    4300036: pPipe8
-    4300038: pPipe7
-    4300040: pPipe6
-    4300042: pCylinder5
-    4300044: pCylinder3
-    4300046: pCylinder1
-    4300048: pCylinder2
-    4300050: pCylinder7
-    4300052: pCylinder8
-    4300054: pCylinder6
-    4300056: pCylinder4
-    4300058: pPipe1
-    4300060: pPipe2
-    4300062: pCube23
-    4300064: pCube16
-    4300066: pCube24
-    4300068: pCube16
-    10800000: directionalLight1
+    2300000: pCube27
+    3300000: pCube27
+    4300000: pCube27
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -349,8 +316,8 @@ ModelImporter:
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
