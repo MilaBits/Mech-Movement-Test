@@ -6,10 +6,22 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: No Name
+    2100002: MechBaseColor
+    2100004: MechAccentColor
     2300000: //RootNode
     3300000: //RootNode
     4300000: Legs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MechAccentColor
+    second: {fileID: 2100000, guid: 22c78d4d80c753946af3d52274595c93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MechBaseColor
+    second: {fileID: 2100000, guid: 40a3e4e5f9d29af4b8541f5dea1ca994, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
