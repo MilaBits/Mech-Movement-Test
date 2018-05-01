@@ -28,11 +28,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Cutoff: 0.5
+    - _Emission: 0.03
     - _Glancing: 1.98
-    - _Gloss: 0.04
+    - _Gloss: 0.035
     - _Intersection: 1
-    - _PreRampExponent: 0.5
-    - _PreRampMultiplier: 1
+    - _PreRampExponent: 0.832
+    - _PreRampMultiplier: 0.89
     - _node_8200: 0.41
     - _node_9956: 0.03
     m_Colors:
