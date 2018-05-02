@@ -35,7 +35,7 @@ Material:
     - _PreRampExponent: 0.832
     - _PreRampMultiplier: 0.89
     - _node_8200: 0.41
-    - _node_9956: 0.03
+    - _node_9956: 0.05
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
