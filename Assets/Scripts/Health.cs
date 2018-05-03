@@ -25,6 +25,12 @@ public class Health : MonoBehaviour {
     [HideIf("isModuleHealth"), HorizontalGroup("Health/Base"), LabelWidth(30), LabelText("Max"), SuffixLabel("HP",true)]
     public int BaseMaxHealth;
 
+    [BoxGroup("Health/UI")]
+    [HideIf("isModuleHealth"), HorizontalGroup("Health/UI/UI"), LabelWidth(30), LabelText("Bar")]
+    public RectTransform UIBar;
+    [HideIf("isModuleHealth"), HorizontalGroup("Health/UI/UI"), LabelWidth(35), LabelText("Text")]
+    public Text UIText;
+    
     [BoxGroup("Health"), ShowIf("isModuleHealth")]
     public Health ParentHealth;
 
@@ -64,6 +70,11 @@ public class Health : MonoBehaviour {
 
     private void Update() {
         if (ParentHealth) ParentHealth.CalculateHealth();
+
+        if (!isModuleHealth) {
+            UIBar.localScale = new Vector3(ExtensionMethods.Remap(health.CurrentHealth, 0, health.MaxHealth, 0, 1), 1, 1);
+            UIText.text = String.Format("{0} / {1}", health.CurrentHealth, health.MaxHealth);
+        }
     }
 
     public void TakeDamage(int damage) {

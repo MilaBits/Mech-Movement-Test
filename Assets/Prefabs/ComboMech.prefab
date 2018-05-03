@@ -826,29 +826,15 @@ MonoBehaviour:
   isModuleHealth: 1
   health:
     Owner: Tracks
-    CurrentHealth: 150
-    MaxHealth: 150
-    BarHealth: 150
+    CurrentHealth: 250
+    MaxHealth: 250
+    BarHealth: 250
   BaseCurrentHealth: 0
   BaseMaxHealth: 0
+  UIBar: {fileID: 0}
+  UIText: {fileID: 0}
   ParentHealth: {fileID: 114097408208372644}
   Modules: []
-  UpdateHealth:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114097408208372644}
-        m_MethodName: CalculateHealth
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   Critical: 0
   CriticalMultiplier: 1.5
   DamagedMaterial: {fileID: 2100000, guid: 294f6e4e7d7f8be459d5f59072d2da19, type: 2}
@@ -874,24 +860,10 @@ MonoBehaviour:
     BarHealth: 50
   BaseCurrentHealth: 0
   BaseMaxHealth: 0
+  UIBar: {fileID: 0}
+  UIText: {fileID: 0}
   ParentHealth: {fileID: 114097408208372644}
   Modules: []
-  UpdateHealth:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114097408208372644}
-        m_MethodName: CalculateHealth
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   Critical: 0
   CriticalMultiplier: 1.5
   DamagedMaterial: {fileID: 2100000, guid: 294f6e4e7d7f8be459d5f59072d2da19, type: 2}
@@ -912,11 +884,13 @@ MonoBehaviour:
   isModuleHealth: 0
   health:
     Owner: ComboMech
-    CurrentHealth: 1400
-    MaxHealth: 1400
-    BarHealth: 1400
+    CurrentHealth: 1600
+    MaxHealth: 1600
+    BarHealth: 1600
   BaseCurrentHealth: 500
   BaseMaxHealth: 500
+  UIBar: {fileID: 0}
+  UIText: {fileID: 0}
   ParentHealth: {fileID: 0}
   Modules:
   - Owner: Torso
@@ -932,18 +906,13 @@ MonoBehaviour:
     MaxHealth: 50
     BarHealth: 50
   - Owner: Base
-    CurrentHealth: 150
-    MaxHealth: 150
-    BarHealth: 150
+    CurrentHealth: 250
+    MaxHealth: 250
+    BarHealth: 250
   - Owner: Tracks
-    CurrentHealth: 150
-    MaxHealth: 150
-    BarHealth: 150
-  UpdateHealth:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    CurrentHealth: 250
+    MaxHealth: 250
+    BarHealth: 250
   Critical: 0
   CriticalMultiplier: 1.5
   DamagedMaterial: {fileID: 0}
@@ -969,24 +938,10 @@ MonoBehaviour:
     BarHealth: 50
   BaseCurrentHealth: 0
   BaseMaxHealth: 0
+  UIBar: {fileID: 0}
+  UIText: {fileID: 0}
   ParentHealth: {fileID: 114097408208372644}
   Modules: []
-  UpdateHealth:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114097408208372644}
-        m_MethodName: CalculateHealth
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   Critical: 0
   CriticalMultiplier: 1.5
   DamagedMaterial: {fileID: 2100000, guid: 294f6e4e7d7f8be459d5f59072d2da19, type: 2}
@@ -1040,9 +995,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7c19e6bf795174fb4f7be461d80767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentScrap: 100
-  MaxScrap: 100
-  BarScrap: 100
+  CurrentScrap: 150
+  MaxScrap: 150
+  BarScrap: 150
+  UIBar: {fileID: 0}
+  UIText: {fileID: 0}
 --- !u!114 &114462374649512600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1057,33 +1014,19 @@ MonoBehaviour:
   isModuleHealth: 1
   health:
     Owner: Base
-    CurrentHealth: 150
-    MaxHealth: 150
-    BarHealth: 150
+    CurrentHealth: 250
+    MaxHealth: 250
+    BarHealth: 250
   BaseCurrentHealth: 0
   BaseMaxHealth: 0
+  UIBar: {fileID: 0}
+  UIText: {fileID: 0}
   ParentHealth: {fileID: 114097408208372644}
   Modules:
   - Owner: Tracks
     CurrentHealth: 500
     MaxHealth: 500
     BarHealth: 500
-  UpdateHealth:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114097408208372644}
-        m_MethodName: CalculateHealth
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   Critical: 0
   CriticalMultiplier: 1.5
   DamagedMaterial: {fileID: 2100000, guid: 294f6e4e7d7f8be459d5f59072d2da19, type: 2}
@@ -6222,6 +6165,8 @@ MonoBehaviour:
     BarHealth: 500
   BaseCurrentHealth: 0
   BaseMaxHealth: 0
+  UIBar: {fileID: 0}
+  UIText: {fileID: 0}
   ParentHealth: {fileID: 114097408208372644}
   Modules:
   - Owner: LeftArm
@@ -6232,22 +6177,6 @@ MonoBehaviour:
     CurrentHealth: 500
     MaxHealth: 500
     BarHealth: 500
-  UpdateHealth:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114097408208372644}
-        m_MethodName: CalculateHealth
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   Critical: 0
   CriticalMultiplier: 1.5
   DamagedMaterial: {fileID: 2100000, guid: 294f6e4e7d7f8be459d5f59072d2da19, type: 2}

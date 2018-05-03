@@ -1,20 +1,25 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using Sirenix.OdinInspector.Editor;
-using Sirenix.Utilities;
 using Sirenix.Utilities.Editor;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScrapPool : MonoBehaviour {
-    [HorizontalGroup("Scrap")] public int CurrentScrap;
+    [BoxGroup("Scrap")] [HorizontalGroup("Scrap/Values"), LabelWidth(90), SuffixLabel("Scrap", true)]
+    public int CurrentScrap;
 
-    [HorizontalGroup("Scrap"), LabelText("Max"), LabelWidth(30)]
+    [HorizontalGroup("Scrap/Values"), LabelText("Max"), LabelWidth(30), SuffixLabel("Scrap", true)]
     public int MaxScrap;
 
-    [CustomValueDrawer("Bar")] public int BarScrap;
+    [BoxGroup("Scrap")] [CustomValueDrawer("Bar")]
+    public int BarScrap;
+
+    [BoxGroup("UI")] [HorizontalGroup("UI/UI"), LabelWidth(30), LabelText("Bar")]
+    public RectTransform UIBar;
+
+    [HorizontalGroup("UI/UI"), LabelWidth(35), LabelText("Text")]
+    public Text UIText;
 
     private Color GetHealthBarColor(float value) {
         return Color.Lerp(Color.red, Color.green, Mathf.Pow(value / MaxScrap, 2));
@@ -27,6 +32,11 @@ public class ScrapPool : MonoBehaviour {
         public HealthBarAttribute(float maxHealth) {
             this.MaxHealth = maxHealth;
         }
+    }
+
+    private void Update() {
+        UIBar.localScale = new Vector3(ExtensionMethods.Remap(CurrentScrap, 0, MaxScrap, 0, 1), 1, 1);
+        UIText.text = String.Format("{0} / {1}", CurrentScrap, MaxScrap);
     }
 
 #if UNITY_EDITOR
