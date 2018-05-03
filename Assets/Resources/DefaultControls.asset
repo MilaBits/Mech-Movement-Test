@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385e60d1afe24886acb244d2108e383b, type: 3}
   m_Name: DefaultControls
   m_EditorClassIdentifier: 
-  inputMethod: 2
+  inputMethod: 1
   Inputs:
   - InputName: Horizontal
     CopyInputName: 1

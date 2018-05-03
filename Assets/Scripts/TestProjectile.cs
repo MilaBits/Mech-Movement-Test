@@ -21,7 +21,7 @@ public class TestProjectile : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision other) {
-        Debug.Log("Hit! " + other.collider.gameObject.name);
+        //Debug.Log("Hit! " + other.collider.gameObject.name);
         GetComponent<Collider>().isTrigger = true;
         if (other.collider.gameObject.GetComponent<Health>()) {
             other.collider.gameObject.GetComponent<Health>().TakeDamage(damage);

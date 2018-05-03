@@ -155,13 +155,10 @@ public class Controls : ScriptableObject {
                 switch (inputMethod) {
                     case InputMethod.Ps4:
                         return Input.GetButton(gameInput.Ps4);
-                        break;
                     case InputMethod.Keyboard:
                         return Input.GetButton(gameInput.Keyboard);
-                        break;
                     case InputMethod.Xbox:
                         return Input.GetButton(gameInput.Xbox);
-                        break;
                     default:
                         throw new ArgumentOutOfRangeException("inputMethod", inputMethod, null);
                 }
@@ -179,13 +176,10 @@ public class Controls : ScriptableObject {
                 switch (inputMethod) {
                     case InputMethod.Ps4:
                         return Input.GetButtonUp(gameInput.Ps4);
-                        break;
                     case InputMethod.Keyboard:
                         return Input.GetButtonUp(gameInput.Keyboard);
-                        break;
                     case InputMethod.Xbox:
                         return Input.GetButtonUp(gameInput.Xbox);
-                        break;
                     default:
                         throw new ArgumentOutOfRangeException("inputMethod", inputMethod, null);
                 }
@@ -203,13 +197,10 @@ public class Controls : ScriptableObject {
                 switch (inputMethod) {
                     case InputMethod.Ps4:
                         return Input.GetButtonDown(gameInput.Ps4);
-                        break;
                     case InputMethod.Keyboard:
                         return Input.GetButtonDown(gameInput.Keyboard);
-                        break;
                     case InputMethod.Xbox:
                         return Input.GetButtonDown(gameInput.Xbox);
-                        break;
                     default:
                         throw new ArgumentOutOfRangeException("inputMethod", inputMethod, null);
                 }

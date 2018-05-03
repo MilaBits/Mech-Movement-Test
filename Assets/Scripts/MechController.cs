@@ -7,28 +7,29 @@ public class MechController : MonoBehaviour {
     [Required] public Game Game;
     private Controls controls;
 
-    [TabGroup("Mech")] [EnumToggleButtons] public MechTypes MechType;
+    [TabGroup("Main","Mech")] [EnumToggleButtons] public MechTypes MechType;
 
-    [TabGroup("Mech")] public GameObject Top;
-    [TabGroup("Mech")] public GameObject Bottom;
-    [TabGroup("Mech")] public float MovementSpeed = .1f;
+    [TabGroup("Main","Mech")] public GameObject Top;
+    [TabGroup("Main","Mech")] public GameObject Bottom;
+    [Space]
+    [TabGroup("Main","Mech")] public float MovementSpeed = .1f;
 
-    [Space] [TabGroup("Camera")] public LayerMask LevelMask;
+    [Space] [TabGroup("Main","Camera")] public LayerMask LevelMask;
 
-    [TabGroup("Camera")] public Camera camera;
-    [Space] [TabGroup("Camera")] public float MaxDistance = 3.5f;
+    [TabGroup("Main","Camera")] public Camera PlayerCamera;
+    [Space] [TabGroup("Main","Camera")] public float MaxDistance = 3.5f;
 
     private float distance;
-    [TabGroup("Camera")] public float WallOffset = 1;
+    [TabGroup("Main","Camera")] public float WallOffset = 1;
     private Vector3 cameraVelocity = Vector3.zero;
-    [TabGroup("Camera")] public float smoothTime = 0.3f;
-    [Space] [TabGroup("Camera")] public float upperLimit = 40;
+    [TabGroup("Main","Camera")] public float smoothTime = 0.3f;
+    [Space] [TabGroup("Main","Camera")] public float upperLimit = 40;
 
-    [TabGroup("Camera")] public float lowerLimit = -15;
-    [Space] [TabGroup("Camera")] public float HorizontalSensitivity = 2;
+    [TabGroup("Main","Camera")] public float lowerLimit = -15;
+    [Space] [TabGroup("Main","Camera")] public float HorizontalSensitivity = 2;
 
-    [TabGroup("Camera")] public float VerticalSensitivity = 1;
-    [TabGroup("Camera")] public float WeaponDampening;
+    [TabGroup("Main","Camera")] public float VerticalSensitivity = 1;
+    [TabGroup("Main","Camera")] public float WeaponDampening;
 
     private float LookRotation;
     private float LookJaw;
@@ -39,27 +40,34 @@ public class MechController : MonoBehaviour {
     private float moveVertical;
     private float heading;
 
-    [HorizontalGroup("Split", 0.5f, LabelWidth = 20)]
-    [BoxGroup("Split/Left Weapon")]
+    
+    [FoldoutGroup("Main/Mech/Equipment")]
+    [HorizontalGroup("Main/Mech/Equipment/Split", 0.5f, LabelWidth = 20)]
+    [BoxGroup("Main/Mech/Equipment/Split/Left Weapon")]
     [LabelWidth(55)]
     [LabelText("Weapon")]
     public Weapon WeaponLeft;
 
-    [BoxGroup("Split/Left Weapon")] [LabelWidth(55)] [LabelText("Pivot")]
+    [BoxGroup("Main/Mech/Equipment/Split/Left Weapon")] [LabelWidth(55)] [LabelText("Pivot")]
     public GameObject WeaponLeftPivot;
 
-    [HorizontalGroup("Split", 0.5f, LabelWidth = 20)]
-    [BoxGroup("Split/Right Weapon")]
+    [HorizontalGroup("Main/Mech/Equipment/Split", 0.5f, LabelWidth = 20)]
+    [BoxGroup("Main/Mech/Equipment/Split/Right Weapon")]
     [LabelWidth(55)]
     [LabelText("Weapon")]
     public Weapon WeaponRight;
 
-    [BoxGroup("Split/Right Weapon")] [LabelWidth(55)] [LabelText("Pivot")]
+    [BoxGroup("Main/Mech/Equipment/Split/Right Weapon")] [LabelWidth(55)] [LabelText("Pivot")]
     public GameObject WeaponRightPivot;
 
-    [BoxGroup("Mod")] [LabelWidth(55)] public Mod Mod;
+    [BoxGroup("Main/Mech/Equipment/Subweapon")] [LabelWidth(55)] public SubWeapon SubWeapon;
 
-    [BoxGroup("Mod")] [LabelWidth(55)] [LabelText("Pivot")]
+    [BoxGroup("Main/Mech/Equipment/Subweapon")] [LabelWidth(55)] [LabelText("Pivot")]
+    public GameObject SubWeaponPivot;
+    
+    [BoxGroup("Main/Mech/Equipment/Mod")] [LabelWidth(55)] public Mod Mod;
+
+    [BoxGroup("Main/Mech/Equipment/Mod")] [LabelWidth(55)] [LabelText("Pivot")]
     public GameObject ModPivot;
 
     void Start() {
@@ -136,12 +144,12 @@ public class MechController : MonoBehaviour {
 
 
         // Vertical rotation
-        verticalCamRotation = ClampAngle(camera.transform.localEulerAngles.x + LookJaw * VerticalSensitivity,
+        verticalCamRotation = ClampAngle(PlayerCamera.transform.localEulerAngles.x + LookJaw * VerticalSensitivity,
             lowerLimit, upperLimit);
-        camera.transform.localRotation = Quaternion.Euler(verticalCamRotation, 0, 0);
-        Vector3 lookAtPoint = camera.transform.parent.position + (camera.transform.forward * -GetDistanceToWall());
-        camera.transform.position =
-            Vector3.SmoothDamp(camera.transform.position, lookAtPoint, ref cameraVelocity, smoothTime);
+        PlayerCamera.transform.localRotation = Quaternion.Euler(verticalCamRotation, 0, 0);
+        Vector3 lookAtPoint = PlayerCamera.transform.parent.position + (PlayerCamera.transform.forward * -GetDistanceToWall());
+        PlayerCamera.transform.position =
+            Vector3.SmoothDamp(PlayerCamera.transform.position, lookAtPoint, ref cameraVelocity, smoothTime);
 
         //TODO: Public float forcamera dampening speed between >0 and 1, if 0 no effect
         //TODO: Change view to cockpit camera when below a certain distance
@@ -150,12 +158,9 @@ public class MechController : MonoBehaviour {
     private float GetDistanceToWall() {
         RaycastHit hit;
         float dist = MaxDistance;
-        Debug.DrawRay(camera.transform.parent.position, -camera.transform.forward * MaxDistance, Color.red, 1f);
-        if (Physics.Raycast(camera.transform.parent.position, -camera.transform.forward, out hit,
+        if (Physics.Raycast(PlayerCamera.transform.parent.position, -PlayerCamera.transform.forward, out hit,
             MaxDistance, LevelMask)) {
-            Debug.DrawLine(camera.transform.parent.position, hit.point, Color.green, 1f);
             dist = hit.distance - WallOffset;
-            Debug.Log("Wall at: " + dist);
         }
 
         return dist;

@@ -2,71 +2,125 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
+using Sirenix.Utilities.Editor;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Random = System.Random;
 
+[ExecuteInEditMode]
 public class Health : MonoBehaviour {
+    [BoxGroup("Health")]
     public bool isModuleHealth;
+
+    [BoxGroup("Health")] public HealthValue health;
+
+    [HideIf("isModuleHealth"), HorizontalGroup("Health/Base"), LabelWidth(90), LabelText("Base Health"),SuffixLabel("HP",true)]
+    public int BaseCurrentHealth;
+
+    [HideIf("isModuleHealth"), HorizontalGroup("Health/Base"), LabelWidth(30), LabelText("Max"), SuffixLabel("HP",true)]
+    public int BaseMaxHealth;
+
+    [BoxGroup("Health"), ShowIf("isModuleHealth")]
     public Health ParentHealth;
-    public int maxHealth;
-    [ProgressBar(0, 500, ColorMember = "GetHealthBarColor")]
-    public int health;
-    public bool Critical;
-    public float CriticalMultiplier = 1.5f;
 
+    [BoxGroup("Health"), HideIf("isModuleHealth")]
+    public List<HealthValue> Modules;
 
-    [SerializeField] private GameObject damagePopup;
-    [SerializeField] private Vector3 popupOffset;
-
-    public Material DamagedMaterial;
-
-    private Color GetHealthBarColor(float value)
-    {
-        // Blends between red, and yellow color for when the health is below 30,
-        // and blends between yellow and green color for when the health is above 30.
-        return Color.Lerp(Color.Lerp(
-                Color.red, Color.yellow, MathUtilities.LinearStep(0f, 30f, value)),
-            Color.green, MathUtilities.LinearStep(0f, 100f, value));
+    [BoxGroup("Health"), Button("Update List", ButtonSizes.Medium), HideIf("isModuleHealth")]
+    public void UpdateHealthList() {
+        Modules.Clear();
+        Health[] healthChildren = transform.GetComponentsInChildren<Health>();
+        for (int i = 0; i < healthChildren.Length; i++) {
+            if (i == 0) continue;
+            HealthValue value = healthChildren[i].health;
+            value.Owner = healthChildren[i].name;
+            Modules.Add(healthChildren[i].health);
+        }
     }
-    
+
+    [FoldoutGroup("Damage")] public bool Critical;
+    [FoldoutGroup("Damage")] public float CriticalMultiplier = 1.5f;
+    [Space] [FoldoutGroup("Damage")] public Material DamagedMaterial;
+
+    [FoldoutGroup("Damage")] [SerializeField]
+    private GameObject damagePopup;
+
+    [FoldoutGroup("Damage")] [SerializeField]
+    private Vector3 popupOffset;
+
     // Use this for initialization
     void Start() {
         if (isModuleHealth) {
-            ParentHealth.health += health;
-            ParentHealth.maxHealth = ParentHealth.health;
+            health.CurrentHealth = health.MaxHealth;
         }
 
-        maxHealth = health;
+        health.Owner = gameObject.name;
+    }
+
+    private void Update() {
+        if (ParentHealth) ParentHealth.CalculateHealth();
     }
 
     public void TakeDamage(int damage) {
-        health -= damage;
-        if (isModuleHealth) {
-            if (Critical) {
-                ParentHealth.health -= (int) Math.Round(damage * CriticalMultiplier);
+        if (!isModuleHealth) {
+            BaseCurrentHealth -= damage;
+
+            if (health.CurrentHealth <= 0) Destroy(gameObject);
+        }
+        else if (isModuleHealth) {
+            if (health.CurrentHealth >= damage) {
+                health.CurrentHealth -= damage;
+                ParentHealth.TakeDamage(damage);
             }
             else {
-                ParentHealth.health -= damage;
-            }
-            DamagePopup("Module damaged!");
-        }
+                int leftoverDamage = 0;
 
-//        if (Critical && isModuleHealth && ParentHealth != null) {
-//            ParentHealth.TakeDamage((int) Math.Round(damage * CriticalMultiplier));
-//            //TODO: popup text yelling "CRITICAL HIT!!!!!!!!"
-//        }
-
-        if (health <= 0) {
-            if (ParentHealth) {
+                leftoverDamage = damage - health.CurrentHealth;
+                health.CurrentHealth = 0;
                 Critical = true;
                 GetComponent<MeshRenderer>().sharedMaterial = DamagedMaterial;
-                DamagePopup("Module damaged!");
+
+                ParentHealth.TakeDamage(damage - leftoverDamage);
+                Debug.Log("Damage taken: " + (damage - leftoverDamage));
+
+                if (leftoverDamage > 0) {
+                    int critDamage = (int) Math.Round(leftoverDamage * CriticalMultiplier);
+                    ParentHealth.TakeDamage(critDamage);
+                    Debug.Log("Damage taken: " + critDamage + " (Crit)");
+                }
             }
-            else Destroy(gameObject);
         }
+    }
+
+    public void CalculateHealth() {
+        UpdateHealthList();
+        if (!isModuleHealth) {
+            health.MaxHealth = CalculateMaxHealth() + BaseMaxHealth;
+            health.CurrentHealth = CalculateCurrentHealth() + BaseCurrentHealth;
+        }
+    }
+
+    public int CalculateMaxHealth() {
+        int health = 0;
+        foreach (var module in Modules) {
+            health += module.MaxHealth;
+        }
+
+        return health;
+    }
+
+    public int CalculateCurrentHealth() {
+        int health = 0;
+        foreach (var module in Modules) {
+            health += module.CurrentHealth;
+        }
+
+        return health;
     }
 
     public void DamagePopup(string value) {
@@ -77,5 +131,18 @@ public class Health : MonoBehaviour {
         popupText.color = Color.red;
         popupText.text = value;
         Destroy(popup, popupText.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+    }
+
+    private Color GetHealthBarColor(float value) {
+        return Color.Lerp(Color.red, Color.green, Mathf.Pow(value / health.MaxHealth, 2));
+    }
+
+    [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
+    public class HealthBarAttribute : Attribute {
+        public float MaxHealth { get; private set; }
+
+        public HealthBarAttribute(float maxHealth) {
+            this.MaxHealth = maxHealth;
+        }
     }
 }
