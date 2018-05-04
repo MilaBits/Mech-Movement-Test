@@ -1,53 +1,44 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using Sirenix.Utilities;
 using Sirenix.Utilities.Editor;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
-using Random = System.Random;
 
 [ExecuteInEditMode]
 public class Health : MonoBehaviour {
-    [BoxGroup("Health")]
+    [HorizontalGroup("Health/module"), LabelText("Module"), LabelWidth(60)]
     public bool isModuleHealth;
+
+    [HorizontalGroup("Health/module"), LabelWidth(90), ShowIf("isModuleHealth")]
+    public Health ParentHealth;
 
     [BoxGroup("Health")] public HealthValue health;
 
-    [HideIf("isModuleHealth"), HorizontalGroup("Health/Base"), LabelWidth(90), LabelText("Base Health"),SuffixLabel("HP",true)]
+    [HideIf("isModuleHealth"), HorizontalGroup("Health/Base"), LabelWidth(90), LabelText("Mech Health"),
+     SuffixLabel("HP", true)]
     public int BaseCurrentHealth;
 
-    [HideIf("isModuleHealth"), HorizontalGroup("Health/Base"), LabelWidth(30), LabelText("Max"), SuffixLabel("HP",true)]
+    [HideIf("isModuleHealth"), HorizontalGroup("Health/Base"), LabelWidth(30), LabelText("Max"),
+     SuffixLabel("HP", true)]
     public int BaseMaxHealth;
 
     [BoxGroup("Health/UI")]
     [HideIf("isModuleHealth"), HorizontalGroup("Health/UI/UI"), LabelWidth(30), LabelText("Bar")]
     public RectTransform UIBar;
+
     [HideIf("isModuleHealth"), HorizontalGroup("Health/UI/UI"), LabelWidth(35), LabelText("Text")]
     public Text UIText;
-    
-    [BoxGroup("Health"), ShowIf("isModuleHealth")]
-    public Health ParentHealth;
+
+    [ShowIf("isModuleHealth"), BoxGroup("Health/UI"), LabelWidth(60), LabelText("HUD Parts"), Tooltip("Put the UI gamaeobjects here that should change color according to health left.")]
+    public Image[] UIMech;
+    [BoxGroup("Health/UI"), LabelText("Health Colors")]public Gradient gradient;
 
     [BoxGroup("Health"), HideIf("isModuleHealth")]
     public List<HealthValue> Modules;
-
-    [BoxGroup("Health"), Button("Update List", ButtonSizes.Medium), HideIf("isModuleHealth")]
-    public void UpdateHealthList() {
-        Modules.Clear();
-        Health[] healthChildren = transform.GetComponentsInChildren<Health>();
-        for (int i = 0; i < healthChildren.Length; i++) {
-            if (i == 0) continue;
-            HealthValue value = healthChildren[i].health;
-            value.Owner = healthChildren[i].name;
-            Modules.Add(healthChildren[i].health);
-        }
-    }
 
     [FoldoutGroup("Damage")] public bool Critical;
     [FoldoutGroup("Damage")] public float CriticalMultiplier = 1.5f;
@@ -59,21 +50,41 @@ public class Health : MonoBehaviour {
     [FoldoutGroup("Damage")] [SerializeField]
     private Vector3 popupOffset;
 
+
     // Use this for initialization
     void Start() {
         if (isModuleHealth) {
             health.CurrentHealth = health.MaxHealth;
+            health.Owner = gameObject.name;
         }
-
-        health.Owner = gameObject.name;
+        else {
+            health.Owner = "Combined";
+        }
     }
 
     private void Update() {
         if (ParentHealth) ParentHealth.CalculateHealth();
 
         if (!isModuleHealth) {
-            UIBar.localScale = new Vector3(ExtensionMethods.Remap(health.CurrentHealth, 0, health.MaxHealth, 0, 1), 1, 1);
+            UIBar.localScale =
+                new Vector3(ExtensionMethods.Remap(health.CurrentHealth, 0, health.MaxHealth, 0, 1), 1, 1);
             UIText.text = String.Format("{0} / {1}", health.CurrentHealth, health.MaxHealth);
+            return;
+        }
+
+        foreach (var image in UIMech) {
+            image.color = GetHealthBarColor(health.CurrentHealth);
+        }
+    }
+
+    public void UpdateHealthList() {
+        Modules.Clear();
+        Health[] healthChildren = transform.GetComponentsInChildren<Health>();
+        for (int i = 0; i < healthChildren.Length; i++) {
+            if (i == 0) continue;
+            HealthValue value = healthChildren[i].health;
+            value.Owner = healthChildren[i].name;
+            Modules.Add(healthChildren[i].health);
         }
     }
 
@@ -145,7 +156,11 @@ public class Health : MonoBehaviour {
     }
 
     private Color GetHealthBarColor(float value) {
-        return Color.Lerp(Color.red, Color.green, Mathf.Pow(value / health.MaxHealth, 2));
+//        if (gradient.colorKeys[0].color != Color.green) {
+//            SetupGradient();
+//        }
+
+        return gradient.Evaluate(1 - value / health.MaxHealth);
     }
 
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property)]
@@ -156,4 +171,18 @@ public class Health : MonoBehaviour {
             this.MaxHealth = maxHealth;
         }
     }
+    
+//    [CustomValueDrawer("Bar")] public int BarHealth;
+//
+//    private int Bar(int value, GUIContent content) {
+//        Rect rect = EditorGUILayout.GetControlRect();
+//
+//        ProgressBarConfig config = new ProgressBarConfig();
+//        config.Height = Convert.ToInt16(rect.height);
+//        config.ForegroundColor = GetHealthBarColor(health.CurrentHealth + BaseCurrentHealth);
+//
+//
+//        return Convert.ToInt16(
+//            SirenixEditorFields.ProgressBarField(rect, health.CurrentHealth + BaseCurrentHealth, 0, health.MaxHealth + BaseMaxHealth, config));
+//    }
 }
