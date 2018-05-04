@@ -829,6 +829,7 @@
     <Compile Include="Assets\Scripts\HealthValue.cs" />
     <Compile Include="Assets\Scripts\MechController.cs" />
     <Compile Include="Assets\Scripts\MechTypes.cs" />
+    <Compile Include="Assets\Scripts\MinimapCameraFollow.cs" />
     <Compile Include="Assets\Scripts\Mod.cs" />
     <Compile Include="Assets\Scripts\ResourceUI.cs" />
     <Compile Include="Assets\Scripts\ScrapPool.cs" />

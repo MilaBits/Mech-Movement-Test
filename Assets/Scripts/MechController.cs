@@ -68,6 +68,9 @@ public class MechController : MonoBehaviour {
     [BoxGroup("Main/Mech/Equipment/Mod")] [LabelWidth(55)] [LabelText("Pivot")]
     public GameObject ModPivot;
 
+    [BoxGroup("Main/Mech/Equipment"), AssetList(Path = "Resources/Equipment")]
+    public Equipment[] equipment;
+
     void Start() {
         if (!Game)
             Game = GameObject.FindObjectOfType<Game>();
