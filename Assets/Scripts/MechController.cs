@@ -5,29 +5,29 @@ public class MechController : MonoBehaviour {
     [Required] public Game Game;
     private Controls controls;
 
-    [TabGroup("Main","Mech")] [EnumToggleButtons] public MechTypes MechType;
+    [TabGroup("Main", "Mech")] [EnumToggleButtons]
+    public MechTypes MechType;
 
-    [TabGroup("Main","Mech")] public GameObject Top;
-    [TabGroup("Main","Mech")] public GameObject Bottom;
-    [Space]
-    [TabGroup("Main","Mech")] public float MovementSpeed = .1f;
+    [TabGroup("Main", "Mech")] public GameObject Top;
+    [TabGroup("Main", "Mech")] public GameObject Bottom;
+    [Space] [TabGroup("Main", "Mech")] public float MovementSpeed = .1f;
 
-    [Space] [TabGroup("Main","Camera")] public LayerMask LevelMask;
+    [Space] [TabGroup("Main", "Camera")] public LayerMask LevelMask;
 
-    [TabGroup("Main","Camera")] public Camera PlayerCamera;
-    [Space] [TabGroup("Main","Camera")] public float MaxDistance = 3.5f;
+    [TabGroup("Main", "Camera")] public Camera PlayerCamera;
+    [Space] [TabGroup("Main", "Camera")] public float MaxDistance = 3.5f;
 
     private float distance;
-    [TabGroup("Main","Camera")] public float WallOffset = 1;
+    [TabGroup("Main", "Camera")] public float WallOffset = 1;
     private Vector3 cameraVelocity = Vector3.zero;
-    [TabGroup("Main","Camera")] public float smoothTime = 0.3f;
-    [Space] [TabGroup("Main","Camera")] public float upperLimit = 40;
+    [TabGroup("Main", "Camera")] public float smoothTime = 0.3f;
+    [Space] [TabGroup("Main", "Camera")] public float upperLimit = 40;
 
-    [TabGroup("Main","Camera")] public float lowerLimit = -15;
-    [Space] [TabGroup("Main","Camera")] public float HorizontalSensitivity = 2;
+    [TabGroup("Main", "Camera")] public float lowerLimit = -15;
+    [Space] [TabGroup("Main", "Camera")] public float HorizontalSensitivity = 2;
 
-    [TabGroup("Main","Camera")] public float VerticalSensitivity = 1;
-    [TabGroup("Main","Camera")] public float WeaponDampening;
+    [TabGroup("Main", "Camera")] public float VerticalSensitivity = 1;
+    [TabGroup("Main", "Camera")] public float WeaponDampening;
 
     private float LookRotation;
     private float LookJaw;
@@ -38,7 +38,7 @@ public class MechController : MonoBehaviour {
     private float moveVertical;
     private float heading;
 
-    
+
     [FoldoutGroup("Main/Mech/Equipment")]
     [HorizontalGroup("Main/Mech/Equipment/Split", 0.5f, LabelWidth = 20)]
     [BoxGroup("Main/Mech/Equipment/Split/Left Weapon")]
@@ -58,18 +58,20 @@ public class MechController : MonoBehaviour {
     [BoxGroup("Main/Mech/Equipment/Split/Right Weapon")] [LabelWidth(55)] [LabelText("Pivot")]
     public GameObject WeaponRightPivot;
 
-    [BoxGroup("Main/Mech/Equipment/Subweapon")] [LabelWidth(55)] public SubWeapon SubWeapon;
+    [BoxGroup("Main/Mech/Equipment/Subweapon")] [LabelWidth(55)]
+    public SubWeapon SubWeapon;
 
     [BoxGroup("Main/Mech/Equipment/Subweapon")] [LabelWidth(55)] [LabelText("Pivot")]
     public GameObject SubWeaponPivot;
-    
-    [BoxGroup("Main/Mech/Equipment/Mod")] [LabelWidth(55)] public Mod Mod;
+
+    [BoxGroup("Main/Mech/Equipment/Mod")] [LabelWidth(55)]
+    public Mod Mod;
 
     [BoxGroup("Main/Mech/Equipment/Mod")] [LabelWidth(55)] [LabelText("Pivot")]
     public GameObject ModPivot;
 
-    [BoxGroup("Main/Mech/Equipment"), AssetList(Path = "Resources/Equipment")]
-    public Equipment[] equipment;
+//    [BoxGroup("Main/Mech/Equipment"), AssetList(Path = "Resources/Equipment"), LabelText("Equipable Stuff")]
+//    public Equipment[] equipment;
 
     void Start() {
         if (!Game)
@@ -81,15 +83,19 @@ public class MechController : MonoBehaviour {
 
     private void InitializeEquipment() {
         //TODO: invert X scale on left weapon
-        WeaponLeft = Instantiate(Resources.Load<Weapon>("Weapons/" + WeaponLeft.name));
+        WeaponLeft = Instantiate(Resources.Load<Weapon>("Equipment/Weapons/" + WeaponLeft.name));
         WeaponRight.InitializeModel(WeaponLeftPivot.transform);
         WeaponLeft.mech = this;
 
-        WeaponRight = Instantiate(Resources.Load<Weapon>("Weapons/" + WeaponRight.name));
+        WeaponRight = Instantiate(Resources.Load<Weapon>("Equipment/Weapons/" + WeaponRight.name));
         WeaponRight.InitializeModel(WeaponRightPivot.transform);
         WeaponRight.mech = this;
 
-        Mod = Instantiate(Resources.Load<Mod>("Mods/" + Mod.name));
+        SubWeapon = Instantiate(Resources.Load<SubWeapon>("Equipment/Weapons/" + SubWeapon.name));
+        WeaponRight.InitializeModel(SubWeaponPivot.transform);
+        SubWeapon.mech = this;
+
+        Mod = Instantiate(Resources.Load<Mod>("Equipment/Mods/" + Mod.name));
         Mod.InitializeModel(ModPivot.transform);
         Mod.mech = this;
     }
@@ -148,7 +154,8 @@ public class MechController : MonoBehaviour {
         verticalCamRotation = ClampAngle(PlayerCamera.transform.localEulerAngles.x + LookJaw * VerticalSensitivity,
             lowerLimit, upperLimit);
         PlayerCamera.transform.localRotation = Quaternion.Euler(verticalCamRotation, 0, 0);
-        Vector3 lookAtPoint = PlayerCamera.transform.parent.position + (PlayerCamera.transform.forward * -GetDistanceToWall());
+        Vector3 lookAtPoint = PlayerCamera.transform.parent.position +
+                              (PlayerCamera.transform.forward * -GetDistanceToWall());
         PlayerCamera.transform.position =
             Vector3.SmoothDamp(PlayerCamera.transform.position, lookAtPoint, ref cameraVelocity, smoothTime);
 

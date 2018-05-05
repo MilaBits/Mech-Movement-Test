@@ -1351,7 +1351,6 @@ GameObject:
   - component: {fileID: 175053887}
   - component: {fileID: 175053886}
   - component: {fileID: 175053885}
-  - component: {fileID: 175053884}
   - component: {fileID: 175053888}
   - component: {fileID: 175053883}
   m_Layer: 0
@@ -1376,18 +1375,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &175053884
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 175053882}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &175053885
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1504,8 +1491,9 @@ MonoBehaviour:
     BarHealth: 200
   Critical: 0
   CriticalMultiplier: 1.5
-  DamagedMaterial: {fileID: 0}
-  damagePopup: {fileID: 0}
+  DamagedMaterial: {fileID: 2100000, guid: 294f6e4e7d7f8be459d5f59072d2da19, type: 2}
+  damagePopup: {fileID: 1073597243493722, guid: bd0f07c6ec81b3f43ba9c7dd639e4297,
+    type: 2}
   popupOffset: {x: 0, y: 0, z: 0}
 --- !u!4 &183745259 stripped
 Transform:
@@ -1827,7 +1815,7 @@ Prefab:
     - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
         type: 2}
       propertyPath: equipment.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4478739298477196, guid: 2c640c74782e56e4ba6c83871d3b6ca4, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1981,56 +1969,35 @@ Prefab:
       propertyPath: UIText
       value: 
       objectReference: {fileID: 87801237}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
         type: 2}
-      propertyPath: health.CurrentHealth
-      value: 1750
-      objectReference: {fileID: 0}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+      propertyPath: equipment.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: bd4ef876743159541b63e2823eaecccc,
         type: 2}
-      propertyPath: health.BarHealth
-      value: 1750
-      objectReference: {fileID: 0}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
         type: 2}
-      propertyPath: BaseCurrentHealth
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+      propertyPath: equipment.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1190ebfeb3843714ca78626908cacb5f,
         type: 2}
-      propertyPath: Modules.Array.data[0].CurrentHealth
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
         type: 2}
-      propertyPath: Modules.Array.data[0].BarHealth
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+      propertyPath: equipment.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c7c14231c3d3c443914aa1d06753551,
         type: 2}
-      propertyPath: Modules.Array.data[1].CurrentHealth
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
         type: 2}
-      propertyPath: Modules.Array.data[1].BarHealth
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+      propertyPath: equipment.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b2ddc7072b252243938f217243b11a1,
         type: 2}
-      propertyPath: Modules.Array.data[2].CurrentHealth
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: Modules.Array.data[2].BarHealth
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
         type: 2}
       propertyPath: WeaponLeft
       value: 
-      objectReference: {fileID: 11400000, guid: 6b2ddc7072b252243938f217243b11a1,
+      objectReference: {fileID: 11400000, guid: 1190ebfeb3843714ca78626908cacb5f,
         type: 2}
     - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
         type: 2}
@@ -2043,24 +2010,6 @@ Prefab:
       propertyPath: Mod
       value: 
       objectReference: {fileID: 11400000, guid: bd4ef876743159541b63e2823eaecccc,
-        type: 2}
-    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: equipment.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 58fce09318fc270428a34061ad2af29f,
-        type: 2}
-    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: equipment.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 6b2ddc7072b252243938f217243b11a1,
-        type: 2}
-    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: equipment.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 6b2ddc7072b252243938f217243b11a1,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c640c74782e56e4ba6c83871d3b6ca4, type: 2}
@@ -2737,7 +2686,6 @@ GameObject:
   - component: {fileID: 1336928503}
   - component: {fileID: 1336928501}
   - component: {fileID: 1336928500}
-  - component: {fileID: 1336928499}
   m_Layer: 0
   m_Name: MinimapCamera
   m_TagString: Untagged
@@ -2745,13 +2693,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1336928499
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1336928498}
-  m_Enabled: 1
 --- !u!124 &1336928500
 Behaviour:
   m_ObjectHideFlags: 0

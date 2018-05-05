@@ -33,9 +33,12 @@ public class Health : MonoBehaviour {
     [HideIf("isModuleHealth"), HorizontalGroup("Health/UI/UI"), LabelWidth(35), LabelText("Text")]
     public Text UIText;
 
-    [ShowIf("isModuleHealth"), BoxGroup("Health/UI"), LabelWidth(60), LabelText("HUD Parts"), Tooltip("Put the UI gamaeobjects here that should change color according to health left.")]
+    [ShowIf("isModuleHealth"), BoxGroup("Health/UI"), LabelWidth(60), LabelText("HUD Parts"),
+     Tooltip("Put the UI gamaeobjects here that should change color according to health left.")]
     public Image[] UIMech;
-    [BoxGroup("Health/UI"), LabelText("Health Colors")]public Gradient gradient;
+
+    [BoxGroup("Health/UI"), LabelText("Health Colors")]
+    public Gradient gradient;
 
     [BoxGroup("Health"), HideIf("isModuleHealth")]
     public List<HealthValue> Modules;
@@ -66,9 +69,9 @@ public class Health : MonoBehaviour {
         if (ParentHealth) ParentHealth.CalculateHealth();
 
         if (!isModuleHealth) {
-            UIBar.localScale =
-                new Vector3(ExtensionMethods.Remap(health.CurrentHealth, 0, health.MaxHealth, 0, 1), 1, 1);
-            UIText.text = String.Format("{0} / {1}", health.CurrentHealth, health.MaxHealth);
+            if (UIBar)
+                UIBar.localScale = new Vector3(ExtensionMethods.Remap(health.CurrentHealth, 0, health.MaxHealth, 0, 1), 1, 1);
+            if (UIText) UIText.text = String.Format("{0} / {1}", health.CurrentHealth, health.MaxHealth);
             return;
         }
 
@@ -171,7 +174,7 @@ public class Health : MonoBehaviour {
             this.MaxHealth = maxHealth;
         }
     }
-    
+
 //    [CustomValueDrawer("Bar")] public int BarHealth;
 //
 //    private int Bar(int value, GUIContent content) {

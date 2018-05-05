@@ -148,6 +148,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1590165653768026
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4392025851356492}
+  m_Layer: 0
+  m_Name: SubWeaponPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1625577536965140
 GameObject:
   m_ObjectHideFlags: 1
@@ -320,6 +335,19 @@ Transform:
   m_Father: {fileID: 4685947623388152}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4392025851356492
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1590165653768026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.5, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4844039671572912}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4395526707444856
 Transform:
   m_ObjectHideFlags: 1
@@ -417,6 +445,7 @@ Transform:
   - {fileID: 4052345272341868}
   - {fileID: 4949999045717196}
   - {fileID: 4317075625949076}
+  - {fileID: 4392025851356492}
   m_Father: {fileID: 4478739298477196}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1100,14 +1129,15 @@ MonoBehaviour:
   HorizontalSensitivity: 1
   VerticalSensitivity: 0.5
   WeaponDampening: 0
-  WeaponLeft: {fileID: 11400000, guid: 6b2ddc7072b252243938f217243b11a1, type: 2}
+  WeaponLeft: {fileID: 11400000, guid: 1190ebfeb3843714ca78626908cacb5f, type: 2}
   WeaponLeftPivot: {fileID: 1270183989353868}
   WeaponRight: {fileID: 11400000, guid: 6b2ddc7072b252243938f217243b11a1, type: 2}
   WeaponRightPivot: {fileID: 1744940345060898}
-  SubWeapon: {fileID: 0}
-  SubWeaponPivot: {fileID: 0}
+  SubWeapon: {fileID: 11400000, guid: 7c7c14231c3d3c443914aa1d06753551, type: 2}
+  SubWeaponPivot: {fileID: 1590165653768026}
   Mod: {fileID: 11400000, guid: bd4ef876743159541b63e2823eaecccc, type: 2}
   ModPivot: {fileID: 1751420088315818}
+  equipment: []
 --- !u!114 &114454067610060842
 MonoBehaviour:
   m_ObjectHideFlags: 1
