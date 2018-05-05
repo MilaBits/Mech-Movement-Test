@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 
 public class Mod : Equipment {
-    public string ActionName;
+    
+    [BoxGroup("$Name")] public string ActionName;
 
     private void Start() { }
 

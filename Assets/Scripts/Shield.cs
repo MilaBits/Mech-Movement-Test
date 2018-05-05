@@ -1,7 +1,9 @@
-﻿using UnityEditor;
+﻿using Sirenix.OdinInspector;
+using UnityEditor;
 using UnityEngine;
 
 public class Shield : Mod {
+    [BoxGroup("$Name")] [InlineEditor(InlineEditorModes.LargePreview)]
     public GameObject ShieldModel;
 
     [MenuItem("Assets/Create/Game/Shield")]

@@ -834,6 +834,7 @@
     <Compile Include="Assets\Scripts\Mod.cs" />
     <Compile Include="Assets\Scripts\ResourceUI.cs" />
     <Compile Include="Assets\Scripts\ScrapPool.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectCreator.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectUtility.cs" />
     <Compile Include="Assets\Scripts\Shield.cs" />
     <Compile Include="Assets\Scripts\SubWeapon.cs" />
