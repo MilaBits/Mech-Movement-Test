@@ -5,12 +5,15 @@ public class MechController : MonoBehaviour {
     [Required] public Game Game;
     private Controls controls;
 
-    [TabGroup("Main", "Mech")] [EnumToggleButtons]
+    [TabGroup("Main", "Mech"), BoxGroup("Main/Mech/Base", false)] [EnumToggleButtons]
     public MechTypes MechType;
 
-    [TabGroup("Main", "Mech")] public GameObject Top;
-    [TabGroup("Main", "Mech")] public GameObject Bottom;
-    [Space] [TabGroup("Main", "Mech")] public float MovementSpeed = .1f;
+    //TODO: Perhaps update these to find children by tag or something having to put them in manually seems clunky
+    [BoxGroup("Main/Mech/Base", false)] public GameObject Top;
+    [BoxGroup("Main/Mech/Base", false)] public GameObject Bottom;
+
+    [Space] [BoxGroup("Main/Mech/Base", false)]
+    public float MovementSpeed = .1f;
 
     [Space] [TabGroup("Main", "Camera")] public LayerMask LevelMask;
 
@@ -39,39 +42,20 @@ public class MechController : MonoBehaviour {
     private float heading;
 
 
-    [FoldoutGroup("Main/Mech/Equipment")]
-    [HorizontalGroup("Main/Mech/Equipment/Split", 0.5f, LabelWidth = 20)]
-    [BoxGroup("Main/Mech/Equipment/Split/Left Weapon")]
-    [LabelWidth(55)]
-    [LabelText("Weapon")]
-    public Weapon WeaponLeft;
+    [TabGroup("Main", "Mech"), InlineEditor]
+    public Loadout Loadout;
 
-    [BoxGroup("Main/Mech/Equipment/Split/Left Weapon")] [LabelWidth(55)] [LabelText("Pivot")]
+    [BoxGroup("Main/Mech/Pivots"), LabelText("Pivot - Left Weapon"), LabelWidth(125)]
     public GameObject WeaponLeftPivot;
 
-    [HorizontalGroup("Main/Mech/Equipment/Split", 0.5f, LabelWidth = 20)]
-    [BoxGroup("Main/Mech/Equipment/Split/Right Weapon")]
-    [LabelWidth(55)]
-    [LabelText("Weapon")]
-    public Weapon WeaponRight;
-
-    [BoxGroup("Main/Mech/Equipment/Split/Right Weapon")] [LabelWidth(55)] [LabelText("Pivot")]
+    [BoxGroup("Main/Mech/Pivots"), LabelText("Pivot - Right Weapon"), LabelWidth(125)]
     public GameObject WeaponRightPivot;
 
-    [BoxGroup("Main/Mech/Equipment/Subweapon")] [LabelWidth(55)]
-    public SubWeapon SubWeapon;
-
-    [BoxGroup("Main/Mech/Equipment/Subweapon")] [LabelWidth(55)] [LabelText("Pivot")]
+    [BoxGroup("Main/Mech/Pivots"), LabelText("Pivot - Sub-Weapon"), LabelWidth(125)]
     public GameObject SubWeaponPivot;
 
-    [BoxGroup("Main/Mech/Equipment/Mod")] [LabelWidth(55)]
-    public Mod Mod;
-
-    [BoxGroup("Main/Mech/Equipment/Mod")] [LabelWidth(55)] [LabelText("Pivot")]
+    [BoxGroup("Main/Mech/Pivots"), LabelText("Pivot - Mod"), LabelWidth(125)]
     public GameObject ModPivot;
-
-//    [BoxGroup("Main/Mech/Equipment"), AssetList(Path = "Resources/Equipment"), LabelText("Equipable Stuff")]
-//    public Equipment[] equipment;
 
     void Start() {
         if (!Game)
@@ -82,22 +66,21 @@ public class MechController : MonoBehaviour {
     }
 
     private void InitializeEquipment() {
-        //TODO: invert X scale on left weapon
-        WeaponLeft = Instantiate(Resources.Load<Weapon>("Equipment/Weapons/" + WeaponLeft.name));
-        WeaponRight.InitializeModel(WeaponLeftPivot.transform);
-        WeaponLeft.mech = this;
+        Loadout.WeaponLeft = Instantiate(Resources.Load<MainWeapon>("Equipment/Weapons/" + Loadout.WeaponLeft.name));
+        Loadout.WeaponRight.InitializeModel(WeaponLeftPivot.transform);
+        Loadout.WeaponLeft.mech = this;
 
-        WeaponRight = Instantiate(Resources.Load<Weapon>("Equipment/Weapons/" + WeaponRight.name));
-        WeaponRight.InitializeModel(WeaponRightPivot.transform);
-        WeaponRight.mech = this;
+        Loadout.WeaponRight = Instantiate(Resources.Load<MainWeapon>("Equipment/Weapons/" + Loadout.WeaponRight.name));
+        Loadout.WeaponRight.InitializeModel(WeaponRightPivot.transform);
+        Loadout.WeaponRight.mech = this;
 
-        SubWeapon = Instantiate(Resources.Load<SubWeapon>("Equipment/Weapons/" + SubWeapon.name));
-        WeaponRight.InitializeModel(SubWeaponPivot.transform);
-        SubWeapon.mech = this;
+        Loadout.SubWeapon = Instantiate(Resources.Load<SubWeapon>("Equipment/Weapons/" + Loadout.SubWeapon.name));
+        Loadout.WeaponRight.InitializeModel(SubWeaponPivot.transform);
+        Loadout.SubWeapon.mech = this;
 
-        Mod = Instantiate(Resources.Load<Mod>("Equipment/Mods/" + Mod.name));
-        Mod.InitializeModel(ModPivot.transform);
-        Mod.mech = this;
+        Loadout.Mod = Instantiate(Resources.Load<Mod>("Equipment/Mods/" + Loadout.Mod.name));
+        Loadout.Mod.InitializeModel(ModPivot.transform);
+        Loadout.Mod.mech = this;
     }
 
     void Update() {
@@ -120,7 +103,7 @@ public class MechController : MonoBehaviour {
 
     private void ModAction() {
         if (controls.GetButtonDown("Mod")) {
-            Mod.Action();
+            Loadout.Mod.Action();
         }
     }
 

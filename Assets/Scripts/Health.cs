@@ -20,11 +20,11 @@ public class Health : MonoBehaviour {
 
     [HideIf("isModuleHealth"), HorizontalGroup("Health/Base"), LabelWidth(90), LabelText("Mech Health"),
      SuffixLabel("HP", true)]
-    public int BaseCurrentHealth;
+    public float BaseCurrentHealth;
 
     [HideIf("isModuleHealth"), HorizontalGroup("Health/Base"), LabelWidth(30), LabelText("Max"),
      SuffixLabel("HP", true)]
-    public int BaseMaxHealth;
+    public float BaseMaxHealth;
 
     [BoxGroup("Health/UI")]
     [HideIf("isModuleHealth"), HorizontalGroup("Health/UI/UI"), LabelWidth(30), LabelText("Bar")]
@@ -91,7 +91,7 @@ public class Health : MonoBehaviour {
         }
     }
 
-    public void TakeDamage(int damage) {
+    public void TakeDamage(float damage) {
         if (!isModuleHealth) {
             BaseCurrentHealth -= damage;
 
@@ -103,7 +103,7 @@ public class Health : MonoBehaviour {
                 ParentHealth.TakeDamage(damage);
             }
             else {
-                int leftoverDamage = 0;
+                float leftoverDamage = 0;
 
                 leftoverDamage = damage - health.CurrentHealth;
                 health.CurrentHealth = 0;
@@ -114,7 +114,7 @@ public class Health : MonoBehaviour {
                 Debug.Log("Damage taken: " + (damage - leftoverDamage));
 
                 if (leftoverDamage > 0) {
-                    int critDamage = (int) Math.Round(leftoverDamage * CriticalMultiplier);
+                    float critDamage = (float) Math.Round(leftoverDamage * CriticalMultiplier);
                     ParentHealth.TakeDamage(critDamage);
                     Debug.Log("Damage taken: " + critDamage + " (Crit)");
                 }
@@ -130,8 +130,8 @@ public class Health : MonoBehaviour {
         }
     }
 
-    public int CalculateMaxHealth() {
-        int health = 0;
+    public float CalculateMaxHealth() {
+        float health = 0;
         foreach (var module in Modules) {
             health += module.MaxHealth;
         }
@@ -139,8 +139,8 @@ public class Health : MonoBehaviour {
         return health;
     }
 
-    public int CalculateCurrentHealth() {
-        int health = 0;
+    public float CalculateCurrentHealth() {
+        float health = 0;
         foreach (var module in Modules) {
             health += module.CurrentHealth;
         }
@@ -159,10 +159,6 @@ public class Health : MonoBehaviour {
     }
 
     private Color GetHealthBarColor(float value) {
-//        if (gradient.colorKeys[0].color != Color.green) {
-//            SetupGradient();
-//        }
-
         return gradient.Evaluate(1 - value / health.MaxHealth);
     }
 
@@ -174,18 +170,4 @@ public class Health : MonoBehaviour {
             this.MaxHealth = maxHealth;
         }
     }
-
-//    [CustomValueDrawer("Bar")] public int BarHealth;
-//
-//    private int Bar(int value, GUIContent content) {
-//        Rect rect = EditorGUILayout.GetControlRect();
-//
-//        ProgressBarConfig config = new ProgressBarConfig();
-//        config.Height = Convert.ToInt16(rect.height);
-//        config.ForegroundColor = GetHealthBarColor(health.CurrentHealth + BaseCurrentHealth);
-//
-//
-//        return Convert.ToInt16(
-//            SirenixEditorFields.ProgressBarField(rect, health.CurrentHealth + BaseCurrentHealth, 0, health.MaxHealth + BaseMaxHealth, config));
-//    }
 }

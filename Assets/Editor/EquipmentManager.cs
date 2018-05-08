@@ -19,22 +19,34 @@ public class EquipmentManager : OdinMenuEditorWindow {
         tree.Config.DrawSearchToolbar = true;
 
         tree.Add("Overview", new AllEquipment());
+        tree.Add("Loadouts", new Loadouts());
 
-        tree.AddAllAssetsAtPath("Weapons", "Assets/Resources/Equipment/Weapons/", typeof(Weapon), true, true)
-            .SortMenuItemsByName();
+        tree.AddAllAssetsAtPath("Weapons/Main Weapons", "Assets/Resources/Equipment/Weapons/", typeof(MainWeapon), true,
+                true)
+            .SortMenuItemsByName()
+            .ForEach(this.AddDragHandles);
 
-        // Add all scriptable object items.
-        tree.AddAllAssetsAtPath("Sub-Weapons", "Assets/Resources/Equipment/Weapons/", typeof(SubWeapon), true)
-            .SortMenuItemsByName();
+        tree.AddAllAssetsAtPath("Weapons/Sub Weapons", "Assets/Resources/Equipment/Weapons/", typeof(SubWeapon), true)
+            .SortMenuItemsByName()
+            .ForEach(this.AddDragHandles);
 
         tree.AddAllAssetsAtPath("Mods", "Assets/Resources/Equipment/Mods/", typeof(Mod), true)
-            .SortMenuItemsByName();
+            .SortMenuItemsByName()
+            .ForEach(this.AddDragHandles);
 
         // Add icons to characters and items.
 //        tree.EnumerateTree().AddIcons<Character>(x => x.Icon);
 //        tree.EnumerateTree().AddIcons<Item>(x => x.Icon);
 
+        // Add drag handles to items, so they can be easily dragged into the inventory if characters etc...
+        tree.EnumerateTree().Where(x => x.ObjectInstance as Equipment)
+            .ForEach(AddDragHandles);
+
         return tree;
+    }
+
+    private void AddDragHandles(OdinMenuItem menuItem) {
+        menuItem.OnDrawItem += x => DragAndDropUtilities.DragZone(menuItem.Rect, menuItem.ObjectInstance, false, false);
     }
 
     protected override void OnBeginDrawEditors() {
@@ -46,6 +58,14 @@ public class EquipmentManager : OdinMenuEditorWindow {
         {
             if (selected != null) {
                 GUILayout.Label(selected.Name);
+            }
+
+            if (SirenixEditorGUI.ToolbarButton(new GUIContent("Create Loadout"))) {
+                ScriptableObjectCreator.ShowDialog<Loadout>("Assets/Resources/Equipment/Loadouts",
+                    obj => {
+                        obj.Name = obj.name;
+                        base.TrySelectMenuItemWithObject(obj); // Selects the newly created item in the editor
+                    });
             }
 
             if (SirenixEditorGUI.ToolbarButton(new GUIContent("Create Equipment"))) {
@@ -65,7 +85,7 @@ public class EquipmentManager : OdinMenuEditorWindow {
 
 #if UNITY_EDITOR
         [Button(ButtonSizes.Medium), PropertyOrder(-1)]
-        public void UpdateCharacterOverview() {
+        public void UpdateEquipmentOverview() {
             // Finds and assigns all scriptable objects of type Character
             this.AllEquipment = AssetDatabase.FindAssets("t:Equipment")
                 .Select(guid => AssetDatabase.LoadAssetAtPath<Equipment>(AssetDatabase.GUIDToAssetPath(guid)))
@@ -75,13 +95,28 @@ public class EquipmentManager : OdinMenuEditorWindow {
     }
 
     public class AllEquipment {
-        [AssetList(Path = "Resources/Equipment/Weapons", AutoPopulate = true)] [InlineEditor]
-        public List<Weapon> weapons;
+        [BoxGroup("Weapons"), AssetList(Path = "Resources/Equipment/Weapons", AutoPopulate = true)] [InlineEditor]
+        public List<MainWeapon> MainWeapons;
 
-        [AssetList(Path = "Resources/Equipment/Weapons", AutoPopulate = true)] [InlineEditor]
+        [BoxGroup("Weapons"), AssetList(Path = "Resources/Equipment/Weapons", AutoPopulate = true)] [InlineEditor]
         public List<SubWeapon> SubWeapons;
 
-        [AssetList(Path = "Resources/Equipment/Mods", AutoPopulate = true)] [InlineEditor]
-        public List<Mod> Mods;
+        [BoxGroup("Mods"), AssetList(Path = "Resources/Equipment/Mods", AutoPopulate = true)] [InlineEditor]
+        public List<Shield> Shields;
+    }
+}
+
+public class Loadouts {
+    public Loadouts() {
+        RefreshList();
+    }
+
+    [InlineEditor] public List<Loadout> loadouts = new List<Loadout>();
+
+    [Button("Refresh", ButtonSizes.Medium), PropertyOrder(-1)]
+    public void RefreshList() {
+        loadouts = AssetDatabase.FindAssets("t:Loadout")
+            .Select(guid => AssetDatabase.LoadAssetAtPath<Loadout>(AssetDatabase.GUIDToAssetPath(guid)))
+            .ToList();
     }
 }

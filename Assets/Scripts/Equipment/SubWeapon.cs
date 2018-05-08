@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-public class SubWeapon : Equipment {
+public class SubWeapon : Weapon {
 
 	// Use this for initialization
 	void Start () {

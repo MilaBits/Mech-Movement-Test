@@ -15,5 +15,6 @@ MonoBehaviour:
   Name: Shield
   Model: {fileID: 100002, guid: 159988a02c3e3ed419f436ae950a0887, type: 3}
   ActionName: Activate Shield
+  BlockPower: 150
   ShieldModel: {fileID: 1361473716884462, guid: a57e5eaa80f809e419188cba65fc133b,
     type: 2}

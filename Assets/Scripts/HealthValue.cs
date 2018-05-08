@@ -8,19 +8,19 @@ using UnityEngine;
 public class HealthValue {
     [HideInInspector] public string Owner;
 
-    [HorizontalGroup("Health")] [LabelText("$Owner"), LabelWidth(90),SuffixLabel("HP",true)]
-    public int CurrentHealth;
+    [HorizontalGroup("Health")] [LabelText("$Owner"), LabelWidth(90), SuffixLabel("HP", true)]
+    public float CurrentHealth;
 
-    [HorizontalGroup("Health"), LabelText("Max"), LabelWidth(30),SuffixLabel("HP",true)]
-    public int MaxHealth;
+    [HorizontalGroup("Health"), LabelText("Max"), LabelWidth(30), SuffixLabel("HP", true)]
+    public float MaxHealth;
 
-    [CustomValueDrawer("Bar")] public int BarHealth;
+    [CustomValueDrawer("Bar")] public float BarHealth;
 
     private Color GetHealthBarColor(float value) {
         return Color.Lerp(Color.red, Color.green, Mathf.Pow(value / MaxHealth, 2));
     }
 
-    private int Bar(int value, GUIContent content) {
+    private float Bar(float value, GUIContent content) {
         Rect rect = EditorGUILayout.GetControlRect();
 
         ProgressBarConfig config = new ProgressBarConfig();
@@ -28,7 +28,6 @@ public class HealthValue {
         config.ForegroundColor = GetHealthBarColor(CurrentHealth);
 
 
-        return Convert.ToInt16(
-            SirenixEditorFields.ProgressBarField(rect, CurrentHealth, 0, MaxHealth, config));
+        return (float) SirenixEditorFields.ProgressBarField(rect, CurrentHealth, 0, MaxHealth, config);
     }
 }

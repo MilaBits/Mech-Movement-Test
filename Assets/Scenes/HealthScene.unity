@@ -1997,19 +1997,31 @@ Prefab:
         type: 2}
       propertyPath: WeaponLeft
       value: 
-      objectReference: {fileID: 11400000, guid: 1190ebfeb3843714ca78626908cacb5f,
+      objectReference: {fileID: 11400000, guid: 8261d2745e9a72e44aa658850501f922,
         type: 2}
     - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
         type: 2}
       propertyPath: WeaponRight
       value: 
-      objectReference: {fileID: 11400000, guid: 6b2ddc7072b252243938f217243b11a1,
+      objectReference: {fileID: 11400000, guid: 8261d2745e9a72e44aa658850501f922,
         type: 2}
     - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
         type: 2}
       propertyPath: Mod
       value: 
       objectReference: {fileID: 11400000, guid: bd4ef876743159541b63e2823eaecccc,
+        type: 2}
+    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+        type: 2}
+      propertyPath: SubWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c7c14231c3d3c443914aa1d06753551,
+        type: 2}
+    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+        type: 2}
+      propertyPath: Loadout
+      value: 
+      objectReference: {fileID: 11400000, guid: a59cf35142c4dbb4abc557d8dfe8eeec,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c640c74782e56e4ba6c83871d3b6ca4, type: 2}
@@ -3970,6 +3982,11 @@ Prefab:
         type: 2}
       propertyPath: m_RenderMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224595779333356384, guid: d5df1ed2406924b41bdaff431aaffdbc,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.060606
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5df1ed2406924b41bdaff431aaffdbc, type: 2}

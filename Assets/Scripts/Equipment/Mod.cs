@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Mod : Equipment {
     
-    [BoxGroup("$Name")] public string ActionName;
+    [BoxGroup("Equipment Base/$Name")] public string ActionName;
 
     private void Start() { }
 

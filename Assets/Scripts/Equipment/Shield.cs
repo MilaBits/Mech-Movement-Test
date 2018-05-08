@@ -3,7 +3,9 @@ using UnityEditor;
 using UnityEngine;
 
 public class Shield : Mod {
-    [BoxGroup("$Name")] [InlineEditor(InlineEditorModes.LargePreview)]
+    [BoxGroup("Equipment Base/$Name", false)] public float BlockPower;
+
+    [BoxGroup("Equipment Base/$Name")] [InlineEditor(InlineEditorModes.LargePreview)] [PropertyOrder(100)]
     public GameObject ShieldModel;
 
     [MenuItem("Assets/Create/Game/Shield")]
