@@ -1,12 +1,26 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEditor;
-using UnityEngine;
 
 public class MainWeapon : Weapon {
+    [FoldoutGroup("Equipment Base/$Name/Moves"), InlineEditor]
+    public List<Move> IdleMoves;
 
-	[MenuItem("Assets/Create/Game/MainWeapon")]
-	public static void CreateAsset() {
-		ScriptableObjectUtility.CreateAsset<MainWeapon>();
-	}
+    [FoldoutGroup("Equipment Base/$Name/Moves"), InlineEditor]
+    public List<Move> ForwardMoves;
+
+    [FoldoutGroup("Equipment Base/$Name/Moves"), InlineEditor]
+    public List<Move> FinisherMoves;
+
+    [FoldoutGroup("Equipment Base/$Name/Moves"), InlineEditor]
+    public List<Move> HighMoves;
+
+    [FoldoutGroup("Equipment Base/$Name/Moves"), InlineEditor]
+    public List<Move> LowMoves;
+
+    [MenuItem("Assets/Create/Game/MainWeapon")]
+    public static void CreateAsset() {
+        ScriptableObjectUtility.CreateAsset<MainWeapon>();
+    }
 }

@@ -61,7 +61,7 @@ public class EquipmentManager : OdinMenuEditorWindow {
             }
 
             if (SirenixEditorGUI.ToolbarButton(new GUIContent("Create Loadout"))) {
-                ScriptableObjectCreator.ShowDialog<Loadout>("Assets/Resources/Equipment/Loadouts",
+                ScriptableObjectPicker.ShowDialog<Loadout>("Assets/Resources/Equipment/Loadouts",
                     obj => {
                         obj.Name = obj.name;
                         base.TrySelectMenuItemWithObject(obj); // Selects the newly created item in the editor
@@ -69,7 +69,7 @@ public class EquipmentManager : OdinMenuEditorWindow {
             }
 
             if (SirenixEditorGUI.ToolbarButton(new GUIContent("Create Equipment"))) {
-                ScriptableObjectCreator.ShowDialog<Equipment>("Assets/Resources/Equipment",
+                ScriptableObjectPicker.ShowDialog<Equipment>("Assets/Resources/Equipment",
                     obj => {
                         obj.Name = obj.name;
                         base.TrySelectMenuItemWithObject(obj); // Selects the newly created item in the editor

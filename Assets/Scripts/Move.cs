@@ -1,17 +1,15 @@
 ﻿using System;
 using JetBrains.Annotations;
+using Sirenix.OdinInspector;
+using UnityEditor;
 using UnityEngine;
 
-public class Attack {
+public class Move : SerializedScriptableObject {
+    public IMoveAction Action;
+
     public Stance EndStance;
     public float EndLag;
-    public Attack FollowupAttack;
-
-    public Attack(Stance endStance, float endLag) : this(endStance, endLag, null) { }
-
-    public Attack(Stance endStance, float endLag, [CanBeNull] Attack followupAttack) {
-        EndStance = endStance;
-        EndLag = endLag;
-        FollowupAttack = followupAttack;
-    }
+    //[InlineEditor] public Move FollowupMove;
+    public GameObject HitBox;
+    public float Damage;
 }

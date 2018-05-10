@@ -67,7 +67,7 @@ MonoBehaviour:
     XboxInvalid: 0
     Keyboard: Left Weapon_Keyboard
     KeyboardMessage: Input Left Weapon_Keyboard does not yet exist
-    KeyboardInvalid: 1
+    KeyboardInvalid: 0
   - InputName: Right Weapon
     CopyInputName: 1
     Ps4: Right Weapon_Ps4
@@ -78,7 +78,7 @@ MonoBehaviour:
     XboxInvalid: 0
     Keyboard: Right Weapon_Keyboard
     KeyboardMessage: Input Right Weapon_Keyboard does not yet exist
-    KeyboardInvalid: 1
+    KeyboardInvalid: 0
   - InputName: Mod
     CopyInputName: 1
     Ps4: Mod_Ps4

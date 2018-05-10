@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f39ad3231890af4cb5791bd5786e972, type: 3}
-  m_Name: Oooooh
+  m_Name: Lance Loadout
   m_EditorClassIdentifier: 
-  Name: Oooooh
-  WeaponLeft: {fileID: 11400000, guid: 8261d2745e9a72e44aa658850501f922, type: 2}
+  Name: Lance Loadout
+  WeaponLeft: {fileID: 0}
   WeaponLeftPivot: {x: 0, y: 0, z: 0}
-  WeaponRight: {fileID: 11400000, guid: 8261d2745e9a72e44aa658850501f922, type: 2}
+  WeaponRight: {fileID: 0}
   WeaponRightPivot: {x: 0, y: 0, z: 0}
-  SubWeapon: {fileID: 11400000, guid: 7c7c14231c3d3c443914aa1d06753551, type: 2}
+  SubWeapon: {fileID: 0}
   SubWeaponPivot: {x: 0, y: 0, z: 0}
-  Mod: {fileID: 11400000, guid: bd4ef876743159541b63e2823eaecccc, type: 2}
+  Mod: {fileID: 0}
   ModPivotOffset: {x: 0, y: 0, z: 0}

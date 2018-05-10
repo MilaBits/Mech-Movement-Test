@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace {
-    public class MoveAction : MonoBehaviour {
-        
-    }
+public interface IMoveAction {
+    void Execute();
 }

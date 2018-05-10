@@ -45,14 +45,22 @@ public class MechController : MonoBehaviour {
     [TabGroup("Main", "Mech"), InlineEditor]
     public Loadout Loadout;
 
+    private MainWeapon WeaponLeft;
+
     [BoxGroup("Main/Mech/Pivots"), LabelText("Pivot - Left Weapon"), LabelWidth(125)]
     public GameObject WeaponLeftPivot;
+
+    private MainWeapon WeaponRight;
 
     [BoxGroup("Main/Mech/Pivots"), LabelText("Pivot - Right Weapon"), LabelWidth(125)]
     public GameObject WeaponRightPivot;
 
+    private SubWeapon SubWeapon;
+
     [BoxGroup("Main/Mech/Pivots"), LabelText("Pivot - Sub-Weapon"), LabelWidth(125)]
     public GameObject SubWeaponPivot;
+
+    private Mod Mod;
 
     [BoxGroup("Main/Mech/Pivots"), LabelText("Pivot - Mod"), LabelWidth(125)]
     public GameObject ModPivot;
@@ -66,21 +74,21 @@ public class MechController : MonoBehaviour {
     }
 
     private void InitializeEquipment() {
-        Loadout.WeaponLeft = Instantiate(Resources.Load<MainWeapon>("Equipment/Weapons/" + Loadout.WeaponLeft.name));
-        Loadout.WeaponRight.InitializeModel(WeaponLeftPivot.transform);
-        Loadout.WeaponLeft.mech = this;
+        WeaponLeft = Instantiate(Resources.Load<MainWeapon>("Equipment/Weapons/" + Loadout.WeaponLeft.name));
+        WeaponLeft.InitializeModel(WeaponLeftPivot.transform);
+        WeaponLeft.mech = this;
 
-        Loadout.WeaponRight = Instantiate(Resources.Load<MainWeapon>("Equipment/Weapons/" + Loadout.WeaponRight.name));
-        Loadout.WeaponRight.InitializeModel(WeaponRightPivot.transform);
-        Loadout.WeaponRight.mech = this;
+        WeaponRight = Instantiate(Resources.Load<MainWeapon>("Equipment/Weapons/" + Loadout.WeaponRight.name));
+        WeaponRight.InitializeModel(WeaponRightPivot.transform);
+        WeaponRight.mech = this;
 
-        Loadout.SubWeapon = Instantiate(Resources.Load<SubWeapon>("Equipment/Weapons/" + Loadout.SubWeapon.name));
-        Loadout.WeaponRight.InitializeModel(SubWeaponPivot.transform);
-        Loadout.SubWeapon.mech = this;
+        SubWeapon = Instantiate(Resources.Load<SubWeapon>("Equipment/Weapons/" + Loadout.SubWeapon.name));
+        SubWeapon.InitializeModel(SubWeaponPivot.transform);
+        SubWeapon.mech = this;
 
-        Loadout.Mod = Instantiate(Resources.Load<Mod>("Equipment/Mods/" + Loadout.Mod.name));
-        Loadout.Mod.InitializeModel(ModPivot.transform);
-        Loadout.Mod.mech = this;
+        Mod = Instantiate(Resources.Load<Mod>("Equipment/Mods/" + Loadout.Mod.name));
+        Mod.InitializeModel(ModPivot.transform);
+        Mod.mech = this;
     }
 
     void Update() {

@@ -821,6 +821,8 @@
     <Compile Include="Assets\PlayMaker\Actions\Vector3\Vector3Subtract.cs" />
     <Compile Include="Assets\PlayMaker\Actions\Web\WWWObject.cs" />
     <Compile Include="Assets\PlayMaker\UpdateHelper.cs" />
+    <Compile Include="Assets\Scripts\ActiveHand.cs" />
+    <Compile Include="Assets\Scripts\ComboSystem.cs" />
     <Compile Include="Assets\Scripts\Controls.cs" />
     <Compile Include="Assets\Scripts\DamageType.cs" />
     <Compile Include="Assets\Scripts\Equipment\Equipment.cs" />
@@ -838,10 +840,15 @@
     <Compile Include="Assets\Scripts\MechController.cs" />
     <Compile Include="Assets\Scripts\MechTypes.cs" />
     <Compile Include="Assets\Scripts\MinimapCameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Move.cs" />
+    <Compile Include="Assets\Scripts\MoveAction.cs" />
+    <Compile Include="Assets\Scripts\MoveBase.cs" />
+    <Compile Include="Assets\Scripts\Moves\Move Actions\BasicTestAttack.cs" />
     <Compile Include="Assets\Scripts\ResourceUI.cs" />
     <Compile Include="Assets\Scripts\ScrapPool.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjectCreator.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectPicker.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectUtility.cs" />
+    <Compile Include="Assets\Scripts\Stance.cs" />
     <Compile Include="Assets\Scripts\TestProjectile.cs" />
     <Compile Include="Assets\Shaders\ScanlinesEffect.cs" />
     <None Include="Assets\Shaders\OverlayUI.shader" />
@@ -854,6 +861,7 @@
     <None Include="Assets\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\PlayMaker\Resources\PlayMakerAssemblies.txt" />
     <None Include="Assets\PlayMaker\Versions\readme.txt" />
+    <None Include="Assets\Shaders\Forcefield.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>K:/Documents/Projects/Unity Projects/MechMovementTest/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

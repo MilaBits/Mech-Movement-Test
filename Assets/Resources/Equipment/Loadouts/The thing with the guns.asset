@@ -19,4 +19,4 @@ MonoBehaviour:
   SubWeapon: {fileID: 11400000, guid: 7c7c14231c3d3c443914aa1d06753551, type: 2}
   SubWeaponPivot: {x: 0, y: 0, z: 0}
   Mod: {fileID: 11400000, guid: bd4ef876743159541b63e2823eaecccc, type: 2}
-  ModPivot: {x: 0, y: 0, z: 0}
+  ModPivotOffset: {x: 0, y: 0, z: 0}

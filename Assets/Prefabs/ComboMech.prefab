@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 4478739298477196}
   - component: {fileID: 114097408208372644}
   - component: {fileID: 114454067610060842}
+  - component: {fileID: 114016234082321610}
   - component: {fileID: 114285675679172908}
   - component: {fileID: 54745339939340078}
   - component: {fileID: 114733792542255952}
@@ -841,6 +842,20 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1889583563616330}
   m_Enabled: 1
+--- !u!114 &114016234082321610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967105270335184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0683556bd955e154391c50b48e8ad063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentStance: 0
+  activeHand: 0
+  moveIndex: 0
 --- !u!114 &114059625642868406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1129,15 +1144,11 @@ MonoBehaviour:
   HorizontalSensitivity: 1
   VerticalSensitivity: 0.5
   WeaponDampening: 0
-  WeaponLeft: {fileID: 11400000, guid: 1190ebfeb3843714ca78626908cacb5f, type: 2}
+  Loadout: {fileID: 11400000, guid: a59cf35142c4dbb4abc557d8dfe8eeec, type: 2}
   WeaponLeftPivot: {fileID: 1270183989353868}
-  WeaponRight: {fileID: 11400000, guid: 6b2ddc7072b252243938f217243b11a1, type: 2}
   WeaponRightPivot: {fileID: 1744940345060898}
-  SubWeapon: {fileID: 11400000, guid: 7c7c14231c3d3c443914aa1d06753551, type: 2}
   SubWeaponPivot: {fileID: 1590165653768026}
-  Mod: {fileID: 11400000, guid: bd4ef876743159541b63e2823eaecccc, type: 2}
   ModPivot: {fileID: 1751420088315818}
-  equipment: []
 --- !u!114 &114454067610060842
 MonoBehaviour:
   m_ObjectHideFlags: 1
