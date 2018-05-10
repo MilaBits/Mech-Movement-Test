@@ -16,7 +16,7 @@ using UnityEngine;
 // to help the user create it in a specific directory.
 // 
 
-public static class ScriptableObjectCreator {
+public static class ScriptableObjectPicker {
     public static void ShowDialog<T>(string defaultDestinationPath, Action<T> onScritpableObjectCreated = null)
         where T : ScriptableObject {
         var selector = new ScriptableObjectSelector<T>(defaultDestinationPath, onScritpableObjectCreated);
