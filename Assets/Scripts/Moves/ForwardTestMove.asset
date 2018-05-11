@@ -19,17 +19,14 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: Action
-      Entry: 7
-      Data: 0|BasicTestAttack, Assembly-CSharp
-    - Name: debugMessage
-      Entry: 1
-      Data: Forward move!
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
+  debugMessage: 
+  Damage: 100
+  Element: 0
+  ElementStrength: 0
+  moveTime: 1
   EndStance: 0
-  EndLag: 0
-  HitBox: {fileID: 0}
-  Damage: 0
+  EndLag: 2
+  HitBox: {fileID: 114918878424683998, guid: 73814b79f6eb6af479fe75fb4bb5be05, type: 2}
+  hitBoxLifetime: 0.5
+  HitBoxPosition: {x: 0, y: 0, z: 0}

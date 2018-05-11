@@ -185,4 +185,12 @@ public class MechController : MonoBehaviour {
         else if (angle > max) return max;
         else return angle;
     }
+
+    public Transform GetWeaponInHand(ActiveHand activeHand) {
+        if (activeHand == ActiveHand.Left) {
+            return WeaponLeftPivot.transform;
+        }
+
+        return WeaponRightPivot.transform;
+    }
 }

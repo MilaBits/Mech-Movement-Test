@@ -824,7 +824,8 @@
     <Compile Include="Assets\Scripts\ActiveHand.cs" />
     <Compile Include="Assets\Scripts\ComboSystem.cs" />
     <Compile Include="Assets\Scripts\Controls.cs" />
-    <Compile Include="Assets\Scripts\DamageType.cs" />
+    <Compile Include="Assets\Scripts\DualMove.cs" />
+    <Compile Include="Assets\Scripts\Element.cs" />
     <Compile Include="Assets\Scripts\Equipment\Equipment.cs" />
     <Compile Include="Assets\Scripts\Equipment\MainWeapon.cs" />
     <Compile Include="Assets\Scripts\Equipment\Mod.cs" />
@@ -836,6 +837,7 @@
     <Compile Include="Assets\Scripts\Game.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\HealthValue.cs" />
+    <Compile Include="Assets\Scripts\Hitbox.cs" />
     <Compile Include="Assets\Scripts\Loadout.cs" />
     <Compile Include="Assets\Scripts\MechController.cs" />
     <Compile Include="Assets\Scripts\MechTypes.cs" />

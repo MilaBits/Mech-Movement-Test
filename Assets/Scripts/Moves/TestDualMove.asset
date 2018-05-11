@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 522305c36f5d4f15b63555cbc588c2c0, type: 3}
-  m_Name: Idle 2
+  m_Name: new move
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,12 +21,12 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   debugMessage: 
-  Damage: 50
-  Element: 1
+  Damage: 0
+  Element: 0
   ElementStrength: 0
-  moveTime: 2
-  EndStance: 1
-  EndLag: 1
-  HitBox: {fileID: 114918878424683998, guid: 73814b79f6eb6af479fe75fb4bb5be05, type: 2}
-  hitBoxLifetime: 0.5
+  moveTime: 0
+  EndStance: 0
+  EndLag: 0
+  HitBox: {fileID: 0}
+  hitBoxLifetime: 0
   HitBoxPosition: {x: 0, y: 0, z: 0}

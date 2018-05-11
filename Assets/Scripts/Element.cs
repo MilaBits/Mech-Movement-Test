@@ -1,4 +1,4 @@
-﻿public enum DamageType {
+﻿public enum Element {
     None,
     Blast,
     Rust,
