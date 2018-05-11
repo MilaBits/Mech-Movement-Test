@@ -27,11 +27,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _: 0.5
     - _Cutoff: 0.5
     - _Emission: 0.03
     - _Glancing: 1.98
     - _Gloss: 0.035
     - _Intersection: 1
+    - _Outline: 0
     - _PreRampExponent: 0.832
     - _PreRampMultiplier: 0.89
     - _node_8200: 0.41
@@ -39,3 +41,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _node_6760: {r: 0.5, g: 0.5, b: 0.5, a: 1}
