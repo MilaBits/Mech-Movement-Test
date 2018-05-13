@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
@@ -50,7 +51,14 @@ public class EquipmentManager : OdinMenuEditorWindow {
     }
 
     protected override void OnBeginDrawEditors() {
-        var selected = this.MenuTree.Selection.FirstOrDefault();
+        OdinMenuItem selected = null;
+        try {
+            if (this.MenuTree.Selection.Count > 0) {
+                selected = this.MenuTree.Selection.FirstOrDefault();
+            }
+        }
+        catch (NullReferenceException) { }
+
         var toolbarHeight = this.MenuTree.Config.SearchToolbarHeight;
 
         // Draws a toolbar with the name of the currently selected menu item.

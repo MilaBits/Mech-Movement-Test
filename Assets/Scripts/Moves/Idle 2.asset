@@ -24,7 +24,7 @@ MonoBehaviour:
   Damage: 50
   Element: 1
   ElementStrength: 0
-  moveTime: 2
+  moveTime: 0.2
   EndStance: 1
   EndLag: 1
   HitBox: {fileID: 114918878424683998, guid: 73814b79f6eb6af479fe75fb4bb5be05, type: 2}

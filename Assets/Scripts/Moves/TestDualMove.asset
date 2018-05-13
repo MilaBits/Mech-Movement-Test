@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 522305c36f5d4f15b63555cbc588c2c0, type: 3}
-  m_Name: new move
+  m_Name: TestDualMove
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -20,13 +20,13 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  debugMessage: 
-  Damage: 0
+  debugMessage: Dual move!
+  Damage: 200
   Element: 0
-  ElementStrength: 0
-  moveTime: 0
+  ElementStrength: 50
+  moveTime: 0.5
   EndStance: 0
-  EndLag: 0
-  HitBox: {fileID: 0}
-  hitBoxLifetime: 0
+  EndLag: 0.5
+  HitBox: {fileID: 114909920417078260, guid: 48c15fa0b8e90094a802aa5712cd5267, type: 2}
+  hitBoxLifetime: 2
   HitBoxPosition: {x: 0, y: 0, z: 0}

@@ -20,7 +20,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  debugMessage: 
+  debugMessage: Forward move!
   Damage: 100
   Element: 0
   ElementStrength: 0

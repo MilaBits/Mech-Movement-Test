@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65563629529269732}
   - component: {fileID: 114909920417078260}
   m_Layer: 0
-  m_Name: TestHitbox 1
+  m_Name: TestHitbox dual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
