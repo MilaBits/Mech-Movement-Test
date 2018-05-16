@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="705b0a79-917e-4ab8-bf8e-9697a3617c8e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Timer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MechMovementTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MechMovementTest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/EquipmentManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/EquipmentManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HardShellStudios/Complete Control/Core.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ComboMech.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ComboMech.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestHitbox dual.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestHitbox dual.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/HealthScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/HealthScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ComboSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ComboSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ExtensionMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ExtensionMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Moves/ForwardTestMove.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Moves/ForwardTestMove.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Moves/Idle 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Moves/Idle 2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Moves/IdleTestMove.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Moves/IdleTestMove.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Moves/TestDualMove.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Moves/TestDualMove.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MechMovementTest.sln" beforeDir="false" afterPath="$PROJECT_DIR$/MechMovementTest.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,13 +20,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ComboSystem.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ComboSystem.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComboSystem.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+            <state relative-caret-position="45">
+              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
               <folding>
-                <marker date="1526211901061" expanded="true" signature="6:128" ph="..." />
+                <marker date="1526211901061" expanded="false" signature="6:128" ph="..." />
                 <marker date="1526211901061" expanded="true" signature="171:8354" ph="{...}" />
                 <marker date="1526211901061" expanded="true" signature="1143:1598" ph="{...}" />
                 <marker date="1526211901061" expanded="true" signature="1626:5663" ph="{...}" />
@@ -67,9 +56,43 @@
                 <marker date="1526211901061" expanded="true" signature="7164:7744" ph="{...}" />
                 <marker date="1526211901061" expanded="true" signature="7259:7395" ph="{...}" />
                 <marker date="1526211901061" expanded="true" signature="7490:7626" ph="{...}" />
-                <marker date="1526211901061" expanded="false" signature="7812:7871" ph="{...}" />
-                <marker date="1526211901061" expanded="false" signature="7921:7999" ph="{...}" />
+                <marker date="1526211901061" expanded="true" signature="7812:7871" ph="{...}" />
+                <marker date="1526211901061" expanded="true" signature="7921:7999" ph="{...}" />
                 <marker date="1526211901061" expanded="true" signature="8062:8352" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MechController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/MechController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="114" column="9" lean-forward="true" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+              <folding>
+                <marker date="1525978014955" expanded="false" signature="6:47" ph="..." />
+                <marker date="1525978014955" expanded="true" signature="93:6982" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="2303:2451" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="2492:3276" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="3296:3323" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="3347:3406" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="3442:3640" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="3673:3701" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="3732:3828" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="3777:3822" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="3858:4617" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="4133:4611" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="4653:5640" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="5479:5634" ph="/* TODO: Public float forcamera dampening speed between &gt;0 and 1, if 0 no effect ... */" />
+                <marker date="1525978014955" expanded="true" signature="5680:5972" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="5887:5944" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="6038:6766" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="6104:6349" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="6176:6339" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="6408:6653" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="6480:6643" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="6828:6980" ph="{...}" />
+                <marker date="1525978014955" expanded="true" signature="6873:6930" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -82,7 +105,6 @@
               <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding>
                 <marker date="1526201017482" expanded="false" signature="6:78" ph="..." />
-                <marker date="1526201017482" expanded="true" signature="117:296" ph="{...}" />
                 <marker date="1526201017482" expanded="true" signature="215:294" ph="{...}" />
               </folding>
             </state>
@@ -92,10 +114,10 @@
       <file leaf-file-name="Timer.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Timer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="345">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
-                <marker date="1526205311663" expanded="true" signature="6:78" ph="..." />
+                <marker date="1526205311663" expanded="false" signature="6:78" ph="..." />
                 <marker date="1526205311663" expanded="true" signature="115:843" ph="{...}" />
                 <marker date="1526205311663" expanded="true" signature="391:522" ph="{...}" />
                 <marker date="1526205311663" expanded="true" signature="553:644" ph="{...}" />
@@ -109,7 +131,7 @@
       <file leaf-file-name="EquipmentManager.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Editor/EquipmentManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="795">
               <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
               <folding>
                 <marker date="1526201901452" expanded="true" signature="6:226" ph="..." />
@@ -129,21 +151,8 @@
                 <marker date="1526201901452" expanded="true" signature="3459:3988" ph="{...}" />
                 <marker date="1526201901452" expanded="true" signature="3679:3975" ph="{...}" />
                 <marker date="1526201901452" expanded="true" signature="4020:4493" ph="{...}" />
-                <marker date="1526201901452" expanded="true" signature="4519:4935" ph="{...}" />
                 <marker date="1526201901452" expanded="true" signature="4543:4573" ph="{...}" />
                 <marker date="1526201901452" expanded="true" signature="4741:4933" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainWeapon.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Equipment/MainWeapon.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-              <folding>
-                <marker date="1525976138881" expanded="false" signature="6:95" ph="..." />
               </folding>
             </state>
           </provider>
@@ -156,7 +165,6 @@
               <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <marker date="1525984084995" expanded="false" signature="6:109" ph="..." />
-                <marker date="1525984084995" expanded="true" signature="158:1191" ph="{...}" />
                 <marker date="1525984084995" expanded="true" signature="841:1121" ph="{...}" />
                 <marker date="1525984084995" expanded="true" signature="1149:1189" ph="{...}" />
               </folding>
@@ -171,7 +179,6 @@
               <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
               <folding>
                 <marker date="1525983908519" expanded="false" signature="6:78" ph="..." />
-                <marker date="1525983908519" expanded="true" signature="116:698" ph="{...}" />
                 <marker date="1525983908519" expanded="true" signature="397:623" ph="{...}" />
                 <marker date="1525983908519" expanded="true" signature="474:617" ph="{...}" />
                 <marker date="1525983908519" expanded="true" signature="650:696" ph="{...}" />
@@ -245,9 +252,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TestProjectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Equipment/Equipment.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Input/GetAltButtonDown.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/Odin Hierarchy/OdinHierarchyDrawer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Input/GetAltButtonUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Equipment/Shield.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/Odin Hierarchy/OdinHierarchySettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/503583B5-FE04-448F-AF1B-E91E4200016E/41/323f3f9d/String.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/Odin Hierarchy/OdinHierarchyWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Timer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayMaker/Actions/Input/GetAltButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Equipment/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
@@ -263,9 +273,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/PlayMaker/Actions/Input/GetAltButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayMaker/Actions/Input/GetAltButtonDown.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayMaker/Actions/Input/GetAltButtonUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/OverlayUI.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ListTestScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game.cs" />
@@ -314,6 +321,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/InterruptibleWaitForSeconds.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ComboSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/Odin Hierarchy/OdinHierarchyDrawer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/Odin Hierarchy/OdinHierarchyWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/Odin Hierarchy/OdinHierarchySettings.cs" />
       </list>
     </option>
   </component>
@@ -337,10 +347,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="UnityExplorer">
-        <option name="show-hidden-items" value="false" />
-      </pane>
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -351,20 +357,28 @@
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="MechMovementTest (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp-Editor" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="MechMovementTest (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp-Editor" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="MechMovementTest (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp-Editor" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Editor" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="MechMovementTest (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp-Editor" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Editor" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Odin Hierarchy" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -372,6 +386,10 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -424,12 +442,13 @@
       <workItem from="1525710565150" duration="14565000" />
       <workItem from="1525783577221" duration="2950000" />
       <workItem from="1525867121607" duration="44622000" />
-      <workItem from="1526200757468" duration="10404000" />
+      <workItem from="1526200757468" duration="11004000" />
+      <workItem from="1526474865821" duration="897000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204886000" />
+    <option name="totallyTimeSpent" value="206383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,10 +471,9 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14765458" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unity" order="8" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38469827" />
@@ -467,6 +485,7 @@
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="NuGet" order="7" />
@@ -474,24 +493,24 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Unity" order="13" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18953212" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Unit Tests" order="9" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32899022" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38469827" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3297414" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,27 +540,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0DCA40ED-C23C-47BA-8588-17FB6613E588/ff/9ed3e078/Input.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/38D9835E-2D2E-4E5D-B8D7-3C71A4D83796/f5/5dbf13e9/MenuItem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjectUtility.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Shaders/OverlayUI.shader">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -725,17 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding>
-            <marker date="1525969291807" expanded="true" signature="63:165" ph="{...}" />
-            <marker date="1525969291807" expanded="true" signature="123:163" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MechController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2790">
-          <caret line="186" column="5" selection-start-line="186" selection-start-column="5" selection-end-line="186" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -770,7 +757,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Editor/EquipmentManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="795">
           <caret line="53" column="34" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
           <folding>
             <marker date="1526201901452" expanded="true" signature="6:226" ph="..." />
@@ -790,34 +777,20 @@
             <marker date="1526201901452" expanded="true" signature="3459:3988" ph="{...}" />
             <marker date="1526201901452" expanded="true" signature="3679:3975" ph="{...}" />
             <marker date="1526201901452" expanded="true" signature="4020:4493" ph="{...}" />
-            <marker date="1526201901452" expanded="true" signature="4519:4935" ph="{...}" />
             <marker date="1526201901452" expanded="true" signature="4543:4573" ph="{...}" />
             <marker date="1526201901452" expanded="true" signature="4741:4933" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/InterruptibleYieldInstruction.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/InterruptibleWaitForSeconds.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/InterruptibleYieldInstruction.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/InterruptibleWaitForSeconds.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Hitbox.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
           <folding>
             <marker date="1525983908519" expanded="false" signature="6:78" ph="..." />
-            <marker date="1525983908519" expanded="true" signature="116:698" ph="{...}" />
             <marker date="1525983908519" expanded="true" signature="397:623" ph="{...}" />
             <marker date="1525983908519" expanded="true" signature="474:617" ph="{...}" />
             <marker date="1525983908519" expanded="true" signature="650:696" ph="{...}" />
@@ -831,7 +804,6 @@
           <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <marker date="1525984084995" expanded="false" signature="6:109" ph="..." />
-            <marker date="1525984084995" expanded="true" signature="158:1191" ph="{...}" />
             <marker date="1525984084995" expanded="true" signature="841:1121" ph="{...}" />
             <marker date="1525984084995" expanded="true" signature="1149:1189" ph="{...}" />
           </folding>
@@ -840,10 +812,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Timer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
+        <state relative-caret-position="345">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
-            <marker date="1526205311663" expanded="true" signature="6:78" ph="..." />
+            <marker date="1526205311663" expanded="false" signature="6:78" ph="..." />
             <marker date="1526205311663" expanded="true" signature="115:843" ph="{...}" />
             <marker date="1526205311663" expanded="true" signature="391:522" ph="{...}" />
             <marker date="1526205311663" expanded="true" signature="553:644" ph="{...}" />
@@ -859,18 +831,62 @@
           <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
             <marker date="1526201017482" expanded="false" signature="6:78" ph="..." />
-            <marker date="1526201017482" expanded="true" signature="117:296" ph="{...}" />
             <marker date="1526201017482" expanded="true" signature="215:294" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Editor/Odin Hierarchy/OdinHierarchyDrawer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="71" column="27" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
+          <folding>
+            <marker date="1526474979847" expanded="true" signature="0:177" ph="/* Odin Hierarchy ... */" />
+            <marker date="1526474979847" expanded="false" signature="185:353" ph="..." />
+            <marker date="1526474979847" expanded="true" signature="413:5140" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="609:1119" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="776:993" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="902:983" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="1158:1414" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="1270:1408" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="1463:5138" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="1530:1570" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="1688:1728" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="1933:5132" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="2043:2788" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="3185:4177" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="3286:3407" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="3494:3625" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="3707:3949" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="4032:4163" ph="{...}" />
+            <marker date="1526474979847" expanded="true" signature="4253:5122" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Editor/Odin Hierarchy/OdinHierarchyWindow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <marker date="1526474996543" expanded="true" signature="0:177" ph="/* Odin Hierarchy ... */" />
+            <marker date="1526474996543" expanded="false" signature="185:507" ph="..." />
+            <marker date="1526474996543" expanded="true" signature="560:1322" ph="{...}" />
+            <marker date="1526474996543" expanded="true" signature="675:867" ph="{...}" />
+            <marker date="1526474996543" expanded="true" signature="948:1216" ph="{...}" />
+            <marker date="1526474996543" expanded="true" signature="999:1055" ph="{...}" />
+            <marker date="1526474996543" expanded="true" signature="1064:1212" ph="{...}" />
+            <marker date="1526474996543" expanded="true" signature="1264:1320" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ComboSystem.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        <state relative-caret-position="45">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding>
-            <marker date="1526211901061" expanded="true" signature="6:128" ph="..." />
+            <marker date="1526211901061" expanded="false" signature="6:128" ph="..." />
             <marker date="1526211901061" expanded="true" signature="171:8354" ph="{...}" />
             <marker date="1526211901061" expanded="true" signature="1143:1598" ph="{...}" />
             <marker date="1526211901061" expanded="true" signature="1626:5663" ph="{...}" />
@@ -900,9 +916,64 @@
             <marker date="1526211901061" expanded="true" signature="7164:7744" ph="{...}" />
             <marker date="1526211901061" expanded="true" signature="7259:7395" ph="{...}" />
             <marker date="1526211901061" expanded="true" signature="7490:7626" ph="{...}" />
-            <marker date="1526211901061" expanded="false" signature="7812:7871" ph="{...}" />
-            <marker date="1526211901061" expanded="false" signature="7921:7999" ph="{...}" />
+            <marker date="1526211901061" expanded="true" signature="7812:7871" ph="{...}" />
+            <marker date="1526211901061" expanded="true" signature="7921:7999" ph="{...}" />
             <marker date="1526211901061" expanded="true" signature="8062:8352" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Editor/Odin Hierarchy/OdinHierarchySettings.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="108" column="21" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
+          <folding>
+            <marker date="1526475040461" expanded="true" signature="0:177" ph="/* Odin Hierarchy ... */" />
+            <marker date="1526475040461" expanded="false" signature="185:482" ph="..." />
+            <marker date="1526475040461" expanded="true" signature="556:4820" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="581:678" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="707:785" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="809:1215" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="1117:1209" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="1762:3846" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="2502:2940" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="2674:2904" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="2812:2890" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="3066:3134" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="3906:4817" ph="{...}" />
+            <marker date="1526475040461" expanded="true" signature="3955:4809" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MechController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="114" column="9" lean-forward="true" selection-start-line="114" selection-start-column="9" selection-end-line="114" selection-end-column="9" />
+          <folding>
+            <marker date="1525978014955" expanded="false" signature="6:47" ph="..." />
+            <marker date="1525978014955" expanded="true" signature="93:6982" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="2303:2451" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="2492:3276" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="3296:3323" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="3347:3406" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="3442:3640" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="3673:3701" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="3732:3828" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="3777:3822" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="3858:4617" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="4133:4611" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="4653:5640" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="5479:5634" ph="/* TODO: Public float forcamera dampening speed between &gt;0 and 1, if 0 no effect ... */" />
+            <marker date="1525978014955" expanded="true" signature="5680:5972" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="5887:5944" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="6038:6766" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="6104:6349" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="6176:6339" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="6408:6653" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="6480:6643" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="6828:6980" ph="{...}" />
+            <marker date="1525978014955" expanded="true" signature="6873:6930" ph="{...}" />
           </folding>
         </state>
       </provider>
