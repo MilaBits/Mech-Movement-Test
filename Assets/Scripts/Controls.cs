@@ -87,15 +87,6 @@ public class Controls : ScriptableObject {
 
         if (axisArray.arraySize == 0)
             Debug.Log("No Axes");
-
-//        for (int i = 0; i < axisArray.arraySize; ++i) {
-//            var axis = axisArray.GetArrayElementAtIndex(i);
-//
-//            var name = axis.FindPropertyRelative("m_Name").stringValue;
-//            var axisVal = axis.FindPropertyRelative("axis").intValue;
-//            var inputType = (InputType) axis.FindPropertyRelative("type").intValue;
-//
-//        }
     }
 
     public enum InputType {
@@ -103,9 +94,6 @@ public class Controls : ScriptableObject {
         MouseMovement,
         JoystickAxis,
     };
-
-    [MenuItem("Assets/ReadInputManager")]
-    public static void DoRead() { }
 
     [MenuItem("Assets/Create/Game/Controls")]
     public static void CreateAsset() {
