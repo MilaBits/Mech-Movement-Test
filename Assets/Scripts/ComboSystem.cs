@@ -12,17 +12,6 @@ public class ComboSystem : MonoBehaviour {
     private Game Game;
     private MechController Mech;
 
-    [BoxGroup("Stance")] [HorizontalGroup("Split")]
-    public Stance CurrentStance;
-
-    [BoxGroup("Stance")] [HorizontalGroup("Split")]
-    public Stance lastStance;
-
-    [BoxGroup("Hand")] public ActiveHand activeHand;
-    [BoxGroup("Hand")] public ActiveHand lastActiveHand;
-
-    [BoxGroup("Move", false)] public int moveIndex;
-
     [BoxGroup("Dual Move")] public string DualTimerName;
     [BoxGroup("Dual Move")] public float DualTime;
     [BoxGroup("Dual Move")] public bool dualPerformed;
@@ -32,6 +21,21 @@ public class ComboSystem : MonoBehaviour {
     [BoxGroup("End Lag")] public Image endLagUI;
     [BoxGroup("End Lag")] public float EndLagTimeLeft;
     private Timer dualTimer;
+
+    [BoxGroup("Stance", false), HorizontalGroup("Stance/Split"), LabelWidth(100)]
+    public Stance CurrentStance;
+
+    [HorizontalGroup("Stance/Split"), LabelWidth(100)]
+    public Stance lastStance;
+
+    [BoxGroup("Hand", false), HorizontalGroup("Hand/Split"), LabelWidth(100)]
+    public ActiveHand activeHand;
+
+    [HorizontalGroup("Hand/Split"), LabelWidth(100)]
+    public ActiveHand lastActiveHand;
+
+    [BoxGroup("Move", false), LabelWidth(100)]
+    public int moveIndex;
 
     private void Start() {
         Mech = GetComponent<MechController>();

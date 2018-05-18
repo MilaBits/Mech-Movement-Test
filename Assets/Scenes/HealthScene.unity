@@ -2630,7 +2630,7 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 4637280774404630, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
     type: 2}
-  m_PrefabInternal: {fileID: 1760837683}
+  m_PrefabInternal: {fileID: 1765233393}
 --- !u!1001 &1521592612
 Prefab:
   m_ObjectHideFlags: 0
@@ -3277,13 +3277,13 @@ Transform:
 Camera:
   m_PrefabParentObject: {fileID: 20203652017876584, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
     type: 2}
-  m_PrefabInternal: {fileID: 1760837683}
+  m_PrefabInternal: {fileID: 1765233393}
 --- !u!1 &1732664477 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1270028272243860, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
     type: 2}
-  m_PrefabInternal: {fileID: 1760837683}
---- !u!1001 &1760837683
+  m_PrefabInternal: {fileID: 1765233393}
+--- !u!1001 &1765233393
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3322,46 +3322,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 114016234082321610, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: endLagUI
-      value: 
-      objectReference: {fileID: 954213536}
-    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: Game
-      value: 
-      objectReference: {fileID: 1147464688}
-    - target: {fileID: 114059625642868406, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: UIMech.Array.data[0]
-      value: 
-      objectReference: {fileID: 959978968}
-    - target: {fileID: 114059625642868406, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: UIMech.Array.data[1]
-      value: 
-      objectReference: {fileID: 2137102168}
-    - target: {fileID: 114169364625921992, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: UIMech.Array.data[0]
-      value: 
-      objectReference: {fileID: 1894407404}
-    - target: {fileID: 114091352779516198, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: UIMech.Array.data[0]
-      value: 
-      objectReference: {fileID: 1377634725}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: UIBar
-      value: 
-      objectReference: {fileID: 50588939}
-    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
-        type: 2}
-      propertyPath: UIText
-      value: 
-      objectReference: {fileID: 1283434109}
     - target: {fileID: 114454067610060842, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
         type: 2}
       propertyPath: UIBar
@@ -3372,6 +3332,46 @@ Prefab:
       propertyPath: UIText
       value: 
       objectReference: {fileID: 87801237}
+    - target: {fileID: 114285675679172908, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+        type: 2}
+      propertyPath: Game
+      value: 
+      objectReference: {fileID: 1147464688}
+    - target: {fileID: 114169364625921992, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+        type: 2}
+      propertyPath: UIMech.Array.data[0]
+      value: 
+      objectReference: {fileID: 1894407404}
+    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+        type: 2}
+      propertyPath: UIBar
+      value: 
+      objectReference: {fileID: 50588939}
+    - target: {fileID: 114097408208372644, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+        type: 2}
+      propertyPath: UIText
+      value: 
+      objectReference: {fileID: 1283434109}
+    - target: {fileID: 114091352779516198, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+        type: 2}
+      propertyPath: UIMech.Array.data[0]
+      value: 
+      objectReference: {fileID: 1377634725}
+    - target: {fileID: 114059625642868406, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+        type: 2}
+      propertyPath: UIMech.Array.data[0]
+      value: 
+      objectReference: {fileID: 959978968}
+    - target: {fileID: 114059625642868406, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+        type: 2}
+      propertyPath: UIMech.Array.data[1]
+      value: 
+      objectReference: {fileID: 2137102168}
+    - target: {fileID: 114016234082321610, guid: 2c640c74782e56e4ba6c83871d3b6ca4,
+        type: 2}
+      propertyPath: endLagUI
+      value: 
+      objectReference: {fileID: 954213536}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c640c74782e56e4ba6c83871d3b6ca4, type: 2}
   m_IsPrefabParent: 0
