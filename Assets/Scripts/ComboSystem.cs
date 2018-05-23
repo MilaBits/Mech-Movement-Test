@@ -159,12 +159,13 @@ public class ComboSystem : MonoBehaviour {
         yield return new WaitForSecondsOrInput(activeHand, time, controls, result => useDual = result);
 
         if (useDual) {
-            //dual move
             move = dualMove;
-            moveIndex = 0;
         }
 
         ExecuteMove(move);
+        if (useDual) {
+            moveIndex = 0;
+        }
     }
 
     public class WaitForSecondsOrInput : CustomYieldInstruction {
