@@ -59,7 +59,9 @@ public class EquipmentManager : OdinMenuEditorWindow {
         }
         catch (NullReferenceException) { }
 
-        var toolbarHeight = this.MenuTree.Config.SearchToolbarHeight;
+        int toolbarHeight = 0;
+        if (this.MenuTree.Config.SearchToolbarHeight != null)
+            toolbarHeight = this.MenuTree.Config.SearchToolbarHeight;
 
         // Draws a toolbar with the name of the currently selected menu item.
         SirenixEditorGUI.BeginHorizontalToolbar(toolbarHeight);

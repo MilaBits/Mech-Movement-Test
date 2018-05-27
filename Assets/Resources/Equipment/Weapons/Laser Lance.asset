@@ -13,8 +13,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mech: {fileID: 0}
   Name: Laser Lance
+  Health: 0
   Model: {fileID: 1591037889015794, guid: 95f7e591c106fd94e9e0b4c28f132faf, type: 2}
-  DamageType: 0
+  BaseDamage: 50
+  Element: 1
+  ElementPower: 50
   IdleMoves:
   - {fileID: 11400000, guid: 4e2448e0551780e49ab2220857822cc6, type: 2}
   - {fileID: 11400000, guid: c1dcc1a803e638548a50d76c6fb7d5ad, type: 2}

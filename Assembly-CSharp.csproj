@@ -821,6 +821,7 @@
     <Compile Include="Assets\PlayMaker\Actions\Web\WWWObject.cs" />
     <Compile Include="Assets\PlayMaker\UpdateHelper.cs" />
     <Compile Include="Assets\Scripts\ActiveHand.cs" />
+    <Compile Include="Assets\Scripts\BasicTestAttack.cs" />
     <Compile Include="Assets\Scripts\ComboSystem.cs" />
     <Compile Include="Assets\Scripts\Controls.cs" />
     <Compile Include="Assets\Scripts\DualMove.cs" />
@@ -838,14 +839,13 @@
     <Compile Include="Assets\Scripts\HealthValue.cs" />
     <Compile Include="Assets\Scripts\Hitbox.cs" />
     <Compile Include="Assets\Scripts\Loadout.cs" />
+    <Compile Include="Assets\Scripts\LoadoutMenuManager.cs" />
     <Compile Include="Assets\Scripts\MechController.cs" />
     <Compile Include="Assets\Scripts\MechTypes.cs" />
     <Compile Include="Assets\Scripts\MinimapCameraFollow.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\MoveAction.cs" />
     <Compile Include="Assets\Scripts\MoveBase.cs" />
-    <Compile Include="Assets\Scripts\Moves\Move Actions\BasicTestAttack.cs" />
-    <Compile Include="Assets\Scripts\ResourceUI.cs" />
     <Compile Include="Assets\Scripts\ScrapPool.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectPicker.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectUtility.cs" />
@@ -1056,11 +1056,11 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>K:/Software/Unity/2018.1.0f2/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Timeline">
-      <HintPath>K:/Software/Unity/2018.1.0f2/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UIAutomation">
       <HintPath>K:/Software/Unity/2018.1.0f2/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>K:/Software/Unity/2018.1.0f2/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>K:/Software/Unity/2018.1.0f2/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>

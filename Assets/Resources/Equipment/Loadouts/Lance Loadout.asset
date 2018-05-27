@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: Lance Loadout
   m_EditorClassIdentifier: 
   Name: Lance Loadout
-  WeaponLeft: {fileID: 0}
+  WeaponLeft: {fileID: 11400000, guid: 42b81982826d73e4ca155b015551da64, type: 2}
   WeaponLeftPivot: {x: 0, y: 0, z: 0}
-  WeaponRight: {fileID: 0}
+  WeaponRight: {fileID: 11400000, guid: 42b81982826d73e4ca155b015551da64, type: 2}
   WeaponRightPivot: {x: 0, y: 0, z: 0}
-  SubWeapon: {fileID: 0}
+  SubWeapon: {fileID: 11400000, guid: 41541f1ad6bcb4b45bb284190fc02432, type: 2}
   SubWeaponPivot: {x: 0, y: 0, z: 0}
-  Mod: {fileID: 0}
+  Mod: {fileID: 11400000, guid: bd4ef876743159541b63e2823eaecccc, type: 2}
   ModPivotOffset: {x: 0, y: 0, z: 0}

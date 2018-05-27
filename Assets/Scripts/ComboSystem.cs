@@ -37,6 +37,8 @@ public class ComboSystem : MonoBehaviour {
     [BoxGroup("Move", false), LabelWidth(100)]
     public int moveIndex;
 
+    public bool DebugLog;
+
     private void Start() {
         Mech = GetComponent<MechController>();
         Game = GetComponent<MechController>().Game;
@@ -140,7 +142,7 @@ public class ComboSystem : MonoBehaviour {
 
     private void ExecuteMove(Move move) {
         EndLagTimeLeft = move.EndLag;
-        Debug.Log(move.name);
+        if (DebugLog) Debug.Log(move.name);
 
         // Do the move stuff!
         move.ActivateHitbox(gameObject.tag, Mech.GetWeaponInHand(activeHand), move.HitBoxPosition);
@@ -186,13 +188,11 @@ public class ComboSystem : MonoBehaviour {
         public override bool keepWaiting {
             get {
                 if (activeHand == ActiveHand.Left && controls.GetButtonDown("Right Weapon")) {
-                    Debug.Log("Stopping timer");
                     Result(true);
                     return false;
                 }
 
                 if (activeHand == ActiveHand.Right && controls.GetButtonDown("Left Weapon")) {
-                    Debug.Log("Stopping timer");
                     Result(true);
                     return false;
                 }
@@ -220,6 +220,6 @@ public class ComboSystem : MonoBehaviour {
 
         InputLag = false;
         dualPerformed = false;
-        Debug.Log("Input lag over");
+        if (DebugLog) Debug.Log("Input lag over");
     }
 }

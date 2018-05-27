@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mech: {fileID: 0}
   Name: Shield
+  Health: 100
   Model: {fileID: 100002, guid: 159988a02c3e3ed419f436ae950a0887, type: 3}
   ActionName: Activate Shield
   BlockPower: 150

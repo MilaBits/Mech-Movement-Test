@@ -8,6 +8,9 @@ public class Equipment : ScriptableObject {
     [BoxGroup("Equipment Base"), InlineButton("UpdateName", "Update File Name"), LabelText("Equipment Name")]
     public string Name;
 
+    [BoxGroup("Equipment Base"), LabelText("Equipment Health")]
+    public float Health;
+    
     [BoxGroup("Equipment Base"), InlineEditor(InlineEditorModes.LargePreview), PropertyOrder(100),
      LabelText("Equipment Model")]
     public GameObject Model;

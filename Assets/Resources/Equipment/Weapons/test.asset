@@ -9,12 +9,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce0a7e37c58f4ca8b39a285a55f1a2ba, type: 3}
-  m_Name: Test Sub-Weapon
+  m_Name: test
   m_EditorClassIdentifier: 
   mech: {fileID: 0}
-  Name: Test Sub-Weapon
-  Health: 0
+  Name: test
+  Health: 50
   Model: {fileID: 1761178172552776, guid: 8732bc176a2850e4c83ae95f4b64df54, type: 2}
-  BaseDamage: 20
-  Element: 0
-  ElementPower: 0
+  BaseDamage: 50
+  Element: 3
+  ElementPower: 25

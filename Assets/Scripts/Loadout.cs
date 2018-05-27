@@ -8,6 +8,8 @@ public class Loadout : ScriptableObject {
     [BoxGroup("Name", false),InlineButton("UpdateName", "Update File Name"), LabelText("Loadout Name")]
     public string Name;
 
+    //TODO: Probably add mech type to loadout rather than the mech itself.
+    
     [FoldoutGroup("Weapons")]
     [HorizontalGroup("Weapons/Split", 0.5f, LabelWidth = 20)]
     [BoxGroup("Weapons/Split/Left Weapon")]
