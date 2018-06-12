@@ -5,11 +5,18 @@ using UnityEditor;
 using UnityEngine;
 
 public class Loadout : ScriptableObject {
-    [BoxGroup("Name", false),InlineButton("UpdateName", "Update File Name"), LabelText("Loadout Name")]
+    [BoxGroup("Name", false), InlineButton("UpdateName", "Update File Name"), LabelText("Loadout Name")]
     public string Name;
 
     //TODO: Probably add mech type to loadout rather than the mech itself.
-    
+
+    [FoldoutGroup("Mech")] [FoldoutGroup("Mech")] [EnumToggleButtons]
+    public MechTypes MechType;
+
+    //TODO: Perhaps update these to find children by tag or something having to put them in manually seems clunky
+    [BoxGroup("Mech/Body", false)] public TopFrame TopFrame;
+    [BoxGroup("Mech/Body", false)] public BottomFrame BottomFrame;
+
     [FoldoutGroup("Weapons")]
     [HorizontalGroup("Weapons/Split", 0.5f, LabelWidth = 20)]
     [BoxGroup("Weapons/Split/Left Weapon")]

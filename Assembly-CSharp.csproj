@@ -826,11 +826,14 @@
     <Compile Include="Assets\Scripts\Controls.cs" />
     <Compile Include="Assets\Scripts\DualMove.cs" />
     <Compile Include="Assets\Scripts\Element.cs" />
+    <Compile Include="Assets\Scripts\Equipment\BottomFrame.cs" />
     <Compile Include="Assets\Scripts\Equipment\Equipment.cs" />
+    <Compile Include="Assets\Scripts\Equipment\Frame.cs" />
     <Compile Include="Assets\Scripts\Equipment\MainWeapon.cs" />
     <Compile Include="Assets\Scripts\Equipment\Mod.cs" />
     <Compile Include="Assets\Scripts\Equipment\Shield.cs" />
     <Compile Include="Assets\Scripts\Equipment\SubWeapon.cs" />
+    <Compile Include="Assets\Scripts\Equipment\TopFrame.cs" />
     <Compile Include="Assets\Scripts\Equipment\Weapon.cs" />
     <Compile Include="Assets\Scripts\ExtensionMethods.cs" />
     <Compile Include="Assets\Scripts\FaceTarget.cs" />
@@ -846,6 +849,7 @@
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\MoveAction.cs" />
     <Compile Include="Assets\Scripts\MoveBase.cs" />
+    <Compile Include="Assets\Scripts\ResourcePaths.cs" />
     <Compile Include="Assets\Scripts\ScrapPool.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectPicker.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjectUtility.cs" />
@@ -1056,11 +1060,11 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>K:/Software/Unity/2018.1.0f2/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UIAutomation">
-      <HintPath>K:/Software/Unity/2018.1.0f2/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Timeline">
       <HintPath>K:/Software/Unity/2018.1.0f2/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>K:/Software/Unity/2018.1.0f2/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>K:/Software/Unity/2018.1.0f2/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
