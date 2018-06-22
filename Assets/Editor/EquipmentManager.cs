@@ -22,6 +22,11 @@ public class EquipmentManager : OdinMenuEditorWindow {
         tree.Add("Overview", new AllEquipment());
         tree.Add("Loadouts", new Loadouts());
 
+        tree.AddAllAssetsAtPath("Frames", "Assets/Resources/Equipment/Frames/", typeof(Frame), true,
+                true)
+            .SortMenuItemsByName()
+            .ForEach(this.AddDragHandles);
+        
         tree.AddAllAssetsAtPath("Weapons/Main Weapons", "Assets/Resources/Equipment/Weapons/", typeof(MainWeapon), true,
                 true)
             .SortMenuItemsByName()
@@ -105,6 +110,9 @@ public class EquipmentManager : OdinMenuEditorWindow {
     }
 
     public class AllEquipment {
+        [BoxGroup("Frames"), AssetList(Path = "Resources/Equipment/Frames", AutoPopulate = true)] [InlineEditor]
+        public List<Frame> Frames;
+        
         [BoxGroup("Weapons"), AssetList(Path = "Resources/Equipment/Weapons", AutoPopulate = true)] [InlineEditor]
         public List<MainWeapon> MainWeapons;
 

@@ -10,7 +10,17 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: RoadEdgeCornerSmallOut
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Darker
+    second: {fileID: 2100000, guid: 472e4d44eb12a9c48bc91a5102ddc0b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Defailt
+    second: {fileID: 2100000, guid: c134be17487610d44a8b2cc299c55db3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

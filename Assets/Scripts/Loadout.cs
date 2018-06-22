@@ -17,35 +17,23 @@ public class Loadout : ScriptableObject {
     [BoxGroup("Mech/Body", false)] public TopFrame TopFrame;
     [BoxGroup("Mech/Body", false)] public BottomFrame BottomFrame;
 
-    [FoldoutGroup("Weapons")]
-    [HorizontalGroup("Weapons/Split", 0.5f, LabelWidth = 20)]
-    [BoxGroup("Weapons/Split/Left Weapon")]
+    [FoldoutGroup("Equipment")]
+    [HorizontalGroup("Equipment/Split", 0.5f, LabelWidth = 20)]
+    [BoxGroup("Equipment/Split/Left Weapon")]
     [LabelWidth(55)]
     [LabelText("Weapon")]
     public MainWeapon WeaponLeft;
 
-    [BoxGroup("Weapons/Split/Left Weapon")] [LabelWidth(55)] [LabelText("Offset")]
-    public Vector3 WeaponLeftPivot;
-
-    [HorizontalGroup("Weapons/Split", 0.5f, LabelWidth = 20)]
-    [BoxGroup("Weapons/Split/Right Weapon")]
+    [HorizontalGroup("Equipment/Split", 0.5f, LabelWidth = 20)]
+    [BoxGroup("Equipment/Split/Right Weapon")]
     [LabelWidth(55)]
     [LabelText("Weapon")]
     public MainWeapon WeaponRight;
 
-    [BoxGroup("Weapons/Split/Right Weapon")] [LabelWidth(55)] [LabelText("Offset")]
-    public Vector3 WeaponRightPivot;
-
-    [BoxGroup("Weapons/Subweapon")] [LabelWidth(55)]
+    [BoxGroup("Equipment/Subweapon")] [LabelWidth(105)]
     public SubWeapon SubWeapon;
 
-    [BoxGroup("Weapons/Subweapon")] [LabelWidth(55)] [LabelText("Offset")]
-    public Vector3 SubWeaponPivot;
-
-    [FoldoutGroup("Mod")] [LabelWidth(55)] public Mod Mod;
-
-    [FoldoutGroup("Mod")] [LabelWidth(55)] [LabelText("Offset")]
-    public Vector3 ModPivotOffset;
+    [FoldoutGroup("Equipment/Mod")] [LabelWidth(55)] public Mod Mod;
 
     void UpdateName() {
         string assetPath = AssetDatabase.GetAssetPath(GetInstanceID());

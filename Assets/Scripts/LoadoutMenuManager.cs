@@ -45,7 +45,8 @@ public class LoadoutMenuManager : MonoBehaviour {
 
     IEnumerator LateStart(float waitTime) {
         yield return new WaitForSeconds(waitTime);
-        //Your Function You Want to Call
+
+        // Filling of dropdowns must happen after start
         UpdateAllBlocks();
     }
 
@@ -57,15 +58,23 @@ public class LoadoutMenuManager : MonoBehaviour {
         UpdateStatBlocks("Armor");
     }
 
-    private void FillDropdowns() {
+    public void FillDropdowns() {
         //Empty dropdowns before filling them
         LoadoutDropdown.options.Clear();
+
         LeftWeapon.DropDown.options.Clear();
         RightWeapon.DropDown.options.Clear();
         SubWeapon.DropDown.options.Clear();
         Mod.DropDown.options.Clear();
         Armor.DropDown.options.Clear();
 
+
+        // Fill loadout dropdown with all existing loadouts.
+        foreach (Loadout loadout in Resources.LoadAll<Loadout>(ResourcePaths.LoadoutPath)) {
+            LoadoutDropdown.options.Add(new Dropdown.OptionData(loadout.name));
+        }
+
+        // Fill equipment dropdowns with their corresponding equipment.
         foreach (MainWeapon weapon in Resources.LoadAll<MainWeapon>(ResourcePaths.WeaponPath)) {
             LeftWeapon.DropDown.options.Add(new Dropdown.OptionData(weapon.Name));
         }
@@ -85,16 +94,18 @@ public class LoadoutMenuManager : MonoBehaviour {
 //        foreach (MainWeapon weapon in Resources.LoadAll<MainWeapon>("Equipment/Weapons/")) {
 //            Armor.options.Add(new Dropdown.OptionData(weapon.Name));
 //        }
-
-        //Loadout stuff
-        foreach (Loadout loadout in Resources.LoadAll<Loadout>(ResourcePaths.LoadoutPath)) {
-            LoadoutDropdown.options.Add(new Dropdown.OptionData(loadout.name));
-        }
     }
 
     public void LoadoutChanged() {
         loadout = Resources.LoadAll<Loadout>(ResourcePaths.LoadoutPath)
             .First(x => x.Name == LoadoutDropdown.GetComponentInChildren<Text>().text);
+
+        if (loadout.MechType == MechTypes.Heavy) {
+            HeavyFrameToggle.isOn = true;
+        }
+        else {
+            LightFrameToggle.isOn = true;
+        }
 
         LeftWeapon.DropDown.value = LeftWeapon.DropDown.options.IndexOf(LeftWeapon.DropDown.options.Single(
             x => x.text == loadout.WeaponLeft.Name));
@@ -190,7 +201,6 @@ public class LoadoutMenuManager : MonoBehaviour {
         }
     }
 
-
     public void SaveLoadout() {
         // Instantiate new Loadout asset.
         Loadout loadout = ScriptableObject.CreateInstance<Loadout>();
@@ -202,12 +212,16 @@ public class LoadoutMenuManager : MonoBehaviour {
 
         // TODO: Temporarily hardcoded.
         if (loadout.MechType == MechTypes.Light) {
-            loadout.TopFrame = Resources.LoadAll<TopFrame>(ResourcePaths.FramePath).FirstOrDefault(x => x.Name == "Light Torso");
-            loadout.BottomFrame = Resources.LoadAll<BottomFrame>(ResourcePaths.FramePath).FirstOrDefault(x => x.Name == "Light Legs");
+            loadout.TopFrame = Resources.LoadAll<TopFrame>(ResourcePaths.FramePath)
+                .FirstOrDefault(x => x.Name == "Light Torso");
+            loadout.BottomFrame = Resources.LoadAll<BottomFrame>(ResourcePaths.FramePath)
+                .FirstOrDefault(x => x.Name == "Light Legs");
         }
         else {
-            loadout.TopFrame = Resources.LoadAll<TopFrame>(ResourcePaths.FramePath).FirstOrDefault(x => x.Name == "Heavy Torso");
-            loadout.BottomFrame = Resources.LoadAll<BottomFrame>(ResourcePaths.FramePath).FirstOrDefault(x => x.Name == "Heavy Legs");
+            loadout.TopFrame = Resources.LoadAll<TopFrame>(ResourcePaths.FramePath)
+                .FirstOrDefault(x => x.Name == "Heavy Torso");
+            loadout.BottomFrame = Resources.LoadAll<BottomFrame>(ResourcePaths.FramePath)
+                .FirstOrDefault(x => x.Name == "Heavy Legs");
         }
 
         loadout.SubWeapon = SelectedSubWeapon;
@@ -230,6 +244,10 @@ public class LoadoutMenuManager : MonoBehaviour {
         }
 
         return MechTypes.Heavy;
+    }
+
+    public void Close() {
+        gameObject.SetActive(false);
     }
 }
 

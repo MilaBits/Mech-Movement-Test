@@ -74,19 +74,19 @@ public class MechController : MonoBehaviour {
     }
 
     private void InitializeEquipment() {
-        WeaponLeft = Instantiate(Resources.Load<MainWeapon>("Equipment/Weapons/" + Loadout.WeaponLeft.name));
+        WeaponLeft = (Resources.Load<MainWeapon>("Equipment/Weapons/" + Loadout.WeaponLeft.name));
         WeaponLeft.InitializeModel(WeaponLeftPivot.transform);
         WeaponLeft.mech = this;
 
-        WeaponRight = Instantiate(Resources.Load<MainWeapon>("Equipment/Weapons/" + Loadout.WeaponRight.name));
+        WeaponRight = (Resources.Load<MainWeapon>("Equipment/Weapons/" + Loadout.WeaponRight.name));
         WeaponRight.InitializeModel(WeaponRightPivot.transform);
         WeaponRight.mech = this;
 
-        SubWeapon = Instantiate(Resources.Load<SubWeapon>("Equipment/Weapons/" + Loadout.SubWeapon.name));
+        SubWeapon = (Resources.Load<SubWeapon>("Equipment/Weapons/" + Loadout.SubWeapon.name));
         SubWeapon.InitializeModel(SubWeaponPivot.transform);
         SubWeapon.mech = this;
 
-        Mod = Instantiate(Resources.Load<Mod>("Equipment/Mods/" + Loadout.Mod.name));
+        Mod = (Resources.Load<Mod>("Equipment/Mods/" + Loadout.Mod.name));
         Mod.InitializeModel(ModPivot.transform);
         Mod.mech = this;
     }

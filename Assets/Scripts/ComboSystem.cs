@@ -18,7 +18,7 @@ public class ComboSystem : MonoBehaviour {
     [BoxGroup("Dual Move")] [InlineEditor] public Move dualMove;
 
     [BoxGroup("End Lag")] public bool InputLag;
-    [BoxGroup("End Lag")] public Image endLagUI;
+    [BoxGroup("End Lag")] public RectTransform endLagUI;
     [BoxGroup("End Lag")] public float EndLagTimeLeft;
     private Timer dualTimer;
 
@@ -46,12 +46,10 @@ public class ComboSystem : MonoBehaviour {
         dualTimer = GetComponents<Timer>().FirstOrDefault(t => t.Name == DualTimerName);
         mainWeapons[0] = loadout.WeaponLeft;
         mainWeapons[1] = loadout.WeaponRight;
-        mainWeaponPivots[0] = loadout.WeaponLeftPivot;
-        mainWeaponPivots[1] = loadout.WeaponRightPivot;
     }
 
     private void Update() {
-        endLagUI.rectTransform.localScale = new Vector3(ExtensionMethods.Remap(EndLagTimeLeft, 0, 4, 0, 1), 1, 1);
+        endLagUI.localScale = new Vector3(ExtensionMethods.Remap(EndLagTimeLeft, 0, 4, 0, 1), 1, 1);
 
         if (Game.controls.GetButtonDown("Left Weapon") || Game.controls.GetButtonDown("Right Weapon")) {
             if (InputLag) {

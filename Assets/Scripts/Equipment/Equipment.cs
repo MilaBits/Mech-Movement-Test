@@ -10,13 +10,20 @@ public class Equipment : ScriptableObject {
 
     [BoxGroup("Equipment Base"), LabelText("Equipment Health")]
     public float Health;
-    
+
     [BoxGroup("Equipment Base"), InlineEditor(InlineEditorModes.LargePreview), PropertyOrder(100),
      LabelText("Equipment Model")]
-    public GameObject Model;
+    public Mesh Model;
 
     public void InitializeModel(Transform position) {
-        Instantiate(Model, position);
+        GameObject gameObj = new GameObject();
+        gameObj.name = name;
+        gameObj.AddComponent<MeshFilter>().mesh = Model;
+        gameObj.AddComponent<MeshCollider>().sharedMesh = gameObj.GetComponent<MeshFilter>().sharedMesh;
+        gameObj.GetComponent<MeshCollider>().convex = true;
+        gameObj.AddComponent<Health>().BaseMaxHealth = Health;
+
+        Instantiate(gameObj, position);
     }
 
     void UpdateName() {

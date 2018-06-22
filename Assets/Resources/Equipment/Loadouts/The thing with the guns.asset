@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Name: The thing with the guns
   m_EditorClassIdentifier: 
   Name: The thing with the guns
-  MechType: 0
-  Top: {fileID: 0}
-  Bottom: {fileID: 0}
+  MechType: 1
+  TopFrame: {fileID: 0}
+  BottomFrame: {fileID: 0}
   WeaponLeft: {fileID: 11400000, guid: 8261d2745e9a72e44aa658850501f922, type: 2}
   WeaponLeftPivot: {x: 0, y: 0, z: 0}
   WeaponRight: {fileID: 11400000, guid: 8261d2745e9a72e44aa658850501f922, type: 2}
