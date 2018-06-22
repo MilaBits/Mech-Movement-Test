@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<HIKRetargeter dest="Character2">
+    <MappedRetargeter body="LeftLeg" className="DefaultRetargeter" destRig="joint37" destSkel="joint37" id="3" matrixSource="LeftLegGX" name="CustomRigDefaultMappingNode21" type="T"/>
+    <MappedRetargeter body="LeftLeg" className="DefaultRetargeter" destRig="joint37" destSkel="joint37" id="3" matrixSource="LeftLegGX" name="CustomRigDefaultMappingNode20" type="R"/>
+    <MappedRetargeter body="RightUpLeg" className="DefaultRetargeter" destRig="joint12" destSkel="joint12" id="5" matrixSource="RightUpLegGX" name="CustomRigDefaultMappingNode23" type="R"/>
+    <MappedRetargeter body="LeftUpLeg" className="DefaultRetargeter" destRig="joint36" destSkel="joint36" id="2" matrixSource="LeftUpLegGX" name="CustomRigDefaultMappingNode22" type="R"/>
+    <MappedRetargeter body="RightArm" className="DefaultRetargeter" destRig="joint4" destSkel="joint4" id="12" matrixSource="RightArmGX" name="CustomRigDefaultMappingNode25" type="R"/>
+    <MappedRetargeter body="RightShoulder" className="DefaultRetargeter" destRig="joint3" destSkel="joint3" id="19" matrixSource="RightShoulderGX" name="CustomRigDefaultMappingNode24" type="R"/>
+    <MappedRetargeter body="Spine1" className="DefaultRetargeter" destRig="joint1" destSkel="joint2" id="23" matrixSource="Spine1GX" name="CustomRigDefaultMappingNode27" offsetX="180.0" offsetZ="95.7513275146" type="R"/>
+    <MappedRetargeter body="Spine" className="DefaultRetargeter" destRig="joint1" destSkel="joint1" id="8" matrixSource="SpineGX" name="CustomRigDefaultMappingNode26" type="R"/>
+    <MappedRetargeter body="RightHand" className="DefaultRetargeter" destRig="joint6" destSkel="joint6" id="14" matrixSource="RightHandGX" name="CustomRigDefaultMappingNode2" type="T"/>
+    <MappedRetargeter body="RightForeArm" className="DefaultRetargeter" destRig="joint5" destSkel="joint5" id="13" matrixSource="RightForeArmGX" name="CustomRigDefaultMappingNode3" type="T"/>
+    <MappedRetargeter body="RightHand" className="DefaultRetargeter" destRig="joint6" destSkel="joint6" id="14" matrixSource="RightHandGX" name="CustomRigDefaultMappingNode1" type="R"/>
+    <MappedRetargeter body="Head" className="DefaultRetargeter" destRig="joint45" destSkel="joint45" id="15" matrixSource="HeadGX" name="CustomRigDefaultMappingNode6" type="T"/>
+    <MappedRetargeter body="LeftForeArm" className="DefaultRetargeter" destRig="joint34" destSkel="joint34" id="10" matrixSource="LeftForeArmGX" name="CustomRigDefaultMappingNode7" type="T"/>
+    <MappedRetargeter body="Spine1" className="DefaultRetargeter" destRig="joint2" destSkel="joint2" id="1000" matrixSource="Spine1GX" name="CustomRigDefaultMappingNode4" type="T"/>
+    <MappedRetargeter body="Head" className="DefaultRetargeter" destRig="joint45" destSkel="joint45" id="15" matrixSource="HeadGX" name="CustomRigDefaultMappingNode5" type="R"/>
+    <MappedRetargeter body="LeftHand" className="DefaultRetargeter" destRig="joint35" destSkel="joint35" id="11" matrixSource="LeftHandGX" name="CustomRigDefaultMappingNode8" type="R"/>
+    <MappedRetargeter body="LeftHand" className="DefaultRetargeter" destRig="joint35" destSkel="joint35" id="11" matrixSource="LeftHandGX" name="CustomRigDefaultMappingNode9" type="T"/>
+    <MappedRetargeter body="LeftArm" className="DefaultRetargeter" destRig="joint33" destSkel="joint33" id="9" matrixSource="LeftArmGX" name="CustomRigDefaultMappingNode10" type="R"/>
+    <MappedRetargeter body="LeftShoulder" className="DefaultRetargeter" destRig="joint32" destSkel="joint32" id="18" matrixSource="LeftShoulderGX" name="CustomRigDefaultMappingNode11" type="R"/>
+    <MappedRetargeter body="Hips" className="DefaultRetargeter" destRig="joint11" destSkel="joint11" id="1" matrixSource="HipsGX" name="CustomRigDefaultMappingNode12" type="R"/>
+    <MappedRetargeter body="Hips" className="DefaultRetargeter" destRig="joint11" destSkel="joint11" id="1" matrixSource="HipsGX" name="CustomRigDefaultMappingNode13" type="T"/>
+    <MappedRetargeter body="LeftFoot" className="DefaultRetargeter" destRig="joint38" destSkel="joint38" id="4" matrixSource="LeftFootGX" name="CustomRigDefaultMappingNode14" type="R"/>
+    <MappedRetargeter body="LeftFoot" className="DefaultRetargeter" destRig="joint38" destSkel="joint38" id="4" matrixSource="LeftFootGX" name="CustomRigDefaultMappingNode15" type="T"/>
+    <MappedRetargeter body="RightFoot" className="DefaultRetargeter" destRig="joint16" destSkel="joint16" id="7" matrixSource="RightFootGX" name="CustomRigDefaultMappingNode16" type="R"/>
+    <MappedRetargeter body="RightFoot" className="DefaultRetargeter" destRig="joint16" destSkel="joint16" id="7" matrixSource="RightFootGX" name="CustomRigDefaultMappingNode17" type="T"/>
+    <MappedRetargeter body="RightLeg" className="DefaultRetargeter" destRig="joint15" destSkel="joint15" id="6" matrixSource="RightLegGX" name="CustomRigDefaultMappingNode18" type="R"/>
+    <MappedRetargeter body="RightLeg" className="DefaultRetargeter" destRig="joint15" destSkel="joint15" id="6" matrixSource="RightLegGX" name="CustomRigDefaultMappingNode19" type="T"/>
+</HIKRetargeter>
